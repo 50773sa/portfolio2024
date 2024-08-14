@@ -15,7 +15,7 @@ export const darkTheme = createTheme({
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
-                    color: grey[200],
+                    color: grey[100],
                 },
             },
         },
