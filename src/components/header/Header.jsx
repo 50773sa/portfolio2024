@@ -1,13 +1,17 @@
-import Grid from '@mui/material/Unstable_Grid2'
+// components
 import TopBar from './children/TopBar'
 import NavBar from './children/NavBar'
+// mui
+import { useTheme } from "@mui/material"
+import Box from '@mui/material/Box'
 
 const Header = () => {
+    const theme = useTheme()
     return (
-        <Grid container flexDirection='column'>
-            <TopBar />
+        <Box>
+            <TopBar theme={theme} />
             <NavBar />
-        </Grid>  
+        </Box>  
     )
 }
 
