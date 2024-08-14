@@ -7,7 +7,7 @@ const TopBar = ({ theme }) => {
 
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: theme.palette.color.orange.dark, px: 1, py: 0.5 }} >
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', width: '100%', maxWidth: 1500 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-end', width: '100%', maxWidth: 1200 }}>
                 <a 
                     aria-label='go to my linkedIn page' 
                     href='https://www.linkedin.com/in/sara-almqvist-93862774/' 
