@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-//mui
+// components
+import BurgerIcon from './navBarChildren/BurgerIcon'
+// mui
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
+const links = [
+    {title: 'Home', path: '/'},
+    {title: 'Projects', path: '/projects'},
+    {title: 'Resume', path: '/resume'},
+    {title: 'Contact', path: '/contact'},
+]
 
 const NavBar = () => {
-    const links = [
-        {title: 'Home', path: '/'},
-        {title: 'Projects', path: '/projects'},
-        {title: 'Resume', path: '/resume'},
-        {title: 'Contact', path: '/contact'},
-    ]
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleDrawer = (e) => {
+        if (e && e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift') ) {
+            return
+        }
+        setIsOpen((prev) => !prev)  
+    }
 
     return (
         <Grid container alignItems='center' justifyContent='center' height={50}>
+            
+            <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
+                <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
+            </Grid>
 
-            <Grid xs={12} sm={4}>
+            <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center'}}>
                 Logo
             </Grid>
 
@@ -38,7 +53,7 @@ const NavBar = () => {
                     </NavLink>
                 ))}
             </Grid>
-            
+ 
             <Grid xs={3} sm={4} />
 
         </Grid>

@@ -1,3 +1,5 @@
+@import './burgerIcon.scss';
+
 *, *::before, *::after {
     padding: 0;
     margin: 0;
@@ -11,6 +13,13 @@
     margin: 0 auto !important;
     padding: 0 !important;
     max-width: 1536px;
+}
+
+.title {
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
