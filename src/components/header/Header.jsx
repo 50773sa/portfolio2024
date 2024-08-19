@@ -1,6 +1,6 @@
 // components
-import TopBar from './children/TopBar'
 import NavBar from './children/NavBar'
+import TopBar from './children/TopBar'
 // mui
 import { useTheme } from "@mui/material"
 import Box from '@mui/material/Box'
@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <Box>
             <TopBar theme={theme} />
-            <NavBar />
+            <NavBar theme={theme} />
         </Box>  
     )
 }
