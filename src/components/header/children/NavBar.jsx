@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 // components
 import BurgerIcon from './navBarChildren/BurgerIcon'
+// assets
+import logo from '../../../assets/logo.svg'
 // mui
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
@@ -24,14 +26,14 @@ const NavBar = () => {
     }
 
     return (
-        <Grid container alignItems='center' justifyContent='center' height={50}>
+        <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 50 }}>
             
             <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
                 <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
             </Grid>
 
             <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center'}}>
-                Logo
+                <img src={logo} alt='logo'/>
             </Grid>
 
             <Grid xs={0} sm={4} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'center' } }}>
