@@ -35,7 +35,7 @@ const NavBar = () => {
                 </Grid>
 
                 <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center'}}>
-                    <img src={logo} alt='logo'/>
+                    <img src={logo} alt='site logo'/>
                 </Grid>
 
                 <Grid xs={0} sm={4} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'center' } }}>
