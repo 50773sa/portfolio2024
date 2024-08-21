@@ -17,7 +17,7 @@ const TopBar = ({ theme }) => {
                         target='_blank' 
                         rel='noopener noreferrer'
                     >
-                        <LinkedInIcon sx={{ ml: 1, fontSize: 'large' }} />
+                        <LinkedInIcon sx={{ ml: 1, fontSize: '23px' }} />
                     </a>
                     <a 
                         href='https://github.com/50773sa'
@@ -25,7 +25,7 @@ const TopBar = ({ theme }) => {
                         target='_blank' 
                         rel='noopener noreferrer'
                     >
-                        <GitHubIcon sx={{ ml: 1, fontSize: 'large' }} />   
+                        <GitHubIcon sx={{ ml: 1, fontSize: '20px' }} />   
                     </a>
                 </Box>
             </InnerWrapper>
