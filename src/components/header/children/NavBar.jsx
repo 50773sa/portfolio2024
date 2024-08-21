@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 // components
 import BurgerIcon from './navBarChildren/BurgerIcon'
+import InnerWrapper from '../../wrappers/InnerWrapper'
 // assets
 import logo from '../../../assets/logo.svg'
 // mui
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
-import InnerWrapper from '../../wrappers/InnerWrapper'
 
 const links = [
     {title: 'Home', path: '/'},
@@ -28,8 +28,16 @@ const NavBar = () => {
 
     return (
         <InnerWrapper>
-            <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 50 }}>
-                
+            <Grid 
+                container 
+                sx={{ 
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center',
+                    bgcolor: '#f9f5f5',
+                    height: 50, 
+                }}
+            >
                 <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
                     <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
                 </Grid>
