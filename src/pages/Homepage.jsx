@@ -1,10 +1,12 @@
 import heroTitle from '../../src/assets/heroTitle.svg'
+// components
+import PrimaryButton from '../components/buttons/PrimaryButton'
 // mui
 import Box from '@mui/material/Box'
 
 const Homepage = () => {
 
-    return (
+    return (  
         <Box 
             sx={{ 
                 display: 'flex', 
@@ -29,7 +31,16 @@ const Homepage = () => {
                     height='100%'
                 />
             </Box>
+
+            <Box sx={{ px: {xs: 4, md: 10}, pt: 10 }}>
+                <PrimaryButton  
+                    buttonText='Contact Me' 
+                    path='/contact'
+                />
+            </Box>
+
         </Box>
+        
     )
 }
 
