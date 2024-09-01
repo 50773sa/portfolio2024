@@ -16,6 +16,8 @@ const Hero = () => {
                 width: 'auto',
             }}
         >
+            {/* Page Title */}
+
             <Box 
                 sx={{ 
                     display: 'flex', 
@@ -32,7 +34,15 @@ const Hero = () => {
                 />
             </Box>
 
-            <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, px: {xs: 4, md: 10}, pt: 10 }}>
+            {/* Buttons */}
+
+            <Box 
+                sx={{ 
+                    display: 'flex', 
+                    flexDirection: {xs: 'column', sm: 'row'}, 
+                    px: {xs: 4, md: 10}, pt: 10 
+                }}
+            >
                 <SecondaryButton 
                     buttonText='Projects' 
                     path='/projects'
