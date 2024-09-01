@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import { ReactQueryDevtools } from 'react-query/devtools'
 // components
 import Header from './components/header/Header'
+import InnerWrapper from './components/wrappers/InnerWrapper'
+import OuterWrapper from './components/wrappers/OuterWrapper'
 // pages
 import ErrorPage from './pages/ErrorPage'
 import Homepage from './pages/Homepage'
@@ -9,8 +11,6 @@ import Homepage from './pages/Homepage'
 import '../src/assets/App.scss'
 import { ThemeProvider } from '@mui/material'
 import { darkTheme } from './themes/darkTheme'
-import InnerWrapper from './components/wrappers/InnerWrapper'
-import OuterWrapper from './components/wrappers/OuterWrapper'
 
 function App() {
 
@@ -25,7 +25,7 @@ function App() {
 						<Route path="*" element={<ErrorPage/>} />
 					</Routes>
 				</InnerWrapper>
-
+			
 			</OuterWrapper>
 
 			<ReactQueryDevtools position='bottom-left' />

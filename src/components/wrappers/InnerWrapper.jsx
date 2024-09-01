@@ -1,8 +1,9 @@
+// mui
 import Container from '@mui/material/Container'
 
 const InnerWrapper = ({ children }) => {
     return (
-        <Container maxWidth='lg'>
+        <Container sx={{ px: 2 }} disableGutters>
             { children }
         </Container>
     )
