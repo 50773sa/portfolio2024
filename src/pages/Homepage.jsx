@@ -1,6 +1,7 @@
 import heroTitle from '../../src/assets/heroTitle.svg'
 // components
 import PrimaryButton from '../components/buttons/PrimaryButton'
+import SecondaryButton from '../components/buttons/SecondaryButton'
 // mui
 import Box from '@mui/material/Box'
 
@@ -33,14 +34,19 @@ const Homepage = () => {
             </Box>
 
             <Box sx={{ px: {xs: 4, md: 10}, pt: 10 }}>
+                <SecondaryButton 
+                    buttonText='Projects' 
+                    path='/projects'
+                    paddingRight
+                />
+
                 <PrimaryButton  
                     buttonText='Contact Me' 
-                    path='/contact'
+                    path='mailto:sara.lm.almqvis@gmail.com'
                 />
             </Box>
 
         </Box>
-        
     )
 }
 
