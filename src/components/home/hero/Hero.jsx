@@ -32,11 +32,11 @@ const Hero = () => {
                 />
             </Box>
 
-            <Box sx={{ px: {xs: 4, md: 10}, pt: 10 }}>
+            <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, px: {xs: 4, md: 10}, pt: 10 }}>
                 <SecondaryButton 
                     buttonText='Projects' 
                     path='/projects'
-                    paddingRight
+                    marginRight
                 />
 
                 <PrimaryButton  

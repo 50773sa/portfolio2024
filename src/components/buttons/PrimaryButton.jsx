@@ -13,7 +13,7 @@ const PrimaryButton = ({ path, buttonText }) => {
             to={path}
             variant='contained' 
             sx={{ 
-                width: '8.5rem',
+                width: {xs: '100%', sm: '8.5rem'},
                 color: 'inherit', 
                 bgcolor: buttonColorLight,
                 '&:hover': { 
