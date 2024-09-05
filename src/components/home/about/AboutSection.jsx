@@ -1,6 +1,7 @@
 // components
-import SectionWrapper from './SectionWrapper'
-import TitleWithDescription from './TitleWithDescription'
+import SectionWrapper from '../SectionWrapper'
+import TitleWithDescription from '../TitleWithDescription'
+import StyledDots from './StyledDots'
 
 const AboutSection = () => {
     return (
@@ -14,6 +15,9 @@ const AboutSection = () => {
                     obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
                     nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,'
             />
+
+            <StyledDots />
+               
         </SectionWrapper>
     )
 }
