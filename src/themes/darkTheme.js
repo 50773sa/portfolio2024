@@ -11,6 +11,11 @@ export const darkTheme = createTheme({
             },
         },
     },
+    typography: {
+        allVariants: {
+            color: grey[100]
+        },
+    },
     components: {
         MuiSvgIcon: {
             styleOverrides: {
@@ -19,5 +24,5 @@ export const darkTheme = createTheme({
                 },
             },
         },
-    }
+    }, 
 })
