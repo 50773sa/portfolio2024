@@ -58,7 +58,7 @@ const NavBar = () => {
                             }
                         }}
                     >
-                        <Typography>
+                        <Typography sx={{ color: '#000000' }}>
                             {link.title}
                         </Typography>
                     </NavLink>
