@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import { ReactQueryDevtools } from 'react-query/devtools'
 // components
 import Header from './components/header/Header'
-import InnerWrapper from './components/wrappers/InnerWrapper'
 import OuterWrapper from './components/wrappers/OuterWrapper'
 // pages
 import ErrorPage from './pages/ErrorPage'
@@ -19,13 +18,10 @@ function App() {
 			<OuterWrapper>	
 				<Header />
 
-				<InnerWrapper>
-					<Routes>
-						<Route path="/" element={<Homepage />} /> 
-						<Route path="*" element={<ErrorPage/>} />
-					</Routes>
-				</InnerWrapper>
-			
+				<Routes>
+					<Route path="/" element={<Homepage />} /> 
+					<Route path="*" element={<ErrorPage/>} />
+				</Routes>
 			</OuterWrapper>
 
 			<ReactQueryDevtools position='bottom-left' />
