@@ -9,6 +9,7 @@ export const darkTheme = createTheme({
                 light: orange[400],
                 dark: '#b2741a'
             },
+            black: '#353434'
         },
     },
     typography: {
