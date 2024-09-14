@@ -10,7 +10,7 @@ const SectionWrapper = ({ children, bgcolor }) => {
                     ? '#4f4f4f' 
                     : '#353434', 
                 py: 6, 
-                px: 10 
+                px: { xs: 3, sm: 10 } 
             }}
         >
             { children }
