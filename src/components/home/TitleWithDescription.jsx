@@ -8,7 +8,7 @@ const TitleWithDescription = ({ h2, paragraph }) => {
                 { h2 }
             </Typography>
 
-            <Typography component='p' variant='subtitle1' align='center'>
+            <Typography component='p' variant='subtitle1' align='center' mb={5}>
                 { paragraph }
             </Typography>
         </>

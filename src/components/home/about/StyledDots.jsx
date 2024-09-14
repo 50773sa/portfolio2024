@@ -7,7 +7,6 @@ const StyledDots = () => {
                 justifyContent: 'center', 
                 alignItems: 'center', 
                 flexWrap: 'nowrap', 
-                paddingTop: 70
             }}
         >
             <div className='dotWrapper'>
