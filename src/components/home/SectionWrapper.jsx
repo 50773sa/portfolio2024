@@ -6,6 +6,10 @@ const SectionWrapper = ({ children, bgcolor }) => {
         <Box
             component='section' 
             sx={{ 
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
                 bgcolor: bgcolor == 'light' 
                     ? '#4f4f4f' 
                     : '#353434', 
