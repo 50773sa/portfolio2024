@@ -1,9 +1,12 @@
+// components
+import PrimaryButton from '../../buttons/PrimaryButton'
 // mui
 import { styled } from '@mui/material/styles'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Skeleton from '@mui/material/Skeleton'
+import Typography from '@mui/material/Typography'
 
 const PlaceholderCard = ({ image }) => {
 
@@ -13,14 +16,18 @@ const PlaceholderCard = ({ image }) => {
         cursor: 'default',
         background: '#636363',
         '&:hover div': {
-            display: 'block',
+            display: 'flex',
         },
         position: 'relative',
     }))
 
     const OverlayDiv = styled('div')(() => ({
-        display: 'none', 
-        backgroundColor: '#00000090',
+        display: 'flex', 
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 24,
+        backgroundColor: '#00000099',
         inset: 0,
         position: 'absolute',
     }))
@@ -37,7 +44,10 @@ const PlaceholderCard = ({ image }) => {
                     </CardContent>
                     
                     <OverlayDiv>
-
+                        <Typography component='h3' variant='subtitle1' sx={{ pb: 2 }}>
+                            Name
+                        </Typography>
+                        <PrimaryButton path='' buttonText='View More' />
                     </OverlayDiv> 
 
                 </StyledCard>  
