@@ -33,7 +33,7 @@ const PlaceholderCard = ({ image }) => {
     }))
 
     return (
-        <Grid container gap={4} justifyContent='center'>
+        <Grid container gap={4} justifyContent='center' mb={4}>
             {[...Array(6)].map((i) => (
                 <StyledCard key={i}>
                     <CardContent sx={{ '&:last-child': { padding: 0 } }}>
