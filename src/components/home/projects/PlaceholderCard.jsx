@@ -22,7 +22,7 @@ const PlaceholderCard = ({ image }) => {
     }))
 
     const OverlayDiv = styled('div')(() => ({
-        display: 'flex', 
+        display: 'none', 
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
