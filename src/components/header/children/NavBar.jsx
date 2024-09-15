@@ -7,7 +7,6 @@ import logo from '../../../assets/logo.svg'
 // mui
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
-import InnerWrapper from '../../wrappers/InnerWrapper'
 
 const links = [
     {title: 'Home', path: '/'},
@@ -27,41 +26,48 @@ const NavBar = () => {
     }
 
     return (
-        <InnerWrapper>
-            <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 50 }}>
-                
-                <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
-                    <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
-                </Grid>
-
-                <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center'}}>
-                    <img src={logo} alt='logo'/>
-                </Grid>
-
-                <Grid xs={0} sm={4} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'center' } }}>
-                    {links.map((link) => (
-                        <NavLink 
-                            key={link.title} 
-                            to={link.path} 
-                            style={({ isActive }) => {
-                                return {
-                                    margin: '0 8px',
-                                    color: 'inherit',
-                                    textDecoration: isActive ? 'underline' : ''
-                                }
-                            }}
-                        >
-                            <Typography>
-                                {link.title}
-                            </Typography>
-                        </NavLink>
-                    ))}
-                </Grid>
-    
-                <Grid xs={3} sm={4} />
-
+        <Grid 
+            container 
+            sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center',
+                bgcolor: '#f9f5f5',
+                height: 50, 
+                px: 2
+            }}
+        >
+            <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
+                <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
             </Grid>
-        </InnerWrapper>
+
+            <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center'}}>
+                <img src={logo} alt='site logo'/>
+            </Grid>
+
+            <Grid xs={0} sm={4} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'center' } }}>
+                {links.map((link) => (
+                    <NavLink 
+                        key={link.title} 
+                        to={link.path} 
+                        style={({ isActive }) => {
+                            return {
+                                margin: '0 8px',
+                                color: 'inherit',
+                                textDecoration: isActive ? 'underline' : ''
+                            }
+                        }}
+                    >
+                        <Typography sx={{ color: '#000000' }}>
+                            {link.title}
+                        </Typography>
+                    </NavLink>
+                ))}
+            </Grid>
+
+            <Grid xs={3} sm={4} />
+
+        </Grid>
     )
 }
 

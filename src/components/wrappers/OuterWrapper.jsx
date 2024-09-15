@@ -1,9 +1,13 @@
+// mui
 import Container from '@mui/material/Container'
+import Paper from '@mui/material/Paper'
 
 const OuterWrapper = ({ children }) => {
     return (
-        <Container maxWidth='xl' disableGutters>
-            { children }
+        <Container maxWidth='lg' disableGutters sx={{ height: '100vh' }}>
+            <Paper square elevation={8} sx={{ bgcolor: '#353434' }}>
+                { children }
+            </Paper>
         </Container>
     )
 }
