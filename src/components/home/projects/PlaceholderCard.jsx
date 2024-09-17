@@ -11,8 +11,11 @@ import Typography from '@mui/material/Typography'
 const PlaceholderCard = ({ image }) => {
 
     const StyledCard = styled(Card)(() => ({
-        height: '200px',
-        width: '300px',
+        // width: '300px',
+        width: '100%',
+        minWidth: '200px',
+        minHeight: '200px',
+        padding: 0,
         cursor: 'default',
         background: '#636363',
         '&:hover div': {
@@ -33,24 +36,26 @@ const PlaceholderCard = ({ image }) => {
     }))
 
     return (
-        <Grid container gap={4} justifyContent='center' mb={4}>
+        <Grid container spacing={4} justifyContent='center' mb={4}>
             {[...Array(6)].map((i) => (
-                <StyledCard key={i}>
-                    <CardContent sx={{ '&:last-child': { padding: 0 } }}>
-                        {!image
-                            ?   <Skeleton variant="rectangle" width={300} height={200} />
-                            :   <img src={image} alt='' width='100%' height='100%' />
-                        }
-                    </CardContent>
-                    
-                    <OverlayDiv>
-                        <Typography component='h3' variant='subtitle1' sx={{ pb: 2 }}>
-                            Name
-                        </Typography>
-                        <PrimaryButton path='' buttonText='View More' />
-                    </OverlayDiv> 
+                <Grid xs={12} sm={6} md={4} key={i}>
+                    <StyledCard key={i}>
+                        <CardContent sx={{ p: 0, '&:last-child': { p: 0 } }}>
+                            {!image
+                                ?   <Skeleton variant="rectangle" width='100%' height='100%' />
+                                :   <img src={image} alt='' width='100%' height='100%' />
+                            }
+                        </CardContent>
+                        
+                        <OverlayDiv>
+                            <Typography component='h3' variant='subtitle1' sx={{ pb: 2 }}>
+                                Name
+                            </Typography>
+                            <PrimaryButton path='' buttonText='View More' />
+                        </OverlayDiv> 
 
-                </StyledCard>  
+                    </StyledCard>  
+                </Grid>
             ))}
         </Grid> 
     )
