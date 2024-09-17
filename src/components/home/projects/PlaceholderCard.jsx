@@ -11,7 +11,6 @@ import Typography from '@mui/material/Typography'
 const PlaceholderCard = ({ image }) => {
 
     const StyledCard = styled(Card)(() => ({
-        // width: '300px',
         width: '100%',
         minWidth: '200px',
         minHeight: '200px',
