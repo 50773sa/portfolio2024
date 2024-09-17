@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper'
 const OuterWrapper = ({ children }) => {
     return (
         <Container maxWidth='lg' disableGutters sx={{ height: '100vh' }}>
-            <Paper square elevation={8} sx={{ height: '100%', bgcolor: '#353434' }}>
+            <Paper square elevation={8} sx={{ bgcolor: '#353434' }}>
                 { children }
             </Paper>
         </Container>

@@ -1,4 +1,5 @@
 @import './burgerIcon.scss';
+@import './decorativeDots.scss';
 
 *, *::before, *::after {
     padding: 0;
@@ -8,15 +9,9 @@
     font-style: normal;
     box-sizing: border-box;
 }
-body {
-  background-color: #2a2a2a;
-}
 
-.title {
-  font-family: "Libre Bodoni", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+body {
+    background-color: #2a2a2a;
 }
 
 a {
@@ -25,3 +20,10 @@ a {
     align-items: center;
     text-decoration: none;
 }
+
+// #heroTitle {
+//     font-family: "Libre Bodoni";
+//     font-optical-sizing: 'auto';
+//     font-weight: '400';
+//     font-style: 'bold';
+// }
