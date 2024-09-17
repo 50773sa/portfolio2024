@@ -20,7 +20,6 @@ const StyledEmptyCard = ({ logo, name }) => {
         margin: 4,
         cursor: 'default',
         borderRadius: '40px',
-        background: '#636363',
         background: 'linear-gradient(180deg, #636363, #C9C9C9)',
         boxShadow: 'rgba(255, 255, 255, 0.24) 0px 3px 8px',
     }))
