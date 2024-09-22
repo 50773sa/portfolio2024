@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 
 const SectionWrapper = ({ children, bgcolor, borderY }) => {
     const theme = useTheme()
+    
     return (
         <Box
             component='section' 
@@ -17,7 +18,9 @@ const SectionWrapper = ({ children, bgcolor, borderY }) => {
                     bgcolor == 'dark' &&  theme.palette.bgColor.dark ||
                     bgcolor == 'orange' &&  theme.palette.bgColor.orange,
                 py: 6, 
-                px: { xs: 3, sm: 10 } 
+                px: { xs: 3, sm: 10 },
+                borderTop: borderY && '3px solid' + `${theme.palette.color.orange.dark}`,
+                borderBottom: borderY && '3px solid' + `${theme.palette.color.orange.dark}`,
             }}
         >
             { children }
