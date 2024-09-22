@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 .env
 
-.temporaryFolder
+# Ignore folder inside src
+src/temporaryFolder/
