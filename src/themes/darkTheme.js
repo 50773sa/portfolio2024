@@ -7,7 +7,8 @@ export const darkTheme = createTheme({
             white: grey[50],
             orange: {
                 light: orange[400],
-                dark: '#b2741a'
+                medium: '#b2741a',
+                dark: '#92703F'
             },
             black: '#353434'
         },
