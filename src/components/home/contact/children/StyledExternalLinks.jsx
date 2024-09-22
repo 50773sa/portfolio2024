@@ -51,7 +51,7 @@ const StyledExternalLinks = () => {
                     underline='none'
                     href='mailto: sara.lm.almqvist@gmail.com'
                 >
-                    <EmailIcon sx={{ mr: 1, fontSize: '33px' }} />
+                    <EmailIcon sx={{ mr: 1, fontSize: '30px' }} />
 
                     sara.lm.almqvist@gmail.com
 
