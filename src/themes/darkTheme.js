@@ -12,6 +12,11 @@ export const darkTheme = createTheme({
             },
             black: '#353434'
         },
+        bgColor: {
+            light: '#4f4f4f',
+            dark: '#353434',
+            orange: '#b2741a',
+        }
     },
     typography: {
         allVariants: {
