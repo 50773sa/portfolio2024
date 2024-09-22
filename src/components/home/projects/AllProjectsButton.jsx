@@ -16,10 +16,10 @@ const AllProjectsButton = ({ path, buttonText }) => {
                 width: '12rem',
                 color: buttonColorLight, 
                 bgcolor: 'transparent',
-                border: `1px solid ${buttonColorLight}`,
+                border: `2px solid ${buttonColorLight}`,
                 '&:hover': { 
-                    padding: 0.5,// prevent 'jumping'
-                    border: `2px solid ${buttonColorLight}`,
+                    padding: 0.5, // prevent 'jumping'
+                    border: `3px solid ${buttonColorLight}`,
                 },
             }}  
         >

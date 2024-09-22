@@ -16,12 +16,12 @@ const SecondaryButton = ({ path, buttonText, marginRight }) => {
                 width: {xs: '100%', sm: '8.5rem'},
                 color: buttonColorLight, 
                 bgcolor: 'transparent',
-                border: `1px solid ${buttonColorLight}`,
+                border: `2px solid ${buttonColorLight}`,
                 mr: {xs: 0, sm: marginRight ? 2 : 0},
                 mb: {xs: 2, sm: 0},
                 '&:hover': { 
                     padding: 0.5,// prevent 'jumping'
-                    border: `2px solid ${buttonColorLight}`,
+                    border: `3px solid ${buttonColorLight}`,
                 }
             }}  
         >
