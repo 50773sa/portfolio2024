@@ -6,7 +6,16 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 const TopBar = ({ theme }) => {
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: theme.palette.color.orange.medium, py: 0.5, px: 2 }} >
+        <Box 
+            sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                bgcolor: theme.palette.color.orange.medium, 
+                py: 0.5, 
+                px: 2
+            }}
+        >
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
                 <a 
                     aria-label="Visit Sara Almqvist's LinkedIn profile, opens in a new tab"
