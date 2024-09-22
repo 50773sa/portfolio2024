@@ -1,7 +1,9 @@
 // mui
+import { useTheme } from '@mui/material'
 import Box from '@mui/material/Box'
 
-const SectionWrapper = ({ children, bgcolor }) => {
+const SectionWrapper = ({ children, bgcolor, borderY }) => {
+    const theme = useTheme()
     return (
         <Box
             component='section' 
@@ -10,9 +12,10 @@ const SectionWrapper = ({ children, bgcolor }) => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                bgcolor: bgcolor == 'light' 
-                    ? '#4f4f4f' 
-                    : '#353434', 
+                bgcolor: 
+                    bgcolor == 'light' && theme.palette.bgColor.light ||
+                    bgcolor == 'dark' &&  theme.palette.bgColor.dark ||
+                    bgcolor == 'orange' &&  theme.palette.bgColor.orange,
                 py: 6, 
                 px: { xs: 3, sm: 10 } 
             }}
