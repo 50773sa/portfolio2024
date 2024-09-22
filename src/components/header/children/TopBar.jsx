@@ -9,7 +9,7 @@ const TopBar = ({ theme }) => {
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: theme.palette.color.orange.medium, py: 0.5, px: 2 }} >
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
                 <a 
-                    aria-label='go to my linkedIn page' 
+                    aria-label="Visit Sara Almqvist's LinkedIn profile, opens in a new tab"
                     href='https://www.linkedin.com/in/sara-almqvist-93862774/' 
                     target='_blank' 
                     rel='noopener noreferrer'
@@ -18,7 +18,7 @@ const TopBar = ({ theme }) => {
                 </a>
                 <a 
                     href='https://github.com/50773sa'
-                    aria-label='go to my github page'
+                    aria-label="Visit Sara Almqvist's GitHub profile, opens in a new tab"
                     target='_blank' 
                     rel='noopener noreferrer'
                 >
