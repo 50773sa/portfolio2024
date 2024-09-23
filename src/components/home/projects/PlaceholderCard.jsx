@@ -12,8 +12,8 @@ const PlaceholderCard = ({ image }) => {
 
     const StyledCard = styled(Card)(() => ({
         width: '100%',
-        minWidth: '200px',
-        minHeight: '200px',
+        // minWidth: '200px',
+        // minHeight: '200px',
         padding: 0,
         cursor: 'default',
         background: '#636363',
