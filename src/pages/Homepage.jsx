@@ -1,6 +1,7 @@
 // components
 import AboutSection from "../components/home/about/AboutSection"
 import Contact from "../components/home/contact/Contact"
+import Footer from "../components/Footer"
 import Hero from "../components/home/hero/Hero"
 import Projects from "../components/home/projects/Projects"
 import TechStack from "../components/home/techStack/TechStack"
@@ -13,6 +14,7 @@ const Homepage = () => {
             <TechStack />
             <Projects />
             <Contact />
+            <Footer />
         </>
     )
 }
