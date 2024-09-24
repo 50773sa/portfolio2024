@@ -15,6 +15,7 @@ const StyledExternalLinks = () => {
         justifyContent: 'center',
         bgcolor: theme.palette.bgColor.light, 
         borderRadius: '3px',
+        p: '5px',
     }
 
     const StyledLink = styled(Link)(() => ({
