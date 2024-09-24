@@ -27,7 +27,7 @@ const StyledExternalLinks = () => {
 
     return (
         <>
-            <Grid xs={12} sm={6} sx={styledGrid}>
+            <Grid xs={12} sm={8} md={6} sx={styledGrid}>
                 <StyledLink 
                     component='a'
                     target="_blank"
@@ -44,7 +44,7 @@ const StyledExternalLinks = () => {
                 </StyledLink>
             </Grid>
 
-            <Grid xs={12} sm={6} sx={styledGrid}>
+            <Grid xs={12} sm={8} md={6} sx={styledGrid}>
                 <StyledLink 
                     component='a'
                     target="_blank"
