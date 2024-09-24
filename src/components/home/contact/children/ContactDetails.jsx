@@ -7,7 +7,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import Link from '@mui/material/Link'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
-const StyledExternalLinks = () => {
+const ContactDetails = () => {
     const theme = useTheme()
 
     const styledGrid = {
@@ -63,4 +63,4 @@ const StyledExternalLinks = () => {
     )
 }
 
-export default StyledExternalLinks
+export default ContactDetails
