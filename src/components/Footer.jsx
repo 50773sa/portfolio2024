@@ -25,7 +25,8 @@ const theme = useTheme()
                 variant='h5' 
                 sx={{ 
                     color: theme.palette.color.orange.light, 
-                    fontStyle: 'italic'
+                    fontStyle: 'italic',
+                    cursor: 'default',
                 }}
             >
                 "Thanks For Your Attention!"
