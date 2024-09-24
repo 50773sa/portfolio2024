@@ -29,7 +29,7 @@ const theme = useTheme()
                     cursor: 'default',
                 }}
             >
-                "Thanks For Your Attention!"
+                "Thanks For Your Scrolling Skills!"
             </Typography>
         </Box>
     )
