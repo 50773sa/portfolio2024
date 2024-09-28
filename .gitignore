@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 .env
-
-# Ignore folder inside src
-src/temporaryFolder/
