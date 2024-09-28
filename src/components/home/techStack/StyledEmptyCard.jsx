@@ -15,7 +15,8 @@ const StyledEmptyCard = ({ logo, name }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: '200px',
+        // minHeight: '200px',
+        aspectRatio: '4 / 4',
         cursor: 'default',
         borderRadius: '40px',
         background: 'linear-gradient(180deg, #636363, #C9C9C9)',
@@ -40,7 +41,7 @@ const StyledEmptyCard = ({ logo, name }) => {
                         <StyledCardContent>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: -10, flexBasis: '80%' }}>
                                 {!logo
-                                    ?   <Skeleton variant="circular" width={100} height={100} />
+                                    ?   <Skeleton variant="circular" width='70%' height='80%' />
                                     :   <img  src='#' alt='' width='100%' height='100%' />
                                 }
                             </div>
@@ -48,11 +49,11 @@ const StyledEmptyCard = ({ logo, name }) => {
                                 sx={{ 
                                     display: 'flex', 
                                     justifyContent: 'center', 
-                                    flexBasis: '20%', 
+                                    flexBasis: '20%',
                                     color: theme.palette.color.black 
                                 }}
                             >
-                                {name}
+                                {name ? name : 'Name'}
                             </Typography>
                         </StyledCardContent>
                     </StyledCard>  
