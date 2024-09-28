@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 // components
 import BurgerIcon from './navBarChildren/BurgerIcon'
 // assets
@@ -42,7 +42,9 @@ const NavBar = () => {
             </Grid>
 
             <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center'}}>
-                <img src={logo} alt='site logo'/>
+                <Link to='/'>
+                    <img src={logo} alt='site logo'/>
+                </Link>
             </Grid>
 
             <Grid xs={0} sm={4} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'center' } }}>
