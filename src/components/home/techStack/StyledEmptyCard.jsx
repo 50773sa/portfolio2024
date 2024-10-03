@@ -54,7 +54,7 @@ const StyledEmptyCard = ({ image, name }) => {
                         textAlign: 'center',
                         fontWeight: 500,
                         lineHeight: '1.1em',
-                        fontSize: {xs: '0.8em', sm: ''},
+                        fontSize: {xs: '0.8em', md: '1em'},
                         color: theme.palette.color.black 
                     }}
                 >
