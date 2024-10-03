@@ -33,15 +33,28 @@ const StyledEmptyCard = ({ image, name }) => {
     return (
         <StyledCard>
             <StyledCardContent>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: -10, flexBasis: '80%' }}>
-                    <img src={image} alt='' width='50%' height='auto' />
-                </div>
-                <Typography 
-                    sx={{ 
+                <div 
+                    style={{ 
                         display: 'flex', 
                         justifyContent: 'center', 
+                        alignItems: 'center', 
+                        flexBasis: '70%' 
+                    }}
+                >
+                    <img src={image} alt={`${name}`+ ' logo'} width='50%' height='auto' />
+                </div>
+                <Typography 
+                    component='span'
+                    variant='subtitle1'
+                    sx={{ 
+                        display: 'flex',
+                        justifyContent: 'center',
                         alignItems: 'center',
-                        flexBasis: '20%',
+                        flexBasis: '30%',
+                        textAlign: 'center',
+                        fontWeight: 500,
+                        lineHeight: '1.1em',
+                        fontSize: {xs: '0.8em', sm: ''},
                         color: theme.palette.color.black 
                     }}
                 >
