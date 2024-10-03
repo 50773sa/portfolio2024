@@ -5,10 +5,9 @@ import Skeleton from '@mui/material/Skeleton'
 const LoadingImgSkeletons = () => {
     return (
         <Grid container spacing={4} justifyContent='center' mb={4} px={2}>
-            {[...Array(6)].map((i) => (
-                <Grid xs={12} sm={6} md={4}>
+            {Array(6).fill().map((_, i) => (
+                <Grid xs={12} sm={6} md={4} key={i}>
                     <Skeleton 
-                        key={i} 
                         variant="rectangle" 
                         sx={{ 
                             minWidth: '200px', 
