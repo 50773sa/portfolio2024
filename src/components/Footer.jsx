@@ -15,7 +15,6 @@ const theme = useTheme()
                 alignItems: 'center',
                 justifyContent: 'center',
                 bgcolor: theme.palette.bgColor.light,
-      
                 py: 6, 
                 px: { xs: 3, sm: 10 },
             }}
@@ -26,6 +25,7 @@ const theme = useTheme()
                 sx={{ 
                     color: theme.palette.color.orange.light, 
                     fontStyle: 'italic',
+                    textAlign: 'center',
                     cursor: 'default',
                 }}
             >
