@@ -7,9 +7,9 @@ import App from './App'
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
+			staleTime: 1000 * 60 * 10, // 10 min
+			cacheTime: 1000 * 60 * 60 * 20, // 20 tim
 			refetchOnWindowFocus: false,
-			staleTime: 1000 * 60 * 3,
-			cacheTime: 1000 * 60 * 60 * 45,
 		}
 	}
 })
