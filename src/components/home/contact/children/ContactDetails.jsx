@@ -28,6 +28,7 @@ const ContactDetails = () => {
         cursor: 'pointer',
         underline: 'none',
         color: theme.palette.color.white,
+        overflow: 'scroll',
         '&:hover .hoverLink': { visibility: 'visible' },
     }))
 
@@ -59,7 +60,7 @@ const ContactDetails = () => {
 
                     sara.lm.almqvist@gmail.com
 
-                    <KeyboardArrowRightIcon className="hoverLink" sx={{ visibility: 'hidden' }}/>
+                    <KeyboardArrowRightIcon className="hoverLink" sx={{ visibility: { sm: 'hidden' } }}/>
                 </StyledLink>
             </StyledGrid>
 
