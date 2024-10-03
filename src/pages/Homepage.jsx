@@ -12,15 +12,23 @@ import TechStack from "../components/home/techStack/TechStack"
 
 const Homepage = () => {
     const [projects, setProjects] = useState([])
+    const [technologies, setTechnologies] = useState([])
     const { getData } = useGetCollectionStore()
     const fetchProjects = () => projects.length == 0 && getData('projects')
+    const fetchTechnologies = () => getData('techStack')
     const { data: allProjects, isLoading, isError } = useQuery('projects', fetchProjects)
+    const { data: allTechnologies } = useQuery('techStack', fetchTechnologies)
 
     useEffect(() => {
         if(allProjects) {
             setProjects(allProjects)
         }
-    }, [projects, allProjects])
+        if(allTechnologies) {
+            setTechnologies(allTechnologies)
+        }
+        return
+    }, [projects, allProjects, technologies, allTechnologies])
+    
 
     return (  
         <>
@@ -28,7 +36,7 @@ const Homepage = () => {
 
             <Hero />
             <AboutSection />
-            <TechStack />
+            <TechStack techStack={technologies} isLoading={isLoading} />
             <Projects projects={projects} isLoading={isLoading} />
             <Contact />
             <Footer />
