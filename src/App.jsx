@@ -4,8 +4,8 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import Header from './components/header/Header'
 import OuterWrapper from './components/wrappers/OuterWrapper'
 // pages
-import ErrorPage from './pages/ErrorPage'
 import Homepage from './pages/Homepage'
+import PageNotFoundPage from './pages/PageNotFoundPage'
 // styles
 import '../src/assets/App.scss'
 import { ThemeProvider } from '@mui/material'
@@ -20,7 +20,7 @@ function App() {
 
 				<Routes>
 					<Route path="/" element={<Homepage />} /> 
-					<Route path="*" element={<ErrorPage/>} />
+					<Route path="*" element={<PageNotFoundPage/>} />
 				</Routes>
 			</OuterWrapper>
 
