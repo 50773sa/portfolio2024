@@ -4,7 +4,8 @@ import { grey, orange } from "@mui/material/colors"
 export const darkTheme = createTheme({
     palette: {
         color: {
-            white: grey[50],
+            white: grey[100],
+            lightGrey: grey[500],
             orange: {
                 light: orange[400],
                 medium: '#b2741a',
@@ -20,14 +21,15 @@ export const darkTheme = createTheme({
     },
     typography: {
         allVariants: {
-            color: grey[100]
+            color: grey[200]
         },
+        
     },
     components: {
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
-                    color: grey[100],
+                    color: grey[200],
                 },
             },
         },
