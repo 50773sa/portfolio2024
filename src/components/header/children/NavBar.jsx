@@ -41,9 +41,9 @@ const NavBar = () => {
                 <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
             </Grid>
 
-            <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center'}}>
-                <Link to='/'>
-                    <img src={logo} alt='site logo'/>
+            <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center', height: '100%', p: 0.5}}>
+                <Link to='/' style={{ height: '100%', width: 'auto'}}>
+                    <img src={logo} alt='site logo' style={{ height: '100%', width: '100%'}}/>
                 </Link>
             </Grid>
 
