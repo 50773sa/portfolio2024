@@ -5,7 +5,6 @@ import BurgerIcon from './navBarChildren/BurgerIcon'
 // assets
 import logo from '../../../assets/logo.svg'
 // mui
-import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
 const links = [
@@ -15,7 +14,7 @@ const links = [
     {title: 'Contact', path: '/contact'},
 ]
 
-const NavBar = () => {
+const NavBar = ({ theme }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleDrawer = (e) => {
@@ -32,16 +31,15 @@ const NavBar = () => {
                 display: 'flex', 
                 justifyContent: 'center', 
                 alignItems: 'center',
-                bgcolor: '#f9f5f5',
-                height: 50, 
-                px: 2
+                height: 100, 
+                px: {xs: 3, md: 10},
             }}
         >
             <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
                 <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
             </Grid>
 
-            <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center', height: '100%', p: 0.5}}>
+            <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center', height: '100%', p: 2.5}}>
                 <Link to='/' style={{ height: '100%', width: 'auto'}}>
                     <img src={logo} alt='site logo' style={{ height: '100%', width: '100%'}}/>
                 </Link>
@@ -55,14 +53,11 @@ const NavBar = () => {
                         style={({ isActive }) => {
                             return {
                                 margin: '0 8px',
-                                color: 'inherit',
-                                textDecoration: isActive ? 'underline' : ''
+                                color: isActive ? theme.palette.color.white : theme.palette.color.lightGrey 
                             }
                         }}
                     >
-                        <Typography sx={{ color: '#000000' }}>
-                            {link.title}
-                        </Typography>
+                        {link.title}
                     </NavLink>
                 ))}
             </Grid>
