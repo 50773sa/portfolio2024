@@ -13,7 +13,7 @@ const SecondaryButton = ({ path, buttonText, marginRight }) => {
             to={path}
             variant='outlined' 
             sx={{ 
-                width: {xs: '100%', sm: '8.5rem'},
+                width: {xs: '100%', sm: '9.5rem'},
                 color: buttonColorLight, 
                 bgcolor: 'transparent',
                 border: `2px solid ${buttonColorLight}`,
