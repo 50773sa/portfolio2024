@@ -21,9 +21,12 @@ a {
     text-decoration: none;
 }
 
-// #heroTitle {
-//     font-family: "Libre Bodoni";
-//     font-optical-sizing: 'auto';
-//     font-weight: '400';
-//     font-style: 'bold';
-// }
+.heroText {    
+    h1, h2, span {
+       font-family: "Kumbh Sans", sans-serif !important;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:
+            "YOPQ" 300; 
+    } 
+}
