@@ -9,8 +9,11 @@ import Footer from "../components/Footer"
 import Hero from "../components/home/hero/Hero"
 import Projects from "../components/home/projects/Projects"
 import TechStack from "../components/home/techStack/TechStack"
+// mui
+import { useTheme } from '@mui/material'
 
 const Homepage = () => {
+    const theme = useTheme()
     const [projects, setProjects] = useState([])
     const [technologies, setTechnologies] = useState([])
     const { getData } = useGetCollectionStore()
@@ -34,12 +37,12 @@ const Homepage = () => {
         <>
             {isError && <p>An error occoured</p>}
 
-            <Hero />
-            <AboutSection />
-            <TechStack techStack={technologies} isLoading={isLoading} />
-            <Projects projects={projects} isLoading={isLoading} />
-            <Contact />
-            <Footer />
+            <Hero theme={theme} />
+            <AboutSection theme={theme}/>
+            <TechStack theme={theme} techStack={technologies} isLoading={isLoading} />
+            <Projects theme={theme} projects={projects} isLoading={isLoading} />
+            <Contact theme={theme} />
+            <Footer theme={theme}/>
         </>
     )
 }
