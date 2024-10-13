@@ -5,7 +5,8 @@ import Button from '@mui/material/Button'
 
 const PrimaryButton = ({ path, buttonText }) => {
     const theme = useTheme()
-    const buttonColorLight = theme.palette.color.orange.light
+    const buttonBgColor = theme.palette.color.orange.light
+    const buttonTextColor = theme.palette.bgColor.dark
 
     return (
         <Button 
@@ -14,10 +15,11 @@ const PrimaryButton = ({ path, buttonText }) => {
             variant='contained' 
             sx={{ 
                 width: {xs: '100%', sm: '9.5rem'},
-                color: 'inherit', 
-                bgcolor: buttonColorLight,
+                color: buttonTextColor, 
+                fontWeight: 'bold',
+                bgcolor: buttonBgColor,
                 '&:hover': { 
-                    bgcolor: '#ffbc59',
+                    bgcolor: theme.palette.color.orange.extraLight,
                 }
             }}  
         >

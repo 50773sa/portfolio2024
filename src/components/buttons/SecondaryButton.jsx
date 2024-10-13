@@ -5,7 +5,8 @@ import Button from '@mui/material/Button'
 
 const SecondaryButton = ({ path, buttonText, marginRight }) => {
     const theme = useTheme()
-    const buttonColorLight = theme.palette.color.orange.light
+    const buttonColor = theme.palette.color.orange.light
+    const buttonColorHover = theme.palette.color.orange.extraLight
 
     return (
         <Button 
@@ -14,14 +15,16 @@ const SecondaryButton = ({ path, buttonText, marginRight }) => {
             variant='outlined' 
             sx={{ 
                 width: {xs: '100%', sm: '9.5rem'},
-                color: buttonColorLight, 
+                color: buttonColor, 
+                fontWeight: 'bold',
                 bgcolor: 'transparent',
-                border: `2px solid ${buttonColorLight}`,
+                border: `2px solid ${buttonColor}`,
                 mr: {xs: 0, sm: marginRight ? 2 : 0},
                 mb: {xs: 2, sm: 0},
                 '&:hover': { 
                     padding: 0.5,// prevent 'jumping'
-                    border: `3px solid ${buttonColorLight}`,
+                    color: buttonColorHover,
+                    border: `3px solid ${buttonColorHover}`,
                 }
             }}  
         >
