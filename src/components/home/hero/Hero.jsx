@@ -1,11 +1,11 @@
-import heroTitle from '../../../assets/heroTitle.svg'
 // components
+import HeroText from './children/HeroText'
 import PrimaryButton from '../../../components/buttons/PrimaryButton'
 import SecondaryButton from '../../../components/buttons/SecondaryButton'
 // mui
 import Box from '@mui/material/Box'
 
-const Hero = () => {
+const Hero = ({ theme }) => {
     return (
         <Box 
             sx={{ 
@@ -16,31 +16,33 @@ const Hero = () => {
                 width: 'auto',
             }}
         >
-            {/* Page Title */}
+            {/**
+                Text
+             */}
 
             <Box 
+                className='heroText'
                 sx={{ 
                     display: 'flex', 
+                    flexDirection: 'column',
                     alightItems: 'center', 
                     width: {xs: '100%', sm: '75%', md: '50%'}, 
-                    px: {xs: 4, md: 10}, 
+                    px: {xs: 4, md: 20}, 
                 }}
+
             >
-                <img 
-                    src={heroTitle} 
-                    alt='Page title: Sara Almqvist, Frontend Developer' 
-                    width='100%'
-                    height='100%'
-                />
+                <HeroText theme={theme} />
             </Box>
 
-            {/* Buttons */}
+            {/**
+                Buttons 
+            */}
 
             <Box 
                 sx={{ 
                     display: 'flex', 
                     flexDirection: {xs: 'column', sm: 'row'}, 
-                    px: {xs: 4, md: 10}, pt: 10 
+                    px: {xs: 4, md: 20}, pt: 10 
                 }}
             >
                 <SecondaryButton 
