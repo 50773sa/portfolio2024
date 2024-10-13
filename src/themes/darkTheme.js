@@ -7,11 +7,10 @@ export const darkTheme = createTheme({
             white: grey[100],
             lightGrey: grey[500],
             orange: {
-                extraLight: orange[300],
-                light: '#d68f24',
-                medium: '#b2741a',
-                dark: '#A17A45',
-
+                extraLight: orange[300], // on hover
+                light: '#d68f24', // buttons
+                medium: '#b2741a', 
+                dark: '#A17A45', // only for decorative purposes (not suitable for text (accessibility issues))
             },
             black: '#353434'
         },
