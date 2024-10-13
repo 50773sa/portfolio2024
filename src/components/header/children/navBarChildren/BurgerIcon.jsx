@@ -1,6 +1,6 @@
 import IconButton from "@mui/material/IconButton"
 
-const BurgerIcon = ({ isOpen, toggleDrawer, isDarkMode }) => {
+const BurgerIcon = ({ isOpen, toggleDrawer }) => {
 
     return (
         <IconButton
@@ -13,9 +13,9 @@ const BurgerIcon = ({ isOpen, toggleDrawer, isDarkMode }) => {
             disableRipple
         >
             <div id="burgerIcon" className={ isOpen ? 'open' : '' }>
-                <span className={ isDarkMode ? 'isDarkMode' : '' } />
-                <span className={ isDarkMode ? 'isDarkMode' : '' } />
-                <span className={ isDarkMode ? 'isDarkMode' : '' } />
+                <span className='isDarkMode' />
+                <span className='isDarkMode' />
+                <span className='isDarkMode' />
             </div>  
         </IconButton>
     )

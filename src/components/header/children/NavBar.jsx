@@ -35,9 +35,6 @@ const NavBar = ({ theme }) => {
                 px: {xs: 3, md: 10},
             }}
         >
-            <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
-                <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
-            </Grid>
 
             <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center', height: '100%', p: 2.5}}>
                 <Link to='/' style={{ height: '100%', width: 'auto'}}>
@@ -62,6 +59,10 @@ const NavBar = ({ theme }) => {
                 ))}
             </Grid>
 
+            <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
+                <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
+            </Grid>
+            
             <Grid xs={3} sm={4} />
 
         </Grid>
