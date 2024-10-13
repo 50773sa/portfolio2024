@@ -8,7 +8,7 @@ const Header = () => {
     const theme = useTheme()
     return (
         <>
-            <TopBar theme={theme} />
+            {/* <TopBar theme={theme} /> */}
             <NavBar theme={theme} />
         </>  
     )

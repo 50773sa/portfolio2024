@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 // components
 import BurgerIcon from './navBarChildren/BurgerIcon'
 // assets
-import logo from '../../../assets/logo.svg'
+import logo from '../../../assets/siteLogo.svg'
 // mui
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
