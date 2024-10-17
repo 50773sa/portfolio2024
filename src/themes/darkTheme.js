@@ -22,9 +22,8 @@ export const darkTheme = createTheme({
     },
     typography: {
         allVariants: {
-            color: grey[200]
-        },
-        
+            color: grey[200],
+        },        
     },
     components: {
         MuiSvgIcon: {
