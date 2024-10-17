@@ -4,6 +4,7 @@ import photo from './../../../assets/photo.png'
 import HeroText from './children/HeroText'
 import PrimaryButton from '../../../components/buttons/PrimaryButton'
 import SecondaryButton from '../../../components/buttons/SecondaryButton'
+import SocialMediaIcons from './children/SocialMediaIcons'
 // mui
 import Box from '@mui/material/Box'
 
@@ -80,6 +81,12 @@ const Hero = ({ theme }) => {
             >
                 <img src={photo} height='100%' />
             </Box>
+
+            {/**
+                Social Media Icons
+             */}
+                
+            <SocialMediaIcons theme={theme} />
         </Box>
     )
 }
