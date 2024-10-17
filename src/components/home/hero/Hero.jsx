@@ -1,62 +1,66 @@
+// assets
+import photo from './../../../assets/photo.png'
 // components
 import HeroText from './children/HeroText'
 import PrimaryButton from '../../../components/buttons/PrimaryButton'
 import SecondaryButton from '../../../components/buttons/SecondaryButton'
 // mui
 import Box from '@mui/material/Box'
+import SocialMediaIcons from './children/SocialMediaIcons'
 
 const Hero = ({ theme }) => {
     return (
-        <Box 
-            sx={{ 
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'center',
-                height: '100vh', 
-                width: 'auto',
-            }}
-        >
-            {/**
-                Text
-             */}
-
-            <Box 
-                className='heroText'
-                sx={{ 
-                    display: 'flex', 
-                    flexDirection: 'column',
-                    alightItems: 'center', 
-                    width: {xs: '100%', sm: '75%', md: '50%'}, 
-                    px: {xs: 4, md: 20}, 
-                }}
-
-            >
-                <HeroText theme={theme} />
-            </Box>
-
-            {/**
-                Buttons 
-            */}
-
+        <Box sx={{ display: 'flex', position: 'relative' }}>
             <Box 
                 sx={{ 
                     display: 'flex', 
-                    flexDirection: {xs: 'column', sm: 'row'}, 
-                    px: {xs: 4, md: 20}, pt: 10 
+                    flexDirection: 'column', 
+                    justifyContent: 'center',
+                    height: '90dvh', 
+                    width: 'auto',
+                    pl: {xs: 4, md: 20}, 
+                    zIndex: 10,
                 }}
             >
-                <SecondaryButton 
-                    buttonText='Projects' 
-                    path='/projects'
-                    marginRight
-                />
+                {/**
+                    Text
+                */}
+                
+                <Box 
+                    className='heroText'
+                    sx={{ 
+                        display: 'flex', 
+                        flexDirection: 'column',
+                        width: {xs: '100%', sm: '75%', md: '50%'}, 
+                        cursor: 'default'
+                    }}
+                >
+                    <HeroText theme={theme} />
+                </Box>
 
-                <PrimaryButton  
-                    buttonText='Contact Me' 
-                    path='mailto:sara.lm.almqvis@gmail.com'
-                />
+                {/**
+                    Buttons 
+                */}
+
+                <Box 
+                    sx={{ 
+                        display: 'flex', 
+                        flexDirection: {xs: 'column', sm: 'row'}, 
+                        pt: 10 
+                    }}
+                >
+                    <SecondaryButton 
+                        buttonText='Projects' 
+                        path='/projects'
+                        marginRight
+                    />
+
+                    <PrimaryButton  
+                        buttonText='Contact Me' 
+                        path='mailto:sara.lm.almqvis@gmail.com'
+                    />
+                </Box>
             </Box>
-
         </Box>
     )
 }
