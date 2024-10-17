@@ -28,5 +28,7 @@ a {
         font-style: normal;
         font-variation-settings:
             "YOPQ" 300; 
+        /* offset-x | offset-y | blur-radius | color */
+        text-shadow: 1px 1px 10px #2a2a2a;
     } 
 }
