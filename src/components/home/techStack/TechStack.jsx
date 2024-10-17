@@ -17,14 +17,16 @@ const TechStack = ({ techStack, isLoading }) => {
 
                 {isLoading && <TechStackImgSkeleton />}
 
-                {!isLoading && techStack.map((tech) => (
-                    <Grid xs={6} sm={4} md={3} key={tech.name}>    
-                        <StyledEmptyCard 
-                            image={tech.logoPath}
-                            name={tech.name}
-                        />
-                    </Grid>
-                ))}
+                {!isLoading && techStack.sort((a, b) => a.order - b.order).map((tech) => {
+                    return (
+                        <Grid xs={6} sm={4} md={3} key={tech.name}>    
+                            <StyledEmptyCard 
+                                image={tech.logoPath}
+                                name={tech.name}
+                            />
+                        </Grid>
+                    )
+                })}
             </Grid>
         </SectionWrapper>
     )
