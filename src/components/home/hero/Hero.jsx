@@ -6,7 +6,6 @@ import PrimaryButton from '../../../components/buttons/PrimaryButton'
 import SecondaryButton from '../../../components/buttons/SecondaryButton'
 // mui
 import Box from '@mui/material/Box'
-import SocialMediaIcons from './children/SocialMediaIcons'
 
 const Hero = ({ theme }) => {
     return (
@@ -60,6 +59,26 @@ const Hero = ({ theme }) => {
                         path='mailto:sara.lm.almqvis@gmail.com'
                     />
                 </Box>
+            </Box>
+
+            {/**
+                Photo
+             */}
+            
+            <Box 
+                sx={{ 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    alignItems: 'center', 
+                    height: '100%',
+                    width: 'auto',
+                    position: 'absolute',
+                    right: 0,
+                    pr: {xs: 4, md: 10}, 
+                    zIndex: 2
+                }}
+            >
+                <img src={photo} height='100%' />
             </Box>
         </Box>
     )
