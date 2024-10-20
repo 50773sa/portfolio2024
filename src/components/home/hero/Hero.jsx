@@ -1,5 +1,3 @@
-// assets
-import photo from './../../../assets/photo.png'
 // components
 import HeroText from './children/HeroText'
 import PrimaryButton from '../../../components/buttons/PrimaryButton'
@@ -8,7 +6,9 @@ import SocialMediaIcons from './children/SocialMediaIcons'
 // mui
 import Box from '@mui/material/Box'
 
-const Hero = ({ theme }) => {
+const Hero = ({ theme, about }) => {
+const photoUrl = about.map(a => a.photo)
+
     return (
         <Box sx={{ display: 'flex', position: 'relative' }}>
             <Box 
@@ -79,7 +79,7 @@ const Hero = ({ theme }) => {
                     zIndex: 2
                 }}
             >
-                <img src={photo} height='100%' />
+                <img src={photoUrl} height='100%' />
             </Box>
 
             {/**

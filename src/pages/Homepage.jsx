@@ -14,15 +14,24 @@ import { useTheme } from '@mui/material'
 
 const Homepage = () => {
     const theme = useTheme()
+    const [about, setAbout] = useState([])
     const [projects, setProjects] = useState([])
     const [technologies, setTechnologies] = useState([])
+    // Get data
     const { getData } = useGetCollectionStore()
+    const fetchAbout = () => getData('about')
     const fetchProjects = () => projects.length == 0 && getData('projects')
     const fetchTechnologies = () => getData('techStack')
-    const { data: allProjects, isLoading, isError } = useQuery('projects', fetchProjects)
+    // Query data
+    const { data: allAbout, isLoading, isError} = useQuery('about', fetchAbout)
+    const { data: allProjects } = useQuery('projects', fetchProjects)
     const { data: allTechnologies } = useQuery('techStack', fetchTechnologies)
 
     useEffect(() => {
+       
+        if(allAbout) {
+            setAbout(allAbout)
+        }
         if(allProjects) {
             setProjects(allProjects)
         }
@@ -30,14 +39,15 @@ const Homepage = () => {
             setTechnologies(allTechnologies)
         }
         return
-    }, [projects, allProjects, technologies, allTechnologies])
+    }, [projects, allProjects, technologies, allTechnologies, about])
+            console.log('about[]', about.map((i => i.photo)))
     
 
     return (  
         <>
             {isError && <p>An error occoured</p>}
 
-            <Hero theme={theme} />
+            <Hero theme={theme} about={about} />
             <AboutSection theme={theme}/>
             <TechStack theme={theme} techStack={technologies} isLoading={isLoading} />
             <Projects theme={theme} projects={projects} isLoading={isLoading} />
