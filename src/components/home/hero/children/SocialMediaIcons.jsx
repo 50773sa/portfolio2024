@@ -8,12 +8,12 @@ const SocialMediaIcons = ({ theme }) => {
 
     const StyledDivider = (
         <Divider 
-            orientation='vertical' 
+            orientation='horizontal'
             aria-hidden="true" 
             sx={{ 
                 bgcolor: theme.palette.color.orange.light,
-                height: '4rem',
-                width: '0.2rem',
+                height: {xs: '0.2rem', sm: '4rem'},
+                width: {xs: '4rem', sm: '0.2rem'},
                 borderRadius: '20px',
             }}
         />
@@ -26,7 +26,7 @@ const SocialMediaIcons = ({ theme }) => {
                 justifyContent: 'right',
                 alignItems: 'end',
                 flexDirection: 'column',
-                width: '100%',
+                width: {xs: '100%', sm: '50%'},
                 pr: {xs: 4, md: 10}, 
                 zIndex: 20,
                 mb: 5,
@@ -35,7 +35,7 @@ const SocialMediaIcons = ({ theme }) => {
             <Box 
                 sx={{ 
                     display: 'flex', 
-                    flexDirection: 'column', 
+                    flexDirection: {xs: 'row', sm: 'column'}, 
                     alignItems: 'center', 
                     justifyContent: 'flex-end',
                     height: '100%',
@@ -49,7 +49,7 @@ const SocialMediaIcons = ({ theme }) => {
                     target='_blank' 
                     rel='noopener noreferrer'
                 >
-                    <LinkedInIcon sx={{ mb: 0.75, mt: 2, fontSize: '30px' }} />
+                    <LinkedInIcon sx={{ m: 1, fontSize: '30px' }} />
                 </a>
                 <a 
                     href='https://github.com/50773sa'
@@ -57,7 +57,7 @@ const SocialMediaIcons = ({ theme }) => {
                     target='_blank' 
                     rel='noopener noreferrer'
                 >
-                    <GitHubIcon sx={{ mb: 2, fontSize: '27px' }} />   
+                    <GitHubIcon sx={{ fontSize: '27px' }} />   
                 </a>
             </Box>
         </Box>
