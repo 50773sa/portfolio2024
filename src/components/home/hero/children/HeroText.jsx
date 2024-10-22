@@ -11,7 +11,7 @@ const HeroText = ({ theme }) => {
                 <Typography 
                     component='span' 
                     sx={{ 
-                        fontSize: { xs: '1.5rem', sm: '2.5rem', md: '2.5rem' }, 
+                        fontSize: { xs: '1.5rem', sm: '2.2rem', md: '2.5rem' }, 
                         mb: {xs: -2, sm: -3},
                     }}
                 >
@@ -31,7 +31,7 @@ const HeroText = ({ theme }) => {
             <Typography 
                 component='h2' 
                 sx={{ 
-                    fontSize: { xs: '0.9rem', sm: '1.2rem' }, 
+                    fontSize: { xs: '1rem', sm: '1.1rem' }, 
                     mb: -2 ,
                 }}
             >
