@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 // components
 import BurgerIcon from './navBarChildren/BurgerIcon'
+import BurgerMenuDrawer from './BurgerMenuDrawer'
 // assets
 import logo from '../../../assets/siteLogo.svg'
 // mui
@@ -31,7 +32,7 @@ const NavBar = ({ theme }) => {
                 display: 'flex', 
                 justifyContent: 'center', 
                 alignItems: 'center',
-                height: 100, 
+                height: 90, 
                 px: {xs: 3, md: 10},
             }}
         >
@@ -59,10 +60,18 @@ const NavBar = ({ theme }) => {
                 ))}
             </Grid>
 
-            <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'center' } }}>
+            <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'flex-end' } }}>
+
                 <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
+                
+                <BurgerMenuDrawer
+                    theme={theme}
+                    isOpen={isOpen}
+                    toggleDrawer={toggleDrawer}
+                    links={links}
+                />
             </Grid>
-            
+
             <Grid xs={3} sm={4} />
 
         </Grid>
