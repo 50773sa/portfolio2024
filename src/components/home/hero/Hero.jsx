@@ -10,7 +10,7 @@ const Hero = ({ theme, about }) => {
 const photoUrl = about.map(a => a.photo)
 
     return (
-        <Box sx={{ display: 'flex', position: 'relative' }}>
+        <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, position: 'relative' }}>
             <Box 
                 sx={{ 
                     display: 'flex', 
@@ -19,7 +19,7 @@ const photoUrl = about.map(a => a.photo)
                     height: '80dvh', 
                     width: 'auto',
                     px: {xs: 4, md: 20}, 
-                    my: 10,
+                    // my: 10,
                     zIndex: 10,
                 }}
             >
@@ -68,18 +68,16 @@ const photoUrl = about.map(a => a.photo)
             
             <Box 
                 sx={{ 
-                    display: 'flex', 
-                    flexDirection: 'column',
-                    alignItems: 'center', 
                     height: '100%',
                     width: 'auto',
                     right: 0,
+                    bottom: 0,
                     pl: {xs: 4, md: 10}, 
                     position: 'absolute',
                     zIndex: 2,
                 }}
             >
-                <img src={photoUrl} height='100%' />
+                <img src={photoUrl} alt='Photo of Sara' height='100%' width='auto' />
             </Box>
 
             {/**
