@@ -31,21 +31,20 @@ const HeroText = ({ theme }) => {
             <Typography 
                 component='h2' 
                 sx={{ 
-                    fontSize: { xs: '0.8rem', sm: '1.2rem', md: '1.3rem' }, 
+                    fontSize: { xs: '0.8rem', sm: '1.2rem', md: '1.2rem' }, 
                     mb: -2 ,
-                    whiteSpace: 'nowrap',
                 }}
             >
                 <Typography 
                     component='span' 
                     variant='' 
                     sx={{ 
-                        color: theme.palette.color.orange.light 
+                        color: theme.palette.color.orange.light,        
                     }}
                 >
                     Front
                 </Typography>
-                 {' '} End Developer
+                 {' '} End Developer specializing in responsive web applications with JavaScript and ReactJS
             </Typography>
 
         </>

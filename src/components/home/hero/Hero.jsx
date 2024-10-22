@@ -31,7 +31,6 @@ const photoUrl = about.map(a => a.photo)
                     sx={{ 
                         display: 'flex', 
                         flexDirection: 'column',
-                        width: {xs: '100%', sm: '75%', md: '50%'}, 
                         cursor: 'default'
                     }}
                 >
