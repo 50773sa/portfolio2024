@@ -16,9 +16,10 @@ const photoUrl = about.map(a => a.photo)
                     display: 'flex', 
                     flexDirection: 'column', 
                     justifyContent: 'center',
-                    height: '90dvh', 
+                    height: '80dvh', 
                     width: 'auto',
-                    pl: {xs: 4, md: 20}, 
+                    px: {xs: 4, md: 20}, 
+                    my: 10,
                     zIndex: 10,
                 }}
             >
@@ -72,10 +73,10 @@ const photoUrl = about.map(a => a.photo)
                     alignItems: 'center', 
                     height: '100%',
                     width: 'auto',
-                    position: 'absolute',
                     right: 0,
-                    pr: {xs: 4, md: 10}, 
-                    zIndex: 2
+                    pl: {xs: 4, md: 10}, 
+                    position: 'absolute',
+                    zIndex: 2,
                 }}
             >
                 <img src={photoUrl} height='100%' />

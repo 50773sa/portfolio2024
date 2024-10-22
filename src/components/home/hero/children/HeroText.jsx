@@ -31,7 +31,7 @@ const HeroText = ({ theme }) => {
             <Typography 
                 component='h2' 
                 sx={{ 
-                    fontSize: { xs: '0.8rem', sm: '1.2rem', md: '1.2rem' }, 
+                    fontSize: { xs: '0.9rem', sm: '1.2rem' }, 
                     mb: -2 ,
                 }}
             >
@@ -46,9 +46,7 @@ const HeroText = ({ theme }) => {
                 </Typography>
                  {' '} End Developer specializing in responsive web applications with JavaScript and ReactJS
             </Typography>
-
         </>
-       
     )
 }
 
