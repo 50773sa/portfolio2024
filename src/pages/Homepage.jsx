@@ -27,8 +27,7 @@ const Homepage = () => {
     const { data: allProjects } = useQuery('projects', fetchProjects)
     const { data: allTechnologies } = useQuery('techStack', fetchTechnologies)
 
-    useEffect(() => {
-       
+    useEffect(() => { 
         if(allAbout) {
             setAbout(allAbout)
         }
@@ -40,7 +39,6 @@ const Homepage = () => {
         }
         return
     }, [projects, allProjects, technologies, allTechnologies, about])
-            console.log('about[]', about.map((i => i.photo)))
     
 
     return (  
