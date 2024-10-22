@@ -5,7 +5,7 @@ const BurgerIcon = ({ isOpen, toggleDrawer }) => {
     return (
         <IconButton
             onClick={toggleDrawer}
-            sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', pr: 2 }}
+            sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', zIndex: 100000 }}
             aria-controls={ isOpen ? 'menu' : undefined }
             aria-haspopup="true"
             aria-expanded={ isOpen ? 'true' : undefined }
