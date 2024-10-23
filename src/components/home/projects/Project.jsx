@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Typography from '@mui/material/Typography'
 
-const PlaceholderCard = ({ image, name }) => {
+const Project = ({ image, name, onClick }) => {
 
     const StyledCard = styled(Card)(() => ({
         aspectRatio: '4 / 3',
@@ -50,7 +50,7 @@ const PlaceholderCard = ({ image, name }) => {
                     <Typography component='h3' variant='h6' sx={{ pb: 2 }}>
                         {name}
                     </Typography>
-                    <PrimaryButton path='' buttonText='View More' />
+                    <PrimaryButton path='' onClick={onClick} buttonText='View More' />
                 </OverlayDiv> 
 
             </StyledCard>                   
@@ -58,4 +58,4 @@ const PlaceholderCard = ({ image, name }) => {
     )
 }
 
-export default PlaceholderCard
+export default Project
