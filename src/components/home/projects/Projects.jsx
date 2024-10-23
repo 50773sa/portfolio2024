@@ -1,13 +1,17 @@
+import { useState } from "react"
 // components
 import AllProjectsButton from "./AllProjectsButton"
-import PlaceholderCard from "./PlaceholderCard"
+import LoadingImgSkeletons from "./children/LoadingImgSkeletons"
+import Project from "./Project"
 import SectionWrapper from "../SectionWrapper"
 import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
-import LoadingImgSkeletons from "./children/LoadingImgSkeletons"
+import ProjectModal from "./children/ProjectModal"
 
 const Projects = ({ projects, isLoading }) => {
+    const [open, setOpen] = useState(false)
+
     return (
         <SectionWrapper bgcolor='light'>
             <TitleWithDescription 
@@ -24,16 +28,26 @@ const Projects = ({ projects, isLoading }) => {
                     project.images.sort((a, b) => a.order - b.order)
 
                     return (
-                        <PlaceholderCard 
+                        <Project 
                             key={project.images[0].url} 
                             image={project.images[0].url} 
                             name={project.name}
+                            onClick={() => setOpen(true)}
                         />
 
                     )
                 })}
             </Grid>
-                <AllProjectsButton path='/projects' buttonText='View All Projects' />
+
+            {/**
+             *   Modal
+             */}
+
+            {open && (
+                <ProjectModal open={open} setOpen={setOpen}/>
+            )}
+
+            <AllProjectsButton path='/projects' buttonText='View All Projects' />
         </SectionWrapper>
     )
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTheme } from "@mui/material"
 import Button from '@mui/material/Button'
 
-const PrimaryButton = ({ path, buttonText }) => {
+const PrimaryButton = ({ path, buttonText, onClick }) => {
     const theme = useTheme()
     const buttonBgColor = theme.palette.color.orange.light
     const buttonTextColor = theme.palette.bgColor.dark
@@ -12,6 +12,7 @@ const PrimaryButton = ({ path, buttonText }) => {
         <Button 
             component={Link}
             to={path}
+            onClick={onClick}
             variant='contained' 
             sx={{ 
                 width: {xs: '100%', sm: '9.5rem'},
