@@ -1,6 +1,7 @@
+// components
+import ProjectModalContent from './ProjectModalContent'
 // mui
 import Dialog from "@mui/material/Dialog"
-import ProjectModalContent from './ProjectModalContent'
 
 const ProjectModal = ({ open, setOpen, project }) => {
     return (
@@ -11,7 +12,7 @@ const ProjectModal = ({ open, setOpen, project }) => {
             aria-labelledby="scroll-dialog-title"
             aria-describedby="scroll-dialog-description"
             fullWidth={true}
-            PaperProps={{ sx: { minHeight: '400px'} }}
+            PaperProps={{ sx: { maxWidth: '1200px' } }}
         >
             <ProjectModalContent open={open} project={project} />
         </Dialog>
