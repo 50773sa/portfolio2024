@@ -3,8 +3,9 @@ import { useState } from 'react'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import Stepper from './Stepper'
 
-const ProjectModalContent = ({ project }) => {
+const ProjectModalContent = ({  project }) => {
     const [imageIndex, setImageIndex] = useState(0)
 
     return (
@@ -16,7 +17,14 @@ const ProjectModalContent = ({ project }) => {
                         component="img"
                         image={project.images[imageIndex]?.url}
                         alt={`View Image ${imageIndex + 1}`}
+                        sx={{ margin: 0, height: {xs: '100%', md: '350px'} }}
                     /> 
+                   
+                    <Stepper
+                        project={project}
+                        imageIndex={imageIndex}
+                        setImageIndex={setImageIndex}
+                    />
                 </Grid>
             </Grid>
         </Card>
