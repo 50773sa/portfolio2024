@@ -20,6 +20,7 @@ function App() {
 
 				<Routes>
 					<Route path="/" element={<Homepage />} /> 
+					<Route path="/projects/:id" element={<Homepage />} /> 
 					<Route path="*" element={<PageNotFoundPage/>} />
 				</Routes>
 			</OuterWrapper>

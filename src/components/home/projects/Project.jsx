@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Typography from '@mui/material/Typography'
 
-const Project = ({ image, name, onClick }) => {
+const Project = ({ image, name, project, onClickProject }) => {
 
     const StyledCard = styled(Card)(() => ({
         aspectRatio: '4 / 3',
@@ -50,10 +50,14 @@ const Project = ({ image, name, onClick }) => {
                     <Typography component='h3' variant='h6' sx={{ pb: 2 }}>
                         {name}
                     </Typography>
-                    <PrimaryButton path='' onClick={onClick} buttonText='View More' />
+                    <PrimaryButton 
+                        path={`/projects/${project.id}`} 
+                        onClick={onClickProject} 
+                        buttonText='View More' 
+                    />
                 </OverlayDiv> 
 
-            </StyledCard>                   
+            </StyledCard>                  
         </Grid>
     )
 }
