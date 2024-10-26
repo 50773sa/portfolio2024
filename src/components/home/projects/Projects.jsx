@@ -11,6 +11,12 @@ import ProjectModal from "./children/ProjectModal"
 
 const Projects = ({ projects, isLoading }) => {
     const [open, setOpen] = useState(false)
+    const [project,  setProject] = useState({})
+
+    const onClickProject = (project) => {
+        setOpen(true)
+        setProject(project)
+    }
 
     return (
         <SectionWrapper bgcolor='light'>
@@ -24,15 +30,16 @@ const Projects = ({ projects, isLoading }) => {
                     <LoadingImgSkeletons />
                 )}
 
-                {projects.length !== 0 && projects.map((project) => {
+                {projects.length !== 0 && projects.map((project, i) => {
                     project.images.sort((a, b) => a.order - b.order)
 
                     return (
                         <Project 
-                            key={project.images[0].url} 
+                            key={i} 
                             image={project.images[0].url} 
                             name={project.name}
-                            onClick={() => setOpen(true)}
+                            project={project}
+                            onClickProject={() => onClickProject(project)}
                         />
 
                     )
@@ -44,7 +51,11 @@ const Projects = ({ projects, isLoading }) => {
              */}
 
             {open && (
-                <ProjectModal open={open} setOpen={setOpen}/>
+                <ProjectModal 
+                    open={open} 
+                    setOpen={setOpen} 
+                    project={project}
+                />
             )}
 
             <AllProjectsButton path='/projects' buttonText='View All Projects' />
