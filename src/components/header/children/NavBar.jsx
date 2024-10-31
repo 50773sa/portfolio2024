@@ -45,7 +45,7 @@ const NavBar = ({ theme }) => {
                 square
                 sx={{ 
                     height: 90, 
-                    px: {xs: 3, md: 10},
+                    px: 0.5, // This is only used to remove shadow on the x-axis
                     mb: 4,
                     bgcolor: theme.palette.bgColor.dark,
                     position: 'sticky',
@@ -58,6 +58,7 @@ const NavBar = ({ theme }) => {
                 sx={{ 
                     justifyContent: 'center', 
                     alignItems: 'center', 
+                    px: {xs: 2.5, md: 9.5}, // 0.5px less because of the px of the parent above, and not allowed to use calc().
                     height: 'inherit', 
                     boxShadow: '0 3px 10px 0' + theme.palette.bgColor.dark,
                 }}
