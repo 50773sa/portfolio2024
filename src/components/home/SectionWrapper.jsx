@@ -2,11 +2,12 @@
 import { useTheme } from '@mui/material'
 import Box from '@mui/material/Box'
 
-const SectionWrapper = ({ children, bgcolor, borderY }) => {
+const SectionWrapper = ({ sectionId, children, bgcolor, borderY }) => {
     const theme = useTheme()
     
     return (
         <Box
+            id={sectionId}
             component='section' 
             sx={{ 
                 display: 'flex',

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 // components
 import BurgerIcon from './navBarChildren/BurgerIcon'
 import BurgerMenuDrawer from './BurgerMenuDrawer'
@@ -9,14 +9,27 @@ import logo from '../../../assets/siteLogo.svg'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
 const links = [
-    {title: 'Home', path: '/'},
-    {title: 'Projects', path: '/projects'},
-    {title: 'Resume', path: '/resume'},
-    {title: 'Contact', path: '/contact'},
+    {title: 'Home', path: '/', sectionId: ''},
+    {title: 'About', path: '/about', sectionId: '#about'},
+    {title: 'Projects', path: '/projects', sectionId: '#projects'},
+    {title: 'Resume', path: '/resume', sectionId: '#resume'},
+    {title: 'Contact', path: '/contact',  sectionId: '#contact'},
 ]
 
 const NavBar = ({ theme }) => {
     const [isOpen, setIsOpen] = useState(false)
+
+    const handleScrollIntoViewNavLink = (sectionId) => {
+        const element = document.getElementById(sectionId)
+
+        if (element === null) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+        }
+
+        if (element !== null) {
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
 
     const toggleDrawer = (e) => {
         if (e && e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift') ) {
@@ -48,6 +61,7 @@ const NavBar = ({ theme }) => {
                     <NavLink 
                         key={link.title} 
                         to={link.path} 
+                        onClick={(e) => handleScrollIntoViewNavLink(e, link.sectionId) }
                         style={({ isActive }) => {
                             return {
                                 margin: '0 8px',
@@ -69,6 +83,7 @@ const NavBar = ({ theme }) => {
                     isOpen={isOpen}
                     toggleDrawer={toggleDrawer}
                     links={links}
+                    handleScrollIntoViewNavLink={handleScrollIntoViewNavLink}
                 />
             </Grid>
 

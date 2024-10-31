@@ -1,8 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 import { ReactQueryDevtools } from 'react-query/devtools'
 // components
+import AboutSection from './components/home/about/AboutSection'
+import ContactSection from './components/home/contact/Contact'
 import Header from './components/header/Header'
 import OuterWrapper from './components/wrappers/OuterWrapper'
+import ProjectsSection from './components/home/projects/Projects'
 // pages
 import Homepage from './pages/Homepage'
 import PageNotFoundPage from './pages/PageNotFoundPage'
@@ -19,8 +22,13 @@ function App() {
 				<Header />
 
 				<Routes>
-					<Route path="/" element={<Homepage />} /> 
-					<Route path="/projects/:id" element={<Homepage />} /> 
+					<Route path="/" element={<Homepage />}>
+						<Route path="/about" element={<AboutSection />} /> 
+						<Route path="/projects" element={<ProjectsSection />} /> 
+						<Route path="/contact" element={<ContactSection />} /> 
+					</Route> 
+
+					{/* <Route path="/projects/:id" element={<Homepage />} />  */}
 					<Route path="*" element={<PageNotFoundPage/>} />
 				</Routes>
 			</OuterWrapper>

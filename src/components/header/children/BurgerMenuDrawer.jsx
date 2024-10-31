@@ -7,7 +7,7 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 
-const BurgerMenuDrawer = ({ theme, isOpen, toggleDrawer, links }) => {
+const BurgerMenuDrawer = ({ theme, isOpen, toggleDrawer, links, handleScrollIntoViewNavLink }) => {
     return (
         <SwipeableDrawer
             anchor='right'
@@ -28,7 +28,8 @@ const BurgerMenuDrawer = ({ theme, isOpen, toggleDrawer, links }) => {
                  
                 <List>
                     {links.map((link) => (
-                        <NavLink key={link.title} to={link.path}>
+                        <NavLink 
+                            key={link.title} to={link.path} onClick={(e) => handleScrollIntoViewNavLink(e, link.sectionId)}>
                             <ListItem disablePadding sx={{ '&:hover': {bgcolor: theme.palette.color.orange.dark} }}>
                                 <ListItemButton sx={{ textAlign: 'center' }}>
                                     <ListItemText primary={link.title} />

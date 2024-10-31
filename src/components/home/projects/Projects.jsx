@@ -19,7 +19,7 @@ const Projects = ({ projects, isLoading }) => {
     }
 
     return (
-        <SectionWrapper bgcolor='light'>
+        <SectionWrapper bgcolor='light' sectionId='#projects'>
             <TitleWithDescription 
                 h2='Projects'
                 paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae '
