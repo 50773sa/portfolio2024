@@ -42,6 +42,7 @@ const NavBar = ({ theme }) => {
     return (
             <Paper
                 elevation={0}
+                square
                 sx={{ 
                     height: 90, 
                     px: {xs: 3, md: 10},
