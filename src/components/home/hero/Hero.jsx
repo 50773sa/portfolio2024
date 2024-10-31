@@ -7,84 +7,85 @@ import SocialMediaIcons from './children/SocialMediaIcons'
 import Box from '@mui/material/Box'
 
 const Hero = ({ theme, about }) => {
-const photoUrl = about.map(a => a.photo)
+    const photoUrl = about.map(a => a.photo)
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, position: 'relative' }}>
-            <Box 
-                sx={{ 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'center',
-                    height: '80dvh', 
-                    width: 'auto',
-                    px: {xs: 4, md: 20}, 
-                    // my: 10,
-                    zIndex: 10,
-                }}
-            >
-                {/**
-                    Text
-                */}
-                
-                <Box 
-                    className='heroText'
-                    sx={{ 
-                        display: 'flex', 
-                        flexDirection: 'column',
-                        cursor: 'default'
-                    }}
-                >
-                    <HeroText theme={theme} />
-                </Box>
-
-                {/**
-                    Buttons 
-                */}
-
+        <Box sx={{ position: 'sticky', top: 0, height: '80dvh', bgcolor: theme.palette.bgColor.dark, }}>
+            <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, height: 'inherit'}}>
                 <Box 
                     sx={{ 
                         display: 'flex', 
-                        flexDirection: {xs: 'column', sm: 'row'}, 
-                        pt: 10 
+                        flexDirection: 'column', 
+                        justifyContent: 'center',
+                        height: 'inherit', 
+                        width: 'auto',
+                        px: {xs: 4, md: 20}, 
                     }}
                 >
-                    <SecondaryButton 
-                        buttonText='Projects' 
-                        path='/projects'
-                        marginRight
-                    />
+                    {/**
+                        Text
+                    */}
+                    
+                    <Box 
+                        className='heroText'
+                        sx={{ 
+                            display: 'flex', 
+                            flexDirection: 'column',
+                            cursor: 'default'
+                        }}
+                    >
+                        <HeroText theme={theme} />
+                    </Box>
 
-                    <PrimaryButton  
-                        buttonText='Contact Me' 
-                        path='mailto:sara.lm.almqvis@gmail.com'
-                    />
+                    {/**
+                        Buttons 
+                    */}
+
+                    <Box 
+                        sx={{ 
+                            display: 'flex', 
+                            flexDirection: {xs: 'column', sm: 'row'}, 
+                            pt: 10,
+                            zIndex: 1000
+                        }}
+                    >
+                        <SecondaryButton 
+                            buttonText='Projects' 
+                            path='/projects'
+                            marginRight
+                        />
+
+                        <PrimaryButton  
+                            buttonText='Contact Me' 
+                            path='mailto:sara.lm.almqvis@gmail.com'
+                        />
+                    </Box>
                 </Box>
-            </Box>
 
-            {/**
-                Photo
-             */}
-            
-            <Box 
-                sx={{ 
-                    height: '100%',
-                    width: 'auto',
-                    right: 0,
-                    bottom: 0,
-                    pl: {xs: 4, md: 10}, 
-                    position: 'absolute',
-                    zIndex: 2,
-                }}
-            >
-                <img src={photoUrl} alt='Photo of Sara' height='100%' width='auto' />
-            </Box>
-
-            {/**
-                Social Media Icons
-             */}
+                {/**
+                    Photo
+                */}
                 
-            <SocialMediaIcons theme={theme} />
+                <Box 
+                    sx={{ 
+                        height: '100%',
+                        width: 'auto',
+                        right: 0,
+                        bottom: 0,
+                        pl: {xs: 4, md: 10}, 
+                        position: 'absolute',
+                        zIndex: -20,
+                    }}
+                >
+                    <img src={photoUrl} alt='Photo of Sara' height='100%' width='auto' />
+                </Box>
+
+                {/**
+                    Social Media Icons
+                */}
+                    
+                <SocialMediaIcons theme={theme} />
+            </Box>
         </Box>
     )
 }
