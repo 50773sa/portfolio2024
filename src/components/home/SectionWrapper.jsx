@@ -22,6 +22,7 @@ const SectionWrapper = ({ sectionId, children, bgcolor, borderY }) => {
                 px: { xs: 3, sm: 10 },
                 borderTop: borderY && '3px solid' + `${theme.palette.color.orange.dark}`,
                 borderBottom: borderY && '3px solid' + `${theme.palette.color.orange.dark}`,
+                scrollMarginTop: 90,
             }}
         >
             { children }
