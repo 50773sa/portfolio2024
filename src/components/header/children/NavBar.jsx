@@ -72,7 +72,7 @@ const NavBar = ({ theme }) => {
                         <NavLink 
                             key={link.title} 
                             to={link.path} 
-                            onClick={(e) => handleScrollIntoViewNavLink(e, link.sectionId) }
+                            onClick={() => handleScrollIntoViewNavLink(link.sectionId) }
                             style={({ isActive }) => {
                                 return {
                                     margin: '0 8px',
