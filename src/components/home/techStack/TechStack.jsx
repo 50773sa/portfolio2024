@@ -8,7 +8,7 @@ import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
 const TechStack = ({ techStack, isLoading }) => {
     return (
-        <SectionWrapper>
+        <SectionWrapper bgcolor='dark'>
             <TitleWithDescription 
                 h2='Current Tech Stack'
                 paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae '
