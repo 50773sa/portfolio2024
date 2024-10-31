@@ -9,6 +9,11 @@ import Box from '@mui/material/Box'
 const Hero = ({ theme, about }) => {
     const photoUrl = about.map(a => a.photo)
 
+     const handleScrollIntoViewBtn = () => {
+        const element = document.getElementById('#projects')
+        element.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return (
         <Box sx={{ position: 'sticky', top: 0, height: '80dvh', bgcolor: theme.palette.bgColor.dark, }}>
             <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, height: 'inherit'}}>
@@ -52,6 +57,7 @@ const Hero = ({ theme, about }) => {
                         <SecondaryButton 
                             buttonText='Projects' 
                             path='/projects'
+                            onClick={handleScrollIntoViewBtn}
                             marginRight
                         />
 

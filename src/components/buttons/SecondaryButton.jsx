@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTheme } from "@mui/material"
 import Button from '@mui/material/Button'
 
-const SecondaryButton = ({ path, buttonText, marginRight }) => {
+const SecondaryButton = ({ path, onClick, buttonText, marginRight }) => {
     const theme = useTheme()
     const buttonColor = theme.palette.color.orange.light
     const buttonColorHover = theme.palette.color.orange.extraLight
@@ -12,6 +12,7 @@ const SecondaryButton = ({ path, buttonText, marginRight }) => {
         <Button 
             component={Link}
             to={path}
+            onClick={onClick}
             variant='outlined' 
             sx={{ 
                 width: {xs: '100%', sm: '9.5rem'},
@@ -25,7 +26,7 @@ const SecondaryButton = ({ path, buttonText, marginRight }) => {
                     padding: 0.5,// prevent 'jumping'
                     color: buttonColorHover,
                     border: `3px solid ${buttonColorHover}`,
-                }
+                },
             }}  
         >
             { buttonText }
