@@ -46,11 +46,14 @@ const Homepage = () => {
             {isError && <p>An error occoured</p>}
 
             <Hero theme={theme} about={about} />
-            <AboutSection theme={theme}/>
-            <TechStack theme={theme} techStack={technologies} isLoading={isLoading} />
-            <Projects theme={theme} projects={projects} isLoading={isLoading} />
-            <Contact theme={theme} />
-            <Footer theme={theme}/>
+            
+            <div style={{ position: 'sticky', top: '80dvh', zIndex: 100 }}>
+                <AboutSection theme={theme}/>
+                <TechStack theme={theme} techStack={technologies} isLoading={isLoading} />
+                <Projects theme={theme} projects={projects} isLoading={isLoading} />
+                <Contact theme={theme} />
+                <Footer theme={theme}/>
+            </div>
         </>
     )
 }
