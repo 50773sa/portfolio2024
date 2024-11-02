@@ -6,6 +6,8 @@ import ContactSection from './components/home/contact/Contact'
 import Header from './components/header/Header'
 import OuterWrapper from './components/wrappers/OuterWrapper'
 import ProjectsSection from './components/home/projects/Projects'
+// hooks
+import useSectionObserver from './hooks/useSectionObserver'
 // pages
 import Homepage from './pages/Homepage'
 import PageNotFoundPage from './pages/PageNotFoundPage'
@@ -15,10 +17,12 @@ import { ThemeProvider } from '@mui/material'
 import { darkTheme } from './themes/darkTheme'
 
 function App() {
+	useSectionObserver()
 
 	return (
 		<ThemeProvider theme={darkTheme}>
 			<OuterWrapper>	
+			
 				<Header />
 
 				<Routes>

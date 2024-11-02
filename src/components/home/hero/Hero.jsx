@@ -6,6 +6,14 @@ import SocialMediaIcons from './children/SocialMediaIcons'
 // mui
 import Box from '@mui/material/Box'
 
+//! Explanation of the bug below.
+/*  This div resolved a bug that prevented the URL from updating while scrolling.
+
+    Issue: The sectionId "Home" wasn’t detected, causing the URL to stay on "about" when scrolling to the top.
+    Cause of the Bug: The "Hero" element's "sticky" position.
+    Solution: Add an empty div above the "Hero" element, without any position, to serve as a target that allows "Home" to register correctly. 
+*/
+
 const Hero = ({ theme, about }) => {
     const photoUrl = about.map(a => a.photo)
 
@@ -15,84 +23,95 @@ const Hero = ({ theme, about }) => {
     }
 
     return (
-        <Box sx={{ position: 'sticky', top: 0, height: '80dvh', bgcolor: theme.palette.bgColor.dark, }}>
-            <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, height: 'inherit'}}>
-                <Box 
-                    sx={{ 
-                        display: 'flex', 
-                        flexDirection: 'column', 
-                        justifyContent: 'center',
-                        height: 'inherit', 
-                        width: 'auto',
-                        px: {xs: 4, md: 20}, 
-                    }}
-                >
-                    {/**
-                        Text
-                    */}
-                    
-                    <Box 
-                        className='heroText'
-                        sx={{ 
-                            display: 'flex', 
-                            flexDirection: 'column',
-                            cursor: 'default'
-                        }}
-                    >
-                        <HeroText theme={theme} />
-                    </Box>
+        <>
+            <div id='home' datasectionid='home' /> {/* //! DO NOT REMOVE. It solved a bug. See above. **/ }
 
-                    {/**
-                        Buttons 
-                    */}
-
+            <Box  
+                sx={{ 
+                    position: 'sticky',
+                    top: 0, 
+                    height: '80dvh', 
+                    bgcolor: theme.palette.bgColor.dark, 
+                }}
+            >
+                <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, height: 'inherit' }}>
                     <Box 
                         sx={{ 
                             display: 'flex', 
-                            flexDirection: {xs: 'column', sm: 'row'}, 
-                            pt: 10,
-                            zIndex: 1000
+                            flexDirection: 'column', 
+                            justifyContent: 'center',
+                            height: 'inherit', 
+                            width: 'auto',
+                            px: {xs: 4, md: 20}, 
                         }}
                     >
-                        <SecondaryButton 
-                            buttonText='Projects' 
-                            path='/projects'
-                            onClick={handleScrollIntoViewBtn}
-                            marginRight
-                        />
+                        {/**
+                            Text
+                        */}
+                        
+                        <Box 
+                            className='heroText'
+                            sx={{ 
+                                display: 'flex', 
+                                flexDirection: 'column',
+                                cursor: 'default'
+                            }}
+                        >
+                            <HeroText theme={theme} />
+                        </Box>
 
-                        <PrimaryButton  
-                            buttonText='Contact Me' 
-                            path='mailto:sara.lm.almqvis@gmail.com'
-                        />
+                        {/**
+                            Buttons 
+                        */}
+
+                        <Box 
+                            sx={{ 
+                                display: 'flex', 
+                                flexDirection: {xs: 'column', sm: 'row'}, 
+                                pt: 10,
+                                zIndex: 1000
+                            }}
+                        >
+                            <SecondaryButton 
+                                buttonText='Projects' 
+                                path='/projects'
+                                onClick={handleScrollIntoViewBtn}
+                                marginRight
+                            />
+
+                            <PrimaryButton  
+                                buttonText='Contact Me' 
+                                path='mailto:sara.lm.almqvis@gmail.com'
+                            />
+                        </Box>
                     </Box>
-                </Box>
 
-                {/**
-                    Photo
-                */}
-                
-                <Box 
-                    sx={{ 
-                        height: '100%',
-                        width: 'auto',
-                        right: 0,
-                        bottom: 0,
-                        pl: {xs: 4, md: 10}, 
-                        position: 'absolute',
-                        zIndex: -20,
-                    }}
-                >
-                    <img src={photoUrl} alt='Photo of Sara' height='100%' width='auto' />
-                </Box>
-
-                {/**
-                    Social Media Icons
-                */}
+                    {/**
+                        Photo
+                    */}
                     
-                <SocialMediaIcons theme={theme} />
+                    <Box 
+                        sx={{ 
+                            height: '100%',
+                            width: 'auto',
+                            right: 0,
+                            bottom: 0,
+                            pl: {xs: 4, md: 10}, 
+                            position: 'absolute',
+                            zIndex: -20,
+                        }}
+                    >
+                        <img src={photoUrl} alt='Photo of Sara' height='100%' width='auto' />
+                    </Box>
+
+                    {/**
+                        Social Media Icons
+                    */}
+                        
+                    <SocialMediaIcons theme={theme} />
+                </Box>
             </Box>
-        </Box>
+        </>
     )
 }
 
