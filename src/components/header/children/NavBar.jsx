@@ -23,7 +23,7 @@ const NavBar = ({ theme }) => {
     const handleScrollIntoViewNavLink = (sectionId) => {
         const element = document.getElementById(sectionId)
 
-        if (element === null) {
+        if (element.id === 'home') {
             window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
         } else {
             element.scrollIntoView({ behavior: 'smooth' })
