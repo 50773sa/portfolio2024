@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 // components
-import BurgerIcon from './navBarChildren/BurgerIcon'
+import BurgerIcon from './BurgerIcon'
 import BurgerMenuDrawer from './BurgerMenuDrawer'
 // assets
 import logo from '../../../assets/siteLogo.svg'
@@ -10,11 +10,11 @@ import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Paper from '@mui/material/Paper'
 
 const links = [
-    {title: 'Home', path: '/', sectionId: ''},
-    {title: 'About', path: '/about', sectionId: '#about'},
-    {title: 'Projects', path: '/projects', sectionId: '#projects'},
-    {title: 'Resume', path: '/resume', sectionId: '#resume'},
-    {title: 'Contact', path: '/contact',  sectionId: '#contact'},
+    {title: 'Home', path: '/', sectionId: 'home'},
+    {title: 'About', path: '/about', sectionId: 'about'},
+    {title: 'Projects', path: '/projects', sectionId: 'projects'},
+    {title: 'Resume', path: '/resume', sectionId: 'resume'},
+    {title: 'Contact', path: '/contact',  sectionId: 'contact'},
 ]
 
 const NavBar = ({ theme }) => {

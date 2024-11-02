@@ -14,7 +14,7 @@ const Contact = () => {
     }
 
     return (
-        <SectionWrapper bgcolor='dark' borderY={true} sectionId='#contact'>
+        <SectionWrapper bgcolor='dark' borderY={true} sectionId='contact'>
             <TitleWithDescription 
                 h2='Contact'
                 paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae '

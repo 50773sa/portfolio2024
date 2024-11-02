@@ -5,7 +5,7 @@ import StyledDots from './StyledDots'
 
 const AboutSection = () => {
     return (
-        <SectionWrapper bgcolor='light' sectionId='#about'>
+        <SectionWrapper bgcolor='light' sectionId='about'>
             <TitleWithDescription
                  h2='About' 
                  paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,

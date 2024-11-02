@@ -7,6 +7,7 @@ const SectionWrapper = ({ sectionId, children, bgcolor, borderY }) => {
     
     return (
         <Box
+            datasectionid={sectionId}
             id={sectionId}
             component='section' 
             sx={{ 
