@@ -18,7 +18,7 @@ const Hero = ({ theme, about }) => {
     const photoUrl = about.map(a => a.photo)
 
      const handleScrollIntoViewBtn = () => {
-        const element = document.getElementById('#projects')
+        const element = document.getElementById('projects')
         element.scrollIntoView({ behavior: 'smooth' })
     }
 
