@@ -3,11 +3,11 @@ import { useState } from "react"
 import AllProjectsButton from "./AllProjectsButton"
 import LoadingImgSkeletons from "./children/LoadingImgSkeletons"
 import Project from "./Project"
+import ProjectModal from "./ProjectModal"
 import SectionWrapper from "../SectionWrapper"
 import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
-import ProjectModal from "./children/ProjectModal"
 
 const Projects = ({ projects, isLoading }) => {
     const [open, setOpen] = useState(false)

@@ -1,5 +1,5 @@
 // components
-import ProjectModalContent from './ProjectModalContent'
+import ProjectModalContent from './children/ProjectModalContent'
 // mui
 import Dialog from "@mui/material/Dialog"
 
