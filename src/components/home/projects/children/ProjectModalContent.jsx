@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Stepper from './Stepper'
 // components
 import CardActionBtns from './CardActionBtns'
+import Stepper from './Stepper'
 // mui
 import { useTheme } from '@mui/material'
 import Box from '@mui/material/Box'
@@ -24,7 +24,7 @@ const ProjectModalContent = ({  project }) => {
                 flexDirection: {xs: 'column', md: 'row'},
                 margin: 0, 
                 bgcolor: theme.palette.bgColor.light,
-                overflow: {xs: 'scroll', md: ''}
+                overflow: {xs: 'scroll', md: ''},
             }} 
         >
             {/**
