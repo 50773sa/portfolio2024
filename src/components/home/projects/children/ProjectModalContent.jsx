@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Stepper from './Stepper'
+// components
+import CardActionBtns from './CardActionBtns'
 // mui
 import { useTheme } from '@mui/material'
+import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
@@ -13,51 +16,107 @@ const ProjectModalContent = ({  project }) => {
     const [imageIndex, setImageIndex] = useState(0)
 
     return (
-        <Card key={project.name} id={project.id} sx={{ margin: 0, bgcolor: theme.palette.bgColor.light }} >
-            <Grid container>
-            
-                <Grid xs={12} sm={6} position='relative'>
-                    <CardMedia
-                        key={project.images[imageIndex]?.url}
-                        component="img"
-                        image={project.images[imageIndex]?.url}
-                        alt={`View Image ${imageIndex + 1}`}
-                        sx={{ margin: 0, minHeight: {xs: '100%', md: '400px'} }}
-                    /> 
-                   
-                    <Stepper
-                        project={project}
-                        imageIndex={imageIndex}
-                        setImageIndex={setImageIndex}
-                    />
-                </Grid>
+        <Card 
+            key={project.name} 
+            id={project.id} 
+            sx={{ 
+                display: 'flex', 
+                flexDirection: {xs: 'column', md: 'row'},
+                margin: 0, 
+                bgcolor: theme.palette.bgColor.light,
+                overflow: {xs: 'scroll', md: ''}
+            }} 
+        >
+            {/**
+             *  Images
+             */} 
 
-                <Grid xs={12} sm={6} p={2} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+            <Box sx={{ width: {xs: '100%', md: '50%'}, position: 'relative' }}>
+                <CardMedia
+                    key={project.images[imageIndex]?.url}
+                    component="img"
+                    image={project.images[imageIndex]?.url}
+                    alt={`View Image ${imageIndex + 1}`}
+                    sx={{ height: 'auto', width: '100%' }}
+                /> 
+                <Stepper
+                    project={project}
+                    imageIndex={imageIndex}
+                    setImageIndex={setImageIndex}
+                />
+            </Box>
+
+            {/**
+             * Title and description
+             */}
+
+            <Box 
+                sx={{ 
+                    width: {xs: '100%', md: '50%'}, 
+                    minheight: '200px',  
+                    overflowY: {xs: 'unset', md: 'scroll'}, 
+                    position: 'relative',
+                }}
+            >
+                <CardContent
+                    sx={{ 
+                        display: 'flex', 
+                        flexDirection: 'column', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        p: 4, 
+                        position: {xs: 'unset', md: 'absolute'}, 
+                        left: 0, 
+                        top: 0,
+                    }}
+                >                           
+                    <Typography gutterBottom variant="h4" component="h2">
+                        {project.name}
+                    </Typography>
+                    
+                    {project.teamProject && (
+                        <Typography variant='caption' fontStyle='italic' gutterBottom mt={-1.5} mb={2}>
+                            Team project during internship
+                        </Typography>
+                    )}
+            
+                    <Typography variant='body1' component="p" sx={{ textAlign: 'center', mb: 6 }}>
+                        {project.description.en}
+                    </Typography>
 
                     {/**
-                     * Title and description
+                     * Technologies
                      */}
 
+                    <Typography component='h3' variant='h6' sx={{ textAlign: 'center' }} gutterBottom>
+                        Technologies
+                    </Typography>
+
+                    <Typography variant='body1' sx={{ textAlign: 'center', mb: 6 }}> 
+                        {project.technologies.map((tech, i) => {
+                            return (
+                                <React.Fragment key={i}>
+                                    {tech.name}{i < project.technologies.length - 1 ? ', ' : ''}
+                                </React.Fragment>
+                            )
+                        })}
+                    </Typography>
+
+                    {/**
+                     * Action buttons
+                     */}                     
+
                     <Grid xs={12}>
-                        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent:'center'}}>
-                            <Typography gutterBottom variant="h4" component="h2">
-                                {project.name}
-                            </Typography>
-                            
-                            {project.teamProject && (
-                                <Typography variant='caption' fontStyle='italic' gutterBottom mt={-1.5} mb={2}>
-                                    Team project during internship
-                                </Typography>
-                            )}
-                    
-                            <Typography variant='body2' component="p" sx={{ textAlign: 'center', overflowY: 'auto' }}>
-                                {project.description.en}
-                            </Typography>
-                        </CardContent>
+                        <CardActionBtns
+                            project={project} 
+                            onClick={() => setOpen(true)}
+                            onPressEnter={(e) => e.key === 'Enter' && setOpen(true) }
+                            theme={theme}
+                            isCodeAvailable={project.link !== ''}
+                        />
                     </Grid>
-                    
-                </Grid>
-            </Grid>
+                </CardContent>
+            </Box>
         </Card>
     )
 }
