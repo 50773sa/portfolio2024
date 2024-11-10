@@ -5,6 +5,7 @@ import AboutSection from './components/home/about/AboutSection'
 import ContactSection from './components/home/contact/Contact'
 import Header from './components/header/Header'
 import OuterWrapper from './components/wrappers/OuterWrapper'
+import Project from './components/home/projects/Project'
 import ProjectsSection from './components/home/projects/Projects'
 // hooks
 import useSectionObserver from './hooks/useSectionObserver'
@@ -29,10 +30,10 @@ function App() {
 					<Route path="/" element={<Homepage />}>
 						<Route path="/about" element={<AboutSection />} /> 
 						<Route path="/projects" element={<ProjectsSection />} /> 
+						<Route path="/projects/:id" element={<Project />} /> 
 						<Route path="/contact" element={<ContactSection />} /> 
 					</Route> 
 
-					{/* <Route path="/projects/:id" element={<Homepage />} />  */}
 					<Route path="*" element={<PageNotFoundPage/>} />
 				</Routes>
 			</OuterWrapper>

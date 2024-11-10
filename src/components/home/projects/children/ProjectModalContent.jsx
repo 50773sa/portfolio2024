@@ -109,9 +109,6 @@ const ProjectModalContent = ({  project }) => {
                     <Grid xs={12}>
                         <CardActionBtns
                             project={project} 
-                            onClick={() => setOpen(true)}
-                            onPressEnter={(e) => e.key === 'Enter' && setOpen(true) }
-                            theme={theme}
                             isCodeAvailable={project.link !== ''}
                         />
                     </Grid>
