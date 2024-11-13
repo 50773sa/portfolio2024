@@ -1,31 +1,41 @@
-import { Link } from 'react-router-dom'
 // mui
 import { useTheme } from "@mui/material"
 import Button from '@mui/material/Button'
+import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded'
+import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded'
 
-const AllProjectsButton = ({ path, buttonText }) => {
+
+const AllProjectsButton = ({ buttonText, expanded, onClick }) => {
     const theme = useTheme()
     const buttonColor = theme.palette.color.orange.light
     const buttonColorHover = theme.palette.color.orange.extraLight
 
     return (
         <Button 
-            component={Link}
-            to={path}
+            onClick={onClick}
             variant='outlined' 
             sx={{ 
-                width: '12rem',
+                minWidth: '10rem',
                 color: buttonColor, 
                 bgcolor: 'transparent',
                 border: `2px solid ${buttonColor}`,
+                whiteSpace: 'pre', // no break whitespace
+                '& svg': { color: buttonColor }, // icons
                 '&:hover': { 
-                    padding: 0.5, // prevent 'jumping'
+                    paddingY: 0.5, // prevent 'jumping'
                     color: buttonColorHover,
                     border: `3px solid ${buttonColorHover}`,
+                    '& svg': {
+                        color: buttonColorHover, 
+                    },
                 },
             }}  
         >
-            { buttonText }
+            { buttonText } 
+            { !expanded 
+                ? <ExpandMoreRoundedIcon  /> 
+                : <ExpandLessRoundedIcon />
+            }
         </Button>
     )
 }
