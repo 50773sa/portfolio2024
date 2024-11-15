@@ -43,7 +43,7 @@ const Projects = ({ projects, isLoading }) => {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Grid container spacing={4} justifyContent='center' mb={4}>
+                    <Grid container spacing={4} justifyContent='center'>
                         {isLoading && <LoadingImgSkeletons />}
                         
                         {projects.length !== 0 && projects.map((project, i) => {
