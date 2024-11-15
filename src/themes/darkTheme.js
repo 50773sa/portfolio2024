@@ -23,7 +23,17 @@ export const darkTheme = createTheme({
     typography: {
         allVariants: {
             color: grey[200],
-        },        
+        },
+        h1: {cursor: 'default'},
+        h2: {cursor: 'default'},
+        h3: {cursor: 'default'},
+        h4: {cursor: 'default'},
+        h5: {cursor: 'default'},
+        h6: {cursor: 'default'},
+        body1: {cursor: 'default'},
+        body2: {cursor: 'default'},
+        subtitle1: {cursor: 'default'},
+        subtitle2: {cursor: 'default'},
     },
     components: {
         MuiSvgIcon: {
@@ -32,6 +42,6 @@ export const darkTheme = createTheme({
                     color: grey[200],
                 },
             },
-        },
+        }
     }, 
 })
