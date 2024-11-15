@@ -100,7 +100,7 @@ const ContactDetails = () => {
                         aria-label="Visit Sara Almqvist's LinkedIn profile, opens in a new tab"
                         href='https://www.linkedin.com/in/sara-almqvist-93862774/'
                     >
-                        <LinkedInIcon sx={{ mr: 1, fontSize: '30px' }} />
+                        <LinkedInIcon sx={{ fontSize: '30px' }} />
                     </StyledLink>
                 </StyledDivider>
             </Grid>
