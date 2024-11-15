@@ -23,6 +23,7 @@ const CardActionBtns = ({ project, isCodeAvailable }) => {
                         justifyContent: 'center', 
                         width: '100%', 
                         marginBottom: 1.5,
+                        cursor: 'pointer'
                     }}
                     underline='none'
                     onMouseOver={() => setIsHovered(true)}
@@ -46,9 +47,7 @@ const CardActionBtns = ({ project, isCodeAvailable }) => {
                         View the code
                 </Typography>
             )}
-
-        </CardActions>
-            
+        </CardActions>    
     )
 }
 
