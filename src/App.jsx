@@ -7,6 +7,7 @@ import Header from './components/header/Header'
 import OuterWrapper from './components/wrappers/OuterWrapper'
 import Project from './components/home/projects/Project'
 import ProjectsSection from './components/home/projects/Projects'
+import ExperiencesSection from './components/home/experiences/Experiences'
 // hooks
 import useSectionObserver from './hooks/useSectionObserver'
 // pages
@@ -31,6 +32,7 @@ function App() {
 						<Route path="/about" element={<AboutSection />} /> 
 						<Route path="/projects" element={<ProjectsSection />} /> 
 						<Route path="/projects/:id" element={<Project />} /> 
+						<Route path="/experiences" element={<ExperiencesSection />} /> 
 						<Route path="/contact" element={<ContactSection />} /> 
 					</Route> 
 
