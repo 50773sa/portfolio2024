@@ -11,7 +11,7 @@ const TechStack = ({ techStack, isLoading }) => {
         <SectionWrapper bgcolor='dark'>
             <TitleWithDescription 
                 h2='Current Tech Stack'
-                paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae '
+                paragraph='In my projects, I have used the following languages ​and technologies among others.'
             />
             <Grid container spacing={4} justifyContent='center'>
 
