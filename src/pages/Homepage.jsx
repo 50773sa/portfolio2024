@@ -5,10 +5,10 @@ import useGetCollectionStore from '../store/useGetCollectionStore'
 // components
 import AboutSection from "../components/home/about/AboutSection"
 import Contact from "../components/home/contact/Contact"
-import Experiences from '../components/home/experiences/Experiences'
 import Footer from "../components/Footer"
 import Hero from "../components/home/hero/Hero"
 import Projects from "../components/home/projects/Projects"
+import Resume from '../components/home/resume/Resume'
 import TechStack from "../components/home/techStack/TechStack"
 // mui
 import { useTheme } from '@mui/material'
@@ -57,7 +57,7 @@ const Homepage = () => {
                 <AboutSection theme={theme}/>
                 <TechStack theme={theme} techStack={technologies} isLoading={isLoading} />
                 <Projects theme={theme} projects={projects} isLoading={isLoading} />
-                <Experiences theme={theme} projects={projects} isLoading={isLoading} />
+                <Resume theme={theme} resume={resume} isLoading={isLoading} />
                 <Contact theme={theme} />
                 <Footer theme={theme}/>
             </div>
