@@ -1,6 +1,5 @@
 // components
-// import SectionWrapper from '../SectionWrapper'
-// import TitleWithDescription from '../TitleWithDescription'
+import H2 from "./H2"
 // mui
 import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
@@ -12,22 +11,20 @@ const months = ["Jan", "Feb", "Mars", "April", "May", "June", "July", "Aug", "Se
 const Experiences = ({ theme, resume }) => {
 
 const styledResumeIcon = {
-    backgroundColor: theme.palette.bgColor.orange,
-    boxShadow: '0px 0px 10px 2px' + theme.palette.color.orange.dark,
-
     display: 'flex',
     justifyContent: 'center',
     borderRadius: '50%',
     padding: 10,
+    marginTop: 8,
+    backgroundColor: theme.palette.bgColor.orange,
+    boxShadow: '0px 0px 10px 2px' + theme.palette.color.orange.dark,
 }
            
     return (
-        <Grid xs={12} md={6}>
-            <Typography component='h2' variant='h5' sx={{ fontWeight: 400, pb: 2 }}>
-                Experiences
-            </Typography>
-
-            {/* <Grid alignItems="center" spacing={1}> */}
+        <>
+            <H2 title='Experiences' />
+            
+            <Grid container alignItems="center" spacing={1}>
                 {resume.map((data) => data.experiences
                     .sort((a, b) => a.order - b.order)
                     .map((exp, i) => {
@@ -45,7 +42,8 @@ const styledResumeIcon = {
                                         flexDirection: "column", 
                                         alignItems: "center", 
                                         marginRight: "16px", 
-                                        paddingBottom: "50px"
+                                        marginBottom: '16px',
+                                        paddingBottom: "50px",
                                     }}
                                 >
                                     <div style={styledResumeIcon}>
@@ -56,24 +54,24 @@ const styledResumeIcon = {
 
                                 <div>
                                     {/**
-                                        *  Company
-                                        */}
+                                     *  Company
+                                     */}
 
                                     <Typography sx={{ fontWeight: 600 }}>
                                         {exp.company}
                                     </Typography>
 
                                     {/**
-                                        *  Role
-                                        */}
+                                     *  Role
+                                     */}
 
                                     <Typography sx={{ fontSize: 14, fontStyle: "italic" }}>
-                                        {exp.title } Intern
+                                        {exp.title}
                                     </Typography>
 
                                     {/**
-                                        *  City
-                                        */}
+                                     *  City
+                                     */}
 
                                     <Typography mb={2} sx={{ fontSize: 14 }}>
                                         {exp.city + " "}[{startMonth}
@@ -81,8 +79,8 @@ const styledResumeIcon = {
                                     </Typography>
 
                                     {/**
-                                        *  Case
-                                        */}
+                                     *  Case
+                                     */}
 
                                     <Typography sx={{ fontWeight: 500 }}>
                                         Case
@@ -93,8 +91,8 @@ const styledResumeIcon = {
                                     </Typography>
 
                                     {/**
-                                        *  Technologies
-                                        */}
+                                     *  Technologies
+                                     */}
 
                                     <Typography sx={{ fontWeight: 500 }}>
                                         Technologies
@@ -108,7 +106,8 @@ const styledResumeIcon = {
                         )
                     })
                 )}
-        </Grid>
+            </Grid>
+        </>
     )
 }
 
