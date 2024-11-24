@@ -33,13 +33,8 @@ const ContactDetails = () => {
     }))
 
     const StyledDivider = styled(Divider)(() => ({
-        display: 'flex',
-        flexDirection: 'row',
-        width: '200px',
-        '&:before, &:after': {
-            borderColor: theme.palette.color.orange.dark,
-        },
-        'span': { display: 'flex' }
+        width: '4rem',
+        height: '0.2rem',
     }))
 
     return (
@@ -90,8 +85,8 @@ const ContactDetails = () => {
                 LinkedIn
              */}
 
-            <Grid xs={12} sx={{ display: 'flex', justifyContent: 'center'}}>
-                <StyledDivider>
+            <Grid xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <StyledDivider />
                     <StyledLink 
                         component='a'
                         target="_blank"
@@ -100,9 +95,10 @@ const ContactDetails = () => {
                         aria-label="Visit Sara Almqvist's LinkedIn profile, opens in a new tab"
                         href='https://www.linkedin.com/in/sara-almqvist-93862774/'
                     >
-                        <LinkedInIcon sx={{ fontSize: '30px' }} />
+                        <LinkedInIcon sx={{ fontSize: '30px', mx: 1 }} />
                     </StyledLink>
-                </StyledDivider>
+                <StyledDivider />
+
             </Grid>
         </>
     )
