@@ -14,7 +14,6 @@ const SocialMediaIcons = ({ theme }) => {
                 bgcolor: theme.palette.color.orange.light,
                 height: {xs: '0.2rem', sm: '4rem'},
                 width: {xs: '4rem', sm: '0.2rem'},
-                borderRadius: '20px',
             }}
         />
     )
