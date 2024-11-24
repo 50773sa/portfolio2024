@@ -10,15 +10,15 @@ const months = ["Jan", "Feb", "Mars", "April", "May", "June", "July", "Aug", "Se
 
 const Experiences = ({ theme, resume }) => {
 
-const styledResumeIcon = {
-    display: 'flex',
-    justifyContent: 'center',
-    borderRadius: '50%',
-    padding: 10,
-    marginTop: 8,
-    backgroundColor: theme.palette.bgColor.orange,
-    boxShadow: '0px 0px 10px 2px' + theme.palette.color.orange.dark,
-}
+    const styledResumeIcon = {
+        display: 'flex',
+        justifyContent: 'center',
+        borderRadius: '50%',
+        padding: 10,
+        marginTop: 8,
+        backgroundColor: theme.palette.bgColor.orange,
+        boxShadow: '0px 0px 10px 2px' + theme.palette.color.orange.dark,
+    }
            
     return (
         <>
