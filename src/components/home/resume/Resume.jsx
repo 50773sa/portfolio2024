@@ -1,4 +1,5 @@
 // components
+import Education from "./children/Education"
 import Experiences from "./children/Experiences"
 import SectionWrapper from "../SectionWrapper"
 import TitleWithDescription from "../TitleWithDescription"
@@ -21,6 +22,9 @@ const Resume = ({ theme, resume, isLoading }) => {
                     <>
                         <Grid xs={12} md={6}>
                             <Experiences theme={theme} resume={resume} />
+                        </Grid>
+                        <Grid xs={12} md={6}>
+                            <Education theme={theme} resume={resume} />
                         </Grid>
                     </>
                 )}
