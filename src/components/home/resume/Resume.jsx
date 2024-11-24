@@ -1,6 +1,7 @@
 // components
 import Education from "./children/Education"
 import Experiences from "./children/Experiences"
+import Languages from "./children/Languages"
 import SectionWrapper from "../SectionWrapper"
 import TitleWithDescription from "../TitleWithDescription"
 // mui
@@ -25,6 +26,7 @@ const Resume = ({ theme, resume, isLoading }) => {
                         </Grid>
                         <Grid xs={12} md={6}>
                             <Education theme={theme} resume={resume} />
+                            <Languages theme={theme} resume={resume} />
                         </Grid>
                     </>
                 )}
