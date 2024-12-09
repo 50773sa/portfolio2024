@@ -44,6 +44,7 @@ const Experiences = ({ theme, resume }) => {
                                         marginRight: "16px", 
                                         marginBottom: '16px',
                                         paddingBottom: "50px",
+                                        paddingRight: "8px",
                                     }}
                                 >
                                     <div style={styledResumeIcon}>
