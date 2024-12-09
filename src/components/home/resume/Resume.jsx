@@ -13,12 +13,10 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2"
 
 const Resume = ({ theme, resume, isLoading }) => {
     return (
-
         <SectionWrapper bgcolor='dark' sectionId='resume'>
             
             <TitleWithDescription 
                 h2='Resume'
-                paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae '
             />
 
             <Grid container justifyContent='center' spacing={10}>
