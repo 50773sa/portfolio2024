@@ -1,4 +1,5 @@
 // components
+import BackgroundImage from "./children/BackgroundImage"
 import Education from "./children/Education"
 import Experiences from "./children/Experiences"
 import Interests from "./children/Interests"
@@ -9,7 +10,6 @@ import SoftwareSkills from "./children/SoftwareSkills"
 import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
-import BackgroundImage from "./children/BackgroundImage"
 
 
 const Resume = ({ theme, resume, isLoading }) => {
