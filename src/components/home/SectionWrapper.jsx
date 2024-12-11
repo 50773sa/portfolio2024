@@ -2,7 +2,7 @@
 import { useTheme } from '@mui/material'
 import Box from '@mui/material/Box'
 
-const SectionWrapper = ({ sectionId, children, bgcolor, borderY }) => {
+const SectionWrapper = ({ sectionId, children, bgcolor, borderY, isStylingRelative }) => {
     const theme = useTheme()
     
     return (
@@ -24,7 +24,7 @@ const SectionWrapper = ({ sectionId, children, bgcolor, borderY }) => {
                 borderTop: borderY && '3px solid' + `${theme.palette.color.orange.dark}`,
                 borderBottom: borderY && '3px solid' + `${theme.palette.color.orange.dark}`,
                 scrollMarginTop: 90,
-                position: 'relative',
+                position: isStylingRelative !== undefined ? 'initial' : 'relative',
             }}
         >
             { children }

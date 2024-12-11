@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography"
 
 const PageNotFound = ({ theme }) => {
     return (
-        <SectionWrapper>
+        <SectionWrapper isStylingRelative={false}>
             <Typography   
                 component='span'
                 sx={{
