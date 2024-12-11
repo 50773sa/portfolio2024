@@ -9,17 +9,18 @@ import SoftwareSkills from "./children/SoftwareSkills"
 import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import BackgroundImage from "./children/BackgroundImage"
 
 
 const Resume = ({ theme, resume, isLoading }) => {
     return (
         <SectionWrapper bgcolor='dark' sectionId='resume'>
+          
+            <BackgroundImage />
             
-            <TitleWithDescription 
-                h2='Resume'
-            />
+            <TitleWithDescription h2='Resume' description= '' />
 
-            <Grid container justifyContent='center' spacing={10}>
+            <Grid container justifyContent='center' spacing={10} sx={{ zIndex: 10 }}>
                 {!isLoading && resume && (
                     <>
                         <Grid xs={12} md={5}>

@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography'
 const TitleWithDescription = ({ h2, paragraph }) => {
     return (
         <>
-            <Typography component='h2' variant='h4' sx={{ textAlign: 'center', mb: 2, cursor: 'default' }}>
+            <Typography component='h2' variant='h4' sx={{ textAlign: 'center', mb: 2, cursor: 'default', zIndex: 10 }}>
                 { h2 }
             </Typography>
 
