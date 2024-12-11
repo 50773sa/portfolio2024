@@ -51,7 +51,7 @@ const Homepage = () => {
         <>
             {isError && <p>An error occoured</p>}
 
-            <Hero theme={theme} about={about} />
+            <Hero theme={theme} />
             
             <div style={{ position: 'sticky', top: '80dvh', zIndex: 100 }}>
                 <AboutSection theme={theme}/>

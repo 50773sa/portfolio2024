@@ -1,3 +1,5 @@
+// assets
+import heroPhoto from '../../../assets/heroPhoto.png'
 // components
 import HeroText from './children/HeroText'
 import PrimaryButton from '../../../components/buttons/PrimaryButton'
@@ -14,8 +16,7 @@ import Box from '@mui/material/Box'
     Solution: Add an empty div above the "Hero" element, without any position, to serve as a target that allows "Home" to register correctly. 
 */
 
-const Hero = ({ theme, about }) => {
-    const photoUrl = about.map(a => a.photo)
+const Hero = ({ theme }) => {
 
      const handleScrollIntoViewBtn = () => {
         const element = document.getElementById('projects')
@@ -103,7 +104,7 @@ const Hero = ({ theme, about }) => {
                             zIndex: -20,
                         }}
                     >
-                        <img src={photoUrl} alt='Photo of Sara' height='100%' width='auto' />
+                        <img src={heroPhoto} alt='Photo of Sara' height='100%' width='auto' />
                     </Box>
 
                     {/**
