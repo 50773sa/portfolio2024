@@ -31,16 +31,18 @@ const Hero = ({ theme, about }) => {
                     position: 'sticky',
                     top: 0, 
                     height: '80dvh', 
+                    maxHeight: '800px',
                     bgcolor: theme.palette.bgColor.dark, 
                 }}
             >
-                <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, height: 'inherit' }}>
+                <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, height: 'inherit', maxHeight: 'inherit' }}>
                     <Box 
                         sx={{ 
                             display: 'flex', 
                             flexDirection: 'column', 
                             justifyContent: 'center',
                             height: 'inherit', 
+                            maxHeight: 'inherit',
                             width: 'auto',
                             px: {xs: 4, md: 20}, 
                         }}
