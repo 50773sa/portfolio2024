@@ -51,7 +51,7 @@ const SocialMediaIcons = ({ theme }) => {
                     <LinkedInIcon sx={{ m: 1, fontSize: '30px' }} />
                 </a>
                 <a 
-                    href='https://github.com/50773sa'
+                    href='https://github.com/07734sa'
                     aria-label="Visit Sara Almqvist's GitHub profile, opens in a new tab"
                     target='_blank' 
                     rel='noopener noreferrer'
