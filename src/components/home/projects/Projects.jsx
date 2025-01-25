@@ -31,7 +31,7 @@ const Projects = ({ projects, isLoading }) => {
             
             <TitleWithDescription 
                 h2='Projects'
-                paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae '
+                paragraph="Here, you'll find a selection of work that showcases the skills and knowledge I've developed along the way."
             />
 
             <Accordion 
