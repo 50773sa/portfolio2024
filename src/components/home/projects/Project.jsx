@@ -48,9 +48,6 @@ const Project = ({ image, name, project, onClickProject }) => {
                 </CardContent>
                 
                 <OverlayDiv>
-                    <Typography component='h3' variant='h6' sx={{ pb: 2 }}>
-                        {name}
-                    </Typography>
                     <PrimaryButton 
                         path={`/projects/${project.id}`} 
                         onClick={onClickProject} 
