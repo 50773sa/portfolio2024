@@ -37,7 +37,7 @@ const ProjectModalContent = ({  project }) => {
                     component="img"
                     image={project.images[imageIndex]?.url}
                     alt={`View Image ${imageIndex + 1}`}
-                    sx={{ height: 'auto', width: '100%' }}
+                    sx={{ height: 'auto', width: '100%', p: 3}}
                 /> 
                 <Stepper
                     project={project}
@@ -65,6 +65,7 @@ const ProjectModalContent = ({  project }) => {
                         alignItems: 'center', 
                         justifyContent: 'center', 
                         p: 4, 
+                        mt: 2,
                         position: {xs: 'unset', md: 'absolute'}, 
                         left: 0, 
                         top: 0,
