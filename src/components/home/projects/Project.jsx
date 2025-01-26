@@ -35,7 +35,41 @@ const Project = ({ image, name, project, onClickProject }) => {
     return (
         <Grid xs={12} sm={6} md={4}>
             <StyledCard>
-                <CardContent sx={{ p: 0, '&:last-child': { paddingBottom: 0 }, height: '100%' }}>   
+
+                <Typography 
+                    component='h3' 
+                    variant='h6' 
+                    sx={{ 
+                        textAlign: 'center',
+                        pb: 2, 
+                        '&::before': { 
+                            content: '""', 
+                            backgroundImage: `url(${logo})`, 
+                            display: 'inline-block', 
+                            height: 34,
+                            width: 34,
+                            backgroundSize: 'contain',  
+                            backgroundRepeat: 'no-repeat', 
+                            textAlign: 'center', 
+                            verticalAlign: 'middle',  
+                            marginRight: '8px' 
+                        } 
+                    }}
+                >
+                    {name}
+                </Typography>
+
+                <CardContent 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center', 
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                        width: '90%',
+                        p: 0, 
+                        '&:last-child': { paddingBottom: 0 }, 
+                    }}
+                >
                     <img    
                         src={image} 
                         alt={name}
