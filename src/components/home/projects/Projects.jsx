@@ -52,7 +52,7 @@ const Projects = ({ theme, projects, isLoading }) => {
                             .map((project, i) => {
                                 project.images.sort((a, b) => a.order - b.order)
                                 
-                                if (!expanded && i >= 3) {
+                                if (!expanded && i >= 6) {
                                     return null// Only show the first 3 projects if not expanded
                                 }
 
