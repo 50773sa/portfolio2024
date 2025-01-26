@@ -13,7 +13,8 @@ const Project = ({ image, name, project, onClickProject }) => {
         aspectRatio: '4 / 3',
         padding: 0,
         cursor: 'default',
-        background: '#636363',
+        borderRadius: '10px',
+        background: theme.palette.bgColor.dark,
         '&:hover div': {
             display: 'flex',
         },
