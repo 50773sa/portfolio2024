@@ -46,12 +46,14 @@ const Projects = ({ projects, isLoading }) => {
                     <Grid container spacing={4} justifyContent='center'>
                         {isLoading && <LoadingImgSkeletons />}
                         
-                        {projects.length !== 0 && projects.map((project, i) => {
-                            project.images.sort((a, b) => a.order - b.order)
-                            
-                            if (!expanded && i >= 3) {
-                                return null// Only show the first 3 projects if not expanded
-                            }
+                        {projects.length !== 0 && projects
+                            .sort((a, b) => a.order - b.order)
+                            .map((project, i) => {
+                                project.images.sort((a, b) => a.order - b.order)
+                                
+                                if (!expanded && i >= 3) {
+                                    return null// Only show the first 3 projects if not expanded
+                                }
 
                             return ( 
                                 <Project 
