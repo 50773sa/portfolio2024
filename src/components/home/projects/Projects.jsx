@@ -42,6 +42,7 @@ const Projects = ({ projects, isLoading }) => {
                 <AccordionSummary
                     aria-controls="panel2-content"
                     id="panel2-header"
+                    sx={{ p: 0 }}    
                 >
                     <Grid container spacing={4} justifyContent='center'>
                         {isLoading && <LoadingImgSkeletons />}
