@@ -12,7 +12,7 @@ import AccordionSummary from '@mui/material/AccordionSummary'
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
 
 
-const Projects = ({ projects, isLoading }) => {
+const Projects = ({ theme, projects, isLoading }) => {
     const [open, setOpen] = useState(false)
     const [project,  setProject] = useState({})
     const [expanded, setExpanded] = useState(false)
@@ -56,15 +56,17 @@ const Projects = ({ projects, isLoading }) => {
                                     return null// Only show the first 3 projects if not expanded
                                 }
 
-                            return ( 
-                                <Project 
-                                    key={i} 
-                                    image={project.images[0].url} 
-                                    name={project.name}
-                                    project={project}
-                                    onClickProject={() => onClickProject(project)}
-                                />     
-                            )
+                                return ( 
+                                    <Project 
+                                        key={i} 
+                                        image={project.images[0].url} 
+                                        name={project.name}
+                                        logo={project.logo}
+                                        project={project}
+                                        onClickProject={() => onClickProject(project)}
+                                        theme={theme}
+                                    />     
+                                )
                         })}
 
                         <Grid xs={12} textAlign='center'>

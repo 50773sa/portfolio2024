@@ -20,7 +20,7 @@ const ProjectModal = ({ open, setOpen, project }) => {
             aria-labelledby="scroll-dialog-title"
             aria-describedby="scroll-dialog-description"
             fullWidth={true}
-            PaperProps={{ sx: { maxWidth: '1200px', position: 'relative' } }}
+            PaperProps={{ sx: { maxWidth: '1100px', position: 'relative' } }}
         >
             <CloseRoundedIcon 
                 role='button'

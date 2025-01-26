@@ -7,11 +7,15 @@ import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Typography from '@mui/material/Typography'
 
-const Project = ({ image, name, project, onClickProject }) => {
+const Project = ({ image, name, logo, project, onClickProject, theme }) => {
 
     const StyledCard = styled(Card)(() => ({
-        aspectRatio: '4 / 3',
-        padding: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 2,
+        aspectRatio: '4/4',
         cursor: 'default',
         borderRadius: '10px',
         background: theme.palette.bgColor.dark,
@@ -28,8 +32,8 @@ const Project = ({ image, name, project, onClickProject }) => {
         alignItems: 'center',
         padding: 24,
         backgroundColor: '#00000099',
-        inset: 0,
         position: 'absolute',
+        inset: 0,
     }))
 
     return (

@@ -31,7 +31,17 @@ const ProjectModalContent = ({  project }) => {
              *  Images
              */} 
 
-            <Box sx={{ width: {xs: '100%', md: '50%'}, position: 'relative' }}>
+            <Box 
+                sx={{ 
+                    display: 'flex',
+                    justifyContent: 'center', 
+                    alignItems: 'center',
+                    width: {xs: '100%', md: '50%'}, 
+                    aspectRatio: 4 / 3,
+                    bgcolor: theme.palette.bgColor.extraDark,
+                    position: 'relative', 
+                }}
+            >
                 <CardMedia
                     key={project.images[imageIndex]?.url}
                     component="img"
