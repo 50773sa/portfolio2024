@@ -15,37 +15,17 @@ import { useTheme } from '@mui/material'
 
 const Homepage = () => {
     const theme = useTheme()
-    const [about, setAbout] = useState([])
-    const [projects, setProjects] = useState([])
-    const [technologies, setTechnologies] = useState([])
-    const [resume, setResume] = useState([])
     // Get data
     const { getData } = useGetCollectionStore()
     const fetchAbout = () => getData('about')
-    const fetchProjects = () => projects.length == 0 && getData('projects')
+    const fetchProjects = () => getData('projects')
     const fetchTechnologies = () => getData('techStack')
     const fetchResume = () => getData('resume')
     // Query data
-    const { data: allAbout, isLoading, isError} = useQuery('about', fetchAbout)
-    const { data: allProjects } = useQuery('projects', fetchProjects)
-    const { data: allTechnologies } = useQuery('techStack', fetchTechnologies)
-    const { data: allResumes } = useQuery('resume', fetchResume)
-
-    useEffect(() => { 
-        if(allAbout) {
-            setAbout(allAbout)
-        }
-        if(allProjects) {
-            setProjects(allProjects)
-        }
-        if(allTechnologies) {
-            setTechnologies(allTechnologies)
-        }
-        if(allResumes) {
-            setResume(allResumes)
-        }
-        return
-    }, [projects, allProjects, technologies, allTechnologies, about, resume, allResumes])
+    const { data: about, isLoading: isLoadingAbout, isError} = useQuery('about', fetchAbout)
+    const { data: projects, isLoading: isLoadingProjects } = useQuery('projects', fetchProjects)
+    const { data: technologies, isLoading: isLoadingTechnologies } = useQuery('techStack', fetchTechnologies)
+    const { data: resume, isLoading: isLoadingResume } = useQuery('resume', fetchResume)
     
     return (  
         <>
@@ -54,10 +34,10 @@ const Homepage = () => {
             <Hero theme={theme} />
             
             <div style={{ position: 'sticky', top: '80dvh', zIndex: 100 }}>
-                {!isLoading && <AboutSection theme={theme} about={allAbout} />}
-                <TechStack theme={theme} techStack={technologies} isLoading={isLoading} />
-                <Projects theme={theme} projects={projects} isLoading={isLoading} />
-                <Resume theme={theme} resume={resume} isLoading={isLoading} />
+                {<AboutSection theme={theme} about={about} isLoading={isLoadingAbout} />}
+                <TechStack theme={theme} techStack={technologies} isLoading={isLoadingTechnologies} />
+                <Projects theme={theme} projects={projects} isLoading={isLoadingProjects} />
+                <Resume theme={theme} resume={resume} isLoading={isLoadingResume} />
                 <Contact theme={theme} />
                 <Footer theme={theme}/>
             </div>

@@ -47,7 +47,7 @@ const Projects = ({ theme, projects, isLoading }) => {
                     <Grid container spacing={4} justifyContent='center'>
                         {isLoading && <LoadingImgSkeletons />}
                         
-                        {projects.length !== 0 && projects
+                        {!isLoading && projects
                             .sort((a, b) => a.order - b.order)
                             .map((project, i) => {
                                 project.images.sort((a, b) => a.order - b.order)
