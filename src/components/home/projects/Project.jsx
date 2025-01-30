@@ -74,13 +74,14 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
                         '&:last-child': { paddingBottom: 0 }, 
                     }}
                 >
-                    <img    
+                    <img
+                        className='dropShadow' 
                         src={image} 
                         alt={name}
                         style={{ 
                             height: '100%', 
                             width: '100%', 
-                            objectFit: 'cover' 
+                            objectFit: 'cover',
                         }} 
                     /> 
                 </CardContent>
