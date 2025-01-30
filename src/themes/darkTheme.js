@@ -17,6 +17,7 @@ export const darkTheme = createTheme({
         bgColor: {
             light: '#4f4f4f',
             dark: '#353434',
+            extraDark: '#1b1b1b',
             orange: '#b2741a',
         }
     },

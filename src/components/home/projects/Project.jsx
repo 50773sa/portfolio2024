@@ -7,13 +7,18 @@ import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Typography from '@mui/material/Typography'
 
-const Project = ({ image, name, project, onClickProject }) => {
+const Project = ({ image, name, logo, project, onClickProject, theme }) => {
 
     const StyledCard = styled(Card)(() => ({
-        aspectRatio: '4 / 3',
-        padding: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 2,
+        aspectRatio: '4/4',
         cursor: 'default',
-        background: '#636363',
+        borderRadius: '10px',
+        background: theme.palette.bgColor.dark,
         '&:hover div': {
             display: 'flex',
         },
@@ -27,29 +32,61 @@ const Project = ({ image, name, project, onClickProject }) => {
         alignItems: 'center',
         padding: 24,
         backgroundColor: '#00000099',
-        inset: 0,
         position: 'absolute',
+        inset: 0,
     }))
 
     return (
         <Grid xs={12} sm={6} md={4}>
             <StyledCard>
-                <CardContent sx={{ p: 0, '&:last-child': { paddingBottom: 0 }, height: '100%' }}>   
-                    <img    
+
+                <Typography 
+                    component='h3' 
+                    variant='h6' 
+                    sx={{ 
+                        textAlign: 'center',
+                        pb: 2, 
+                        '&::before': { 
+                            content: '""', 
+                            backgroundImage: `url(${logo})`, 
+                            display: 'inline-block', 
+                            height: 34,
+                            width: 34,
+                            backgroundSize: 'contain',  
+                            backgroundRepeat: 'no-repeat', 
+                            textAlign: 'center', 
+                            verticalAlign: 'middle',  
+                            marginRight: '8px' 
+                        } 
+                    }}
+                >
+                    {name}
+                </Typography>
+
+                <CardContent 
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center', 
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                        width: '90%',
+                        p: 0, 
+                        '&:last-child': { paddingBottom: 0 }, 
+                    }}
+                >
+                    <img
+                        className='dropShadow' 
                         src={image} 
                         alt={name}
                         style={{ 
                             height: '100%', 
                             width: '100%', 
-                            objectFit: 'cover' 
+                            objectFit: 'cover',
                         }} 
                     /> 
                 </CardContent>
                 
                 <OverlayDiv>
-                    <Typography component='h3' variant='h6' sx={{ pb: 2 }}>
-                        {name}
-                    </Typography>
                     <PrimaryButton 
                         path={`/projects/${project.id}`} 
                         onClick={onClickProject} 
