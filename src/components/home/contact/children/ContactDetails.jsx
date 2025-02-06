@@ -12,7 +12,7 @@ import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded'
 import Typography from "@mui/material/Typography"
 
 
-const ContactDetails = () => {
+const ContactDetails = ({ contact }) => {
     const theme = useTheme()
 
     const StyledGrid = styled(Grid)(() => ({
@@ -49,11 +49,11 @@ const ContactDetails = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     underline='none'
-                    href='mailto: sara.lm.almqvist@gmail.com'
+                    href={`mailto: ${contact.emal}`}
                 >
                     <EmailIcon sx={{ mr: 1, fontSize: '30px' }} />
 
-                    sara.lm.almqvist@gmail.com
+                    {contact.email}
 
                     <KeyboardArrowRightIcon className="hoverLink" sx={{ visibility: { sm: 'hidden' } }}/>
                 </StyledLink>
@@ -66,7 +66,7 @@ const ContactDetails = () => {
             <StyledGrid xs={12} sm={8} md={5}>
                 <LocalPhoneRoundedIcon sx={{ mr: 1, fontSize: '30px' }} />
                 <Typography component='p' sx={{ cursor: 'default' }}>
-                    +46 706-173007
+                    +46{contact.phoneNumber}
                 </Typography>
             </StyledGrid>
 
@@ -93,7 +93,7 @@ const ContactDetails = () => {
                         rel="noopener noreferrer"
                         underline='none'
                         aria-label="Visit Sara Almqvist's LinkedIn profile, opens in a new tab"
-                        href='https://www.linkedin.com/in/sara-almqvist-93862774/'
+                        href={contact.linkedIn}
                     >
                         <LinkedInIcon sx={{ fontSize: '30px', mx: 1 }} />
                     </StyledLink>

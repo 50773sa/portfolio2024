@@ -5,7 +5,7 @@ import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
-const Contact = () => {
+const Contact = ({ about, isLoading }) => {
     const styledGridContainer = { 
         display: 'flex', 
         justifyContent: 'center', 
@@ -15,13 +15,17 @@ const Contact = () => {
 
     return (
         <SectionWrapper bgcolor='dark' borderY={true} sectionId='contact'>
-            <TitleWithDescription 
-                h2='Contact'
-                paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae '
-            />
-            <Grid container sx={styledGridContainer} gap={4}>
-                <ContactDetails/>
-            </Grid>
+            {!isLoading && (
+                <>
+                    <TitleWithDescription 
+                        h2='Contact'
+                        paragraph={about[0].contact.text}
+                    />
+                    <Grid container sx={styledGridContainer} gap={4}>
+                        <ContactDetails contact={about[0].contact} />
+                    </Grid>
+                </>
+            )}
         </SectionWrapper>
     )   
 }

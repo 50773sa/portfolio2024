@@ -38,7 +38,7 @@ const Homepage = () => {
                 <TechStack theme={theme} techStack={technologies} isLoading={isLoadingTechnologies} />
                 <Projects theme={theme} projects={projects} isLoading={isLoadingProjects} />
                 <Resume theme={theme} resume={resume} isLoading={isLoadingResume} />
-                <Contact theme={theme} />
+                <Contact theme={theme} about={about} isLoading={isLoadingAbout}/>
                 <Footer theme={theme}/>
             </div>
         </>
