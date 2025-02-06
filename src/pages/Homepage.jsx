@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { useQuery } from "react-query"
 // stores
 import useGetCollectionStore from '../store/useGetCollectionStore'
