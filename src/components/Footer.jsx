@@ -18,7 +18,7 @@ const theme = useTheme()
                 py: 6, 
                 px: { xs: 3, sm: 10 },
             }}
-        >
+        >   
             <Typography 
                 component='p' 
                 variant='h5' 
@@ -29,7 +29,8 @@ const theme = useTheme()
                     cursor: 'default',
                 }}
             >
-                "Thanks For Your Scrolling Skills!"
+                
+              { `"Thanks For Your Scrolling Skills!" `}
             </Typography>
         </Box>
     )
