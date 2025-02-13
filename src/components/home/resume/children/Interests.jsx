@@ -24,26 +24,30 @@ const Interests = ({ resume, theme }) => {
             <H2 title='Interests' />
 
             <Grid container gap={2} spacing={2}>
-                {resume.map((data) => data.hobbies.map((i) => (
-                    <Grid
-                        key={i.title}
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                        }}
-                    >
-                        <span style={bgCircle}>
-                            {i.title == "Crosswords" && <GridOnIcon />}
-                            {i.title == "Animals" && <PetsIcon />}
-                            {i.title == "Home decor" && <ChairIcon />}
-                        </span>
+                {resume
+                    .map((data) => data.hobbies
+                    .sort((a, b) => a.order - b.order)
+                    .map((i) => (
+                        <Grid
+                            key={i.title}
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                            }}
+                        >
+                            <span style={bgCircle}>
+                                {i.title == "Crosswords" && <GridOnIcon />}
+                                {i.title == "Animals" && <PetsIcon />}
+                                {i.title == "Home decor" && <ChairIcon />}
+                            </span>
 
-                        <Typography variant="caption" sx={{ whiteSpace: "nowrap" }}>
-                            {i.title}
-                        </Typography>
-                    </Grid>
-                )))}
+                            <Typography variant="caption" sx={{ whiteSpace: "nowrap" }}>
+                                {i.title}
+                            </Typography>
+                        </Grid>
+                    )))
+                }
             </Grid>
         </>
     )    
