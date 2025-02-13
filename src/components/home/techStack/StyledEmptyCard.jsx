@@ -1,13 +1,11 @@
 // mui
-import { useTheme } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 
 
-const StyledEmptyCard = ({ image, name }) => {
-    const theme = useTheme()
+const StyledEmptyCard = ({ image, name, theme }) => {
 
     const StyledCard = styled(Card)(() => ({
         display: 'flex',
@@ -16,8 +14,7 @@ const StyledEmptyCard = ({ image, name }) => {
         aspectRatio: '4/4',
         cursor: 'default',
         borderRadius: '10px',
-        background: 'linear-gradient(180deg, #636363, #C9C9C9)',
-        boxShadow: 'rgba(255, 255, 255, 0.24) 0px 3px 8px',
+        backgroundColor: theme.palette.bgColor.medium,
     }))
 
     const StyledCardContent = styled(CardContent)(() => ({
@@ -55,7 +52,6 @@ const StyledEmptyCard = ({ image, name }) => {
                         fontWeight: 500,
                         lineHeight: '1.1em',
                         fontSize: {xs: '0.8em', md: '1em'},
-                        color: theme.palette.color.black 
                     }}
                 >
                     {name}
