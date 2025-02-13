@@ -6,7 +6,7 @@ import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
-const TechStack = ({ techStack, isLoading }) => {
+const TechStack = ({ techStack, isLoading, theme }) => {
     return (
         <SectionWrapper bgcolor='dark'>
             <TitleWithDescription 
@@ -23,6 +23,7 @@ const TechStack = ({ techStack, isLoading }) => {
                             <StyledEmptyCard 
                                 image={tech.logoPath}
                                 name={tech.name}
+                                theme={theme}
                             />
                         </Grid>
                     )

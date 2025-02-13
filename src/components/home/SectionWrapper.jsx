@@ -17,7 +17,9 @@ const SectionWrapper = ({ sectionId, children, bgcolor, borderY, isStylingRelati
                 justifyContent: 'center',
                 bgcolor: 
                     bgcolor == 'light' && theme.palette.bgColor.light ||
+                    bgcolor == 'medium' && theme.palette.bgColor.medium ||
                     bgcolor == 'dark' &&  theme.palette.bgColor.dark ||
+                    bgcolor == 'extraDark' &&  theme.palette.bgColor.extraDark ||
                     bgcolor == 'orange' &&  theme.palette.bgColor.orange,
                 py: 6, 
                 px: { xs: 3, sm: 10 },

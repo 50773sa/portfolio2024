@@ -14,7 +14,7 @@ const theme = useTheme()
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                bgcolor: theme.palette.bgColor.light,
+                bgcolor: theme.palette.bgColor.medium,
                 py: 6, 
                 px: { xs: 3, sm: 10 },
             }}

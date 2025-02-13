@@ -5,7 +5,7 @@ import StyledDots from './StyledDots'
 
 const AboutSection = ({ about, isLoading }) => {
     return (
-        <SectionWrapper bgcolor='light' sectionId='about'>
+        <SectionWrapper bgcolor='medium' sectionId='about'>
             <TitleWithDescription
                  h2='About'  
                  paragraph={!isLoading && about[0].text.en}

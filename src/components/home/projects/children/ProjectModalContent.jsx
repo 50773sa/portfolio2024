@@ -23,7 +23,7 @@ const ProjectModalContent = ({  project }) => {
                 display: 'flex', 
                 flexDirection: {xs: 'column', md: 'row'},
                 margin: 0, 
-                bgcolor: theme.palette.bgColor.light,
+                bgcolor: theme.palette.bgColor.medium,
                 overflow: {xs: 'scroll', md: ''},
             }} 
         >
