@@ -33,7 +33,7 @@ const Homepage = () => {
             <Hero theme={theme} />
             
             <div style={{ position: 'sticky', top: '80dvh', zIndex: 100 }}>
-                {<AboutSection theme={theme} about={about} isLoading={isLoadingAbout} />}
+                <AboutSection theme={theme} about={about} isLoading={isLoadingAbout} />
                 <TechStack theme={theme} techStack={technologies} isLoading={isLoadingTechnologies} />
                 <Projects theme={theme} projects={projects} isLoading={isLoadingProjects} />
                 <Resume theme={theme} resume={resume} isLoading={isLoadingResume} />
