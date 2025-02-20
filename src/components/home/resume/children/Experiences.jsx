@@ -17,7 +17,7 @@ const Experiences = ({ theme, resume }) => {
         padding: 10,
         marginTop: 8,
         backgroundColor: theme.palette.bgColor.orange,
-        boxShadow: '0px 0px 10px 2px' + theme.palette.color.orange.dark,
+        boxShadow: '0px 0px 5px 1px' + theme.palette.color.orange.dark,
     }
            
     return (
@@ -50,7 +50,7 @@ const Experiences = ({ theme, resume }) => {
                                     <div style={styledResumeIcon}>
                                         <WorkIcon />
                                     </div>
-                                    <Divider orientation="vertical" variant="middle" aria-hidden="true" /> {/* aria hidden='true' = screen readers will skip this part. is used when the component is only for styling purposes */}
+                                    <Divider orientation="vertical" variant="middle" sx={{ /* bgcolor: theme.palette.color.lightGrey  */ width: 2}} aria-hidden="true" /> {/* aria hidden='true' = screen readers will skip this part. is used when the component is only for styling purposes */}
                                 </div>
 
                                 <div>
