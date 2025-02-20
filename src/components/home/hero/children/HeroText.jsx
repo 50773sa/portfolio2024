@@ -10,6 +10,8 @@ const HeroText = ({ theme }) => {
             >
                 <Typography 
                     component='span' 
+                    variant='h3'
+                    className='firstName'
                     sx={{ 
                         fontSize: { xs: '1.5rem', sm: '2.2rem', md: '2.5rem' }, 
                         mb: {xs: -2, sm: -3},
@@ -19,6 +21,7 @@ const HeroText = ({ theme }) => {
                 </Typography>
                 <Typography 
                     component='span' 
+                    className='lastName'
                     sx={{ 
                         fontSize: { xs: '3rem', sm: '4.5rem', md: '5rem' }, 
                         fontWeight: 800 
@@ -29,7 +32,7 @@ const HeroText = ({ theme }) => {
             </Typography>
 
             <Typography 
-                component='h2' 
+                component='p' 
                 sx={{ 
                     fontSize: { xs: '1rem', sm: '1.1rem' }, 
                     mb: -2 ,
@@ -37,7 +40,6 @@ const HeroText = ({ theme }) => {
             >
                 <Typography 
                     component='span' 
-                    variant='' 
                     sx={{ 
                         color: theme.palette.color.orange.light,        
                     }}
