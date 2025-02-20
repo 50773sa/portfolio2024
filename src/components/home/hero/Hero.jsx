@@ -97,10 +97,10 @@ const Hero = ({ theme }) => {
                         sx={{ 
                             height: '100%',
                             width: 'auto',
-                            right: 0,
-                            bottom: 0,
                             pl: {xs: 4, md: 10}, 
                             position: 'absolute',
+                            right: 100,
+                            bottom: 0,
                             zIndex: -20,
                         }}
                     >
