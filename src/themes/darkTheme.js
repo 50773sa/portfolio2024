@@ -12,12 +12,15 @@ export const darkTheme = createTheme({
                 medium: '#b2741a', 
                 dark: '#A17A45', // only for decorative purposes (not suitable for text (accessibility issues))
             },
+            magenta: '#BA2C73',
             black: '#353434'
         },
         bgColor: {
-            light: '#4f4f4f',
+            extraLight: '#FFFCF9',
+            light: '#5c5c5c',
+            medium: '#444444',
             dark: '#353434',
-            extraDark: '#1b1b1b',
+            extraDark: '#1f1f1f',
             orange: '#b2741a',
         }
     },
