@@ -13,21 +13,15 @@ const StyledDots = () => {
                 <span className='smallDot'/>
                 <span className='smallDot'/>
                 <span className='smallDot'/>
-                <span className='smallDot'/>
-                <span className='smallDot'/>
             </div>
             
             <div className='dotWrapper'>
                 <span className='largeDot'/>
                 <span className='largeDot'/>
                 <span className='largeDot'/>
-                <span className='largeDot'/>
-                <span className='largeDot'/>
             </div>
 
             <div className='dotWrapper'>
-                <span className='smallDot'/>
-                <span className='smallDot'/>
                 <span className='smallDot'/>
                 <span className='smallDot'/>
                 <span className='smallDot'/>
