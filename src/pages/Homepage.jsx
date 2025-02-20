@@ -25,7 +25,7 @@ const Homepage = () => {
     const { data: projects, isLoading: isLoadingProjects } = useQuery('projects', fetchProjects)
     const { data: technologies, isLoading: isLoadingTechnologies } = useQuery('techStack', fetchTechnologies)
     const { data: resume, isLoading: isLoadingResume } = useQuery('resume', fetchResume)
-    
+
     return (  
         <>
             {isError && <p>An error occoured</p>}
