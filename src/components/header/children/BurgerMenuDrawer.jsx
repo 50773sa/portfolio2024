@@ -29,20 +29,20 @@ const BurgerMenuDrawer = ({ theme, isOpen, toggleDrawer, links, handleScrollInto
                 <List>
                     {links.map((link) => (
                         <NavLink 
+                            tabIndex={-1}
                             key={link.title} 
-                            to={link.path} 
-                            onClick={() => handleScrollIntoViewNavLink(link.sectionId)}
-                            
+                            to={link.path}                             
                         >
                             {({ isActive }) => (
                                 <ListItem 
                                     disablePadding 
-                                    sx={{ 
-                                        bgcolor: isActive ? theme.palette.color.orange.dark : 'inherit'
-                                    }}
+                                    sx={{ bgcolor: isActive ? theme.palette.color.orange.dark : 'inherit' }}
                                 >
-                                    <ListItemButton sx={{ textAlign: 'center' }}>
-                                        <ListItemText primary={link.title}  />
+                                    <ListItemButton 
+                                        sx={{ textAlign: 'center' }}                             
+                                        onClick={() => handleScrollIntoViewNavLink(link.sectionId)}
+                                    >
+                                        <ListItemText primary={link.title} />
                                     </ListItemButton>
                                 </ListItem>
                         )}
