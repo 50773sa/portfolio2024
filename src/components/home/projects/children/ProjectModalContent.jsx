@@ -100,7 +100,7 @@ const ProjectModalContent = ({  project }) => {
                      */}
 
                     <Typography component='h3' variant='h6' sx={{ textAlign: 'center' }} gutterBottom>
-                        Technologies
+                        Tech & Tools
                     </Typography>
 
                     <Typography variant='body1' sx={{ textAlign: 'center', mb: 6 }}> 
