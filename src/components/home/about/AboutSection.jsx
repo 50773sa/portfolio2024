@@ -1,18 +1,18 @@
 // components
 import SectionWrapper from '../SectionWrapper'
+import TechStack from '../techStack/TechStack'
 import TitleWithDescription from '../TitleWithDescription'
-import StyledDots from './StyledDots'
 
-const AboutSection = ({ about, isLoading }) => {
+const AboutSection = ({ about, isLoadingAbout, theme, techStack, isLoadingTechnologies }) => {
     return (
-        <SectionWrapper bgcolor='medium' sectionId='about'>
+        <SectionWrapper bgcolor='dark' sectionId='about'>
             <TitleWithDescription
                  h2='About'  
-                 paragraph={!isLoading && about[0].text.en}
+                 paragraph={!isLoadingAbout && about[0].text.en}
             />
 
-            <StyledDots />
-               
+            <TechStack theme={theme} techStack={techStack} isLoading={isLoadingTechnologies} />
+
         </SectionWrapper>
     )
 }
