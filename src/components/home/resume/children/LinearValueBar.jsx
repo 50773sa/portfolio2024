@@ -34,6 +34,7 @@ const LinearValueBar = ({ skill }) => {
     return (
         <Box sx={{ position: 'relative' }}>
             <StyledLinearBar 
+                aria-label='value'
                 variant="determinate" 
                 color='inherit'
                 value={skill.rating} 
