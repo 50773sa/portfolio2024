@@ -53,7 +53,7 @@ const Projects = ({ theme, projects, isLoading }) => {
                                 project.images.sort((a, b) => a.order - b.order)
                                 
                                 if (!expanded && i >= 6) {
-                                    return null// Only show the first 3 projects if not expanded
+                                    return null// Only show the first 6 projects if not expanded
                                 }
 
                                 return ( 
