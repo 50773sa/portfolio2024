@@ -90,7 +90,7 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
                     <PrimaryButton 
                         path={`/projects/${project.id}`} 
                         onClick={onClickProject} 
-                        buttonText='View More' 
+                        buttonText='More Info' 
                     />
                 </OverlayDiv> 
 
