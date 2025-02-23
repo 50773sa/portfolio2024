@@ -58,7 +58,7 @@ const Experiences = ({ theme, resume }) => {
                                      *  Company
                                      */}
 
-                                    <Typography sx={{ fontWeight: 600 }}>
+                                    <Typography component='h4' sx={{ fontWeight: 600 }}>
                                         {exp.company}
                                     </Typography>
 
@@ -83,7 +83,7 @@ const Experiences = ({ theme, resume }) => {
                                      *  Case
                                      */}
 
-                                    <Typography sx={{ fontWeight: 500 }}>
+                                    <Typography component='h5' sx={{ fontWeight: 500 }}>
                                         Case
                                     </Typography>
 
@@ -95,7 +95,7 @@ const Experiences = ({ theme, resume }) => {
                                      *  Technologies & tools
                                      */}
 
-                                    <Typography sx={{ fontWeight: 500 }}>
+                                    <Typography component='h5' sx={{ fontWeight: 500 }}>
                                         Technologies & Tools
                                     </Typography>
 
