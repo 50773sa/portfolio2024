@@ -12,16 +12,22 @@ const SoftwareSkills = ({ resume }) => {
 
             <Grid container alignItems="center" mb={7} spacing={1}>
                 {resume.map((data) =>
-                    data.softwareSkills.map((skill) => (
-                        <>
-                            <Grid xs={6}>
-                                <Typography>{skill.title}</Typography>
-                            </Grid>
-                            <Grid xs={6}>
-                                <LinearValueBar skill={skill} />
-                            </Grid>
-                        </>
-                    ))
+                    <>
+                        {data.softwareSkills.map((skill) => (
+                            <>
+                                <Grid xs={6}>
+                                    <Typography>{skill.title}</Typography>
+                                </Grid>
+                                <Grid xs={6}>
+                                    <LinearValueBar skill={skill} />
+                                </Grid>
+                            </>
+                        ))}
+                        <Grid sx={{ mt: 1 }}>
+                            <Typography>{data.softwareSkillsOther}...</Typography>
+                        </Grid>
+                        
+                    </>
                 )}
             </Grid>
         </>
