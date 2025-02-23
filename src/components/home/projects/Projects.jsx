@@ -30,7 +30,7 @@ const Projects = ({ theme, projects, isLoading }) => {
         <SectionWrapper bgcolor='medium' sectionId='projects'>
             
             <TitleWithDescription 
-                h2='Projects'
+                h3='Projects'
                 paragraph="Here, you'll find a selection of work that showcases the skills and knowledge I've developed along the way."
             />
 

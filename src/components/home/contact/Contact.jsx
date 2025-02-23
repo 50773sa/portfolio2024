@@ -18,7 +18,7 @@ const Contact = ({ about, isLoading }) => {
             {!isLoading && (
                 <>
                     <TitleWithDescription 
-                        h2='Contact'
+                        h3='Contact'
                         paragraph={about[0].contact.text}
                     />
                     <Grid container sx={styledGridContainer} gap={4}>

@@ -10,7 +10,7 @@ const TechStack = ({ techStack, isLoading, theme }) => {
     return (
         <SectionWrapper bgcolor='extraDark'>
             <TitleWithDescription 
-                h2='Tech & Tools'
+                h3='Software Skills'
                 paragraph='In my projects, I have used the following technologies and tools among others.'
             />
             <Grid container spacing={4} justifyContent='center'>

@@ -18,12 +18,12 @@ const Resume = ({ theme, resume, isLoading }) => {
           
             <BackgroundImage />
             
-            <TitleWithDescription h2='Resume' description= '' />
+            <TitleWithDescription h3='Resume' description='' />
 
             <Grid container justifyContent='center' spacing={10} sx={{ zIndex: 10 }}>
                 {!isLoading && resume && (
                     <>
-                        <Grid xs={12} md={5}>
+                        <Grid xs={12} md={6}>
                             <SoftwareSkills resume={resume} />
                             <Languages resume={resume} theme={theme} />
                             <SoftSkills resume={resume} theme={theme} />
