@@ -19,9 +19,9 @@ const ContactDetails = ({ contact }) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme.palette.bgColor.light, 
+        backgroundColor: theme.palette.bgColor.dark, 
         borderRadius: '3px',
-        padding: '5px 0',
+        padding: '10px 0',
     }))
 
     const StyledLink = styled(Link)(() => ({
