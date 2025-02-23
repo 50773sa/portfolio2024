@@ -1,5 +1,5 @@
 // components
-import H2 from "./H2"
+import H3 from "./H3"
 // mui
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
@@ -9,7 +9,7 @@ const SoftSkills = ({ resume, theme }) => {
 
     return (
         <>
-            <H2 title='Soft Skills' />
+            <H3 title='Soft Skills' />
 
             <Grid container alignItems="center" spacing={1} mb={7}>
                 <Grid xs={12} display="flex" alignItems="center" flexWrap='wrap'>

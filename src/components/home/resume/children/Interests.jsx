@@ -1,5 +1,5 @@
 // components
-import H2 from "./H2"
+import H3 from "./H3"
 // mui
 import ChairIcon from "@mui/icons-material/Chair"
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
@@ -21,7 +21,7 @@ const Interests = ({ resume, theme }) => {
 
     return (
         <>
-            <H2 title='Interests' />
+            <H3 title='Interests' />
 
             <Grid container gap={2} spacing={2}>
                 {resume

@@ -1,5 +1,5 @@
 // components
-import H2 from "./H2"
+import H3 from "./H3"
 // mui
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
 import List from '@mui/material/List'
@@ -11,13 +11,13 @@ const monthsEN = ["Jan", "Feb", "Mars", "April", "May", "June", "July", "Aug", "
 const Education = ({ resume }) => {
     return (
          <>
-            <H2 title='Education' />
+            <H3 title='Education' />
 
             <Grid container mb={7} spacing={1}>
                 {resume.map((data) =>
                     data.educations.map((edu) => (
                         <Grid xs={12} key={edu.title}>
-                            <Typography sx={{ fontWeight: 600 }}>
+                            <Typography component='h4' sx={{ fontWeight: 600 }}>
                                 {edu.title}
                             </Typography>
 
@@ -34,7 +34,7 @@ const Education = ({ resume }) => {
                                 ]
                             </Typography>
 
-                            <Typography sx={{ fontWeight: 500 }}>
+                            <Typography component='h5' sx={{ fontWeight: 500 }}>
                                 Technologies & Tools
                             </Typography>
 
