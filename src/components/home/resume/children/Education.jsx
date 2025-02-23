@@ -35,7 +35,7 @@ const Education = ({ resume }) => {
                             </Typography>
 
                             <Typography sx={{ fontWeight: 500 }}>
-                                Technologies
+                                Technologies & Tools
                             </Typography>
 
                             <List sx={{ display: 'flex', flexWrap: 'wrap', p: 0 }}>
@@ -51,6 +51,7 @@ const Education = ({ resume }) => {
                                     </ListItem>
                                 ))}
                             </List>
+                            
                         </Grid>
                     ))
                 )}  

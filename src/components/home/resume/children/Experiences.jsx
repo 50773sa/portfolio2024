@@ -92,11 +92,11 @@ const Experiences = ({ theme, resume }) => {
                                     </Typography>
 
                                     {/**
-                                     *  Technologies
+                                     *  Technologies & tools
                                      */}
 
                                     <Typography sx={{ fontWeight: 500 }}>
-                                        Technologies
+                                        Technologies & Tools
                                     </Typography>
 
                                     <Typography paragraph>
