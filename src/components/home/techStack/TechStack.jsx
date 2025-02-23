@@ -8,7 +8,7 @@ import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
 const TechStack = ({ techStack, isLoading, theme }) => {
     return (
-        <SectionWrapper bgcolor='dark'>
+        <SectionWrapper bgcolor='extraDark'>
             <TitleWithDescription 
                 h2='Tech & Tools'
                 paragraph='In my projects, I have used the following technologies and tools among others.'

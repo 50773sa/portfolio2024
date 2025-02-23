@@ -33,7 +33,7 @@ const Hero = ({ theme }) => {
                     top: 0, 
                     height: '80dvh', 
                     maxHeight: '800px',
-                    bgcolor: theme.palette.bgColor.dark, 
+                    bgcolor: theme.palette.bgColor.extraDark, 
                 }}
             >
                 <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, height: 'inherit', maxHeight: 'inherit' }}>

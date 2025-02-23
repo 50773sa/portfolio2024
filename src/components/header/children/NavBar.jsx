@@ -45,7 +45,7 @@ const NavBar = ({ theme }) => {
                 height: 90, 
                 px: 0.5, // This is only used to remove shadow on the x-axis
                 mb: 4,
-                bgcolor: theme.palette.bgColor.dark,
+                bgcolor: theme.palette.bgColor.extraDark,
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,

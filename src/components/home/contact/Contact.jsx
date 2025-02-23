@@ -14,7 +14,7 @@ const Contact = ({ about, isLoading }) => {
     }
 
     return (
-        <SectionWrapper bgcolor='dark' borderY={true} sectionId='contact'>
+        <SectionWrapper bgcolor='extraDark' borderY={true} sectionId='contact'>
             {!isLoading && (
                 <>
                     <TitleWithDescription 
