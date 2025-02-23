@@ -65,7 +65,6 @@ const ProjectModalContent = ({  project }) => {
                     width: {xs: '100%', md: '50%'}, 
                     minheight: '200px',  
                     overflowY: {xs: 'unset', md: 'scroll'}, 
-                    position: 'relative',
                 }}
             >
                 <CardContent
@@ -76,9 +75,6 @@ const ProjectModalContent = ({  project }) => {
                         justifyContent: 'center', 
                         p: 4, 
                         mt: 2,
-                        position: {xs: 'unset', md: 'absolute'}, 
-                        left: 0, 
-                        top: 0,
                     }}
                 >                           
                     <Typography gutterBottom variant="h4" component="h2">
