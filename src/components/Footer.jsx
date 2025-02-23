@@ -4,17 +4,17 @@ import Box from '@mui/material/Box'
 import Typography from "@mui/material/Typography"
 
 const Footer = () => {
-const theme = useTheme()
+    const theme = useTheme()
 
     return (
-           <Box
+        <Box
             component='footer' 
             sx={{ 
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                bgcolor: theme.palette.bgColor.medium,
+                bgcolor: theme.palette.bgColor.dark,
                 py: 6, 
                 px: { xs: 3, sm: 10 },
             }}
@@ -30,7 +30,7 @@ const theme = useTheme()
                 }}
             >
                 
-              { `"Thanks For Your Scrolling Skills!" `}
+                { `"Thanks For Scrolling!" `}
             </Typography>
         </Box>
     )
