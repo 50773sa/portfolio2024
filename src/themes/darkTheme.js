@@ -20,7 +20,7 @@ export const darkTheme = createTheme({
             light: '#5c5c5c',
             medium: '#444444',
             dark: '#353434',
-            extraDark: '#1f1f1f',
+            extraDark: '#2f2e2e',
             orange: '#b2741a',
         }
     },
