@@ -99,7 +99,8 @@ const Hero = ({ theme }) => {
                             width: 'auto',
                             pl: {xs: 4, md: 10}, 
                             position: 'absolute',
-                            right: 100,
+                            right: {xs: 0, md: 100}, 
+                            opacity: {xs: '50%', sm: '100%' },
                             bottom: 0,
                             zIndex: -20,
                         }}

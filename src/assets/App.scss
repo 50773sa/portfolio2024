@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-h1 span, h2, h3 {
+h1 span, h1 + p, h2, h3 {
     font-family: "Frank Ruhl Libre", serif !important;
     font-optical-sizing: auto;
     font-weight: 400;
