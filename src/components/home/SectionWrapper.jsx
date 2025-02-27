@@ -10,6 +10,7 @@ const SectionWrapper = ({ sectionId, children, bgcolor, borderY, isStylingRelati
             datasectionid={sectionId}
             id={sectionId}
             component='section' 
+            tabIndex={-1}
             sx={{ 
                 display: 'flex',
                 flexDirection: 'column',
