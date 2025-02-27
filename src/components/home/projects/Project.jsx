@@ -16,7 +16,7 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
         alignItems: 'center',
         padding: 2,
         aspectRatio: '4/4',
-        cursor: 'default',
+        cursor: 'pointer',
         borderRadius: '10px',
         background: theme.palette.bgColor.extraDark,
         '&:hover div': {
@@ -37,7 +37,7 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
     }))
 
     return (
-        <Grid xs={12} sm={6} md={4}>
+        <Grid xs={12} sm={6} md={4} sx={{ cursor: 'default' }}>
             <StyledCard>
 
                 <Typography 
@@ -70,7 +70,7 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
                         alignItems: 'center',
                         flexDirection: 'column',
                         width: '90%',
-                        p: 0, 
+                        p: 0,
                         '&:last-child': { paddingBottom: 0 }, 
                     }}
                 >
