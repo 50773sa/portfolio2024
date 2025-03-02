@@ -15,7 +15,7 @@ const TitleWithDescription = ({ h2, h3, paragraph }) => {
 
                     <div style={{ display: 'flex' }}>
                         <Divider 
-                            orientation='verticale'
+                            orientation='vertical'
                             aria-hidden="true" 
                             sx={{ 
                                 bgcolor: theme.palette.color.orange.light,
