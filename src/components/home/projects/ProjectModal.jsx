@@ -24,7 +24,7 @@ const ProjectModal = ({ open, setOpen, project }) => {
         >
             <CloseRoundedIcon 
                 role='button'
-                ariaLabel='Close'
+                aria-label='Close'
                 tabIndex={0}
                 onClick={() => setOpen(false)} 
                 onKeyDown={(e) => closeModal(e)}
