@@ -10,7 +10,7 @@ const ProjectModal = ({ open, setOpen, project }) => {
         if (e && e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift') ) {
             return
         }
-        setOpen(false)  
+        setOpen(false)
     }
     return (
         <Dialog
@@ -27,7 +27,7 @@ const ProjectModal = ({ open, setOpen, project }) => {
                 aria-label='Close'
                 tabIndex={0}
                 onClick={() => setOpen(false)} 
-                onKeyDown={(e) => closeModal(e)}
+                onKeyDown={(e) => closeModal(e) }
                 sx={{ 
                     position: 'absolute', 
                     top: 14, 

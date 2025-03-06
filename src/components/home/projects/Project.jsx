@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Typography from '@mui/material/Typography'
 
-const Project = ({ image, name, logo, project, onClickProject, theme }) => {
+const Project = ({ image, name, logo, project, onClickProject, onPressEnter, theme }) => {
 
     const StyledCard = styled(Card)(() => ({
         display: 'flex',
@@ -20,6 +20,9 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
         borderRadius: '10px',
         background: theme.palette.bgColor.extraDark,
         '&:hover div': {
+            display: 'flex',
+        },
+        '&:focus div': {
             display: 'flex',
         },
         position: 'relative',
@@ -38,7 +41,7 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
 
     return (
         <Grid xs={12} sm={6} md={4} sx={{ cursor: 'default' }}>
-            <StyledCard>
+            <StyledCard onKeyDown={onPressEnter}>
 
                 <Typography 
                     component='h3' 
@@ -64,6 +67,7 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
                 </Typography>
 
                 <CardContent 
+                    tabIndex={0}
                     sx={{
                         display: 'flex',
                         justifyContent: 'center', 
@@ -89,7 +93,7 @@ const Project = ({ image, name, logo, project, onClickProject, theme }) => {
                 <OverlayDiv>
                     <PrimaryButton 
                         path={`/projects/${project.id}`} 
-                        onClick={onClickProject} 
+                        onClick={onClickProject}
                         buttonText='More Info' 
                     />
                 </OverlayDiv> 

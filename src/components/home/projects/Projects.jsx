@@ -65,6 +65,7 @@ const Projects = ({ theme, projects, isLoading }) => {
                                         logo={project.logo}
                                         project={project}
                                         onClickProject={() => onClickProject(project)}
+                                        onPressEnter={((e) => e.key == 'Enter' && onClickProject(project) )} 
                                         theme={theme}
                                     />     
                                 )
