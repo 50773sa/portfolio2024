@@ -1,5 +1,4 @@
 // components
-import SectionWrapper from "../SectionWrapper"
 import StyledEmptyCard from "./StyledEmptyCard"
 import TechStackImgSkeleton from "./TechStackImgSkeleton"
 import TitleWithDescription from "../TitleWithDescription"
@@ -8,7 +7,7 @@ import Grid from '@mui/material/Unstable_Grid2/Grid2'
 
 const TechStack = ({ techStack, isLoading, theme }) => {
     return (
-        <SectionWrapper bgcolor='extraDark'>
+        <>
             <TitleWithDescription 
                 h3='Software Skills'
                 paragraph='In my projects, I have used the following technologies and tools among others.'
@@ -29,7 +28,7 @@ const TechStack = ({ techStack, isLoading, theme }) => {
                     )
                 })}
             </Grid>
-        </SectionWrapper>
+        </>
     )
 }
 
