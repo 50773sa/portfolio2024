@@ -11,7 +11,7 @@ const SoftSkills = ({ resume, theme }) => {
         <>
             <H3 title='Soft Skills' />
 
-            <Grid container alignItems="center" spacing={1} mb={7}>
+            <Grid container alignItems="center" mb={7}>
                 <Grid xs={12} display="flex" alignItems="center" flexWrap='wrap'>
                     {resume.map((data) => data.softSkills.map((i) => 
                         <div
