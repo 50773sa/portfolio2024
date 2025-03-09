@@ -1,6 +1,7 @@
 // components
 import H3 from "./H3"
 // mui
+import CodeIcon from '@mui/icons-material/Code'
 import ChairIcon from "@mui/icons-material/Chair"
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
 import GridOnIcon from '@mui/icons-material/GridOn'
@@ -39,8 +40,9 @@ const Interests = ({ resume, theme }) => {
                         >
                             <span style={bgCircle}>
                                 {i.title == "Crosswords" && <GridOnIcon />}
-                                {i.title == "Animals" && <PetsIcon />}
-                                {i.title == "Home decor" && <ChairIcon />}
+                                {i.title == "Petting Animals" && <PetsIcon />}
+                                {i.title == "Interior Decor" && <ChairIcon />}
+                                {i.title == "Coding" && <CodeIcon />}
                             </span>
 
                             <Typography variant="caption" sx={{ whiteSpace: "nowrap", mt: 1 }}>
