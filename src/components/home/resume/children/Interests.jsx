@@ -23,12 +23,13 @@ const Interests = ({ resume, theme }) => {
         <>
             <H3 title='Interests' />
 
-            <Grid container gap={2} spacing={2}>
+            <Grid container xs={12} spacing={2}>
                 {resume
                     .map((data) => data.hobbies
                     .sort((a, b) => a.order - b.order)
                     .map((i) => (
                         <Grid
+                            xs={6}
                             key={i.title}
                             sx={{
                                 display: "flex",
@@ -42,7 +43,7 @@ const Interests = ({ resume, theme }) => {
                                 {i.title == "Home decor" && <ChairIcon />}
                             </span>
 
-                            <Typography variant="caption" sx={{ whiteSpace: "nowrap" }}>
+                            <Typography variant="caption" sx={{ whiteSpace: "nowrap", mt: 1 }}>
                                 {i.title}
                             </Typography>
                         </Grid>
