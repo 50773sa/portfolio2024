@@ -33,10 +33,12 @@ const Homepage = () => {
             
             <div style={{ position: 'sticky', top: '80dvh', zIndex: 100 }}>
                 <AboutSection 
-                    theme={theme} 
-                    about={about} 
-                    isLoadingAbout={isLoadingAbout} 
-                    techStack={technologies} 
+                    theme={theme}
+                    resume={resume}
+                    about={about}
+                    isLoadingAbout={isLoadingAbout}
+                    isLoadingResume={isLoadingResume}
+                    techStack={technologies}
                     isLoadingTechnologies={isLoadingTechnologies}
                 />
                 <Projects theme={theme} projects={projects} isLoading={isLoadingProjects} />
