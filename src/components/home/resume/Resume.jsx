@@ -6,7 +6,6 @@ import Interests from "./children/Interests"
 import Languages from "./children/Languages"
 import SectionWrapper from "../SectionWrapper"
 import SoftSkills from "./children/SoftSkills"
-import SoftwareSkills from "./children/SoftwareSkills"
 import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
@@ -24,7 +23,6 @@ const Resume = ({ theme, resume, isLoading }) => {
                 {!isLoading && resume && (
                     <>
                         <Grid xs={12} md={6}>
-                            <SoftwareSkills resume={resume} />
                             <Languages resume={resume} theme={theme} />
                             <SoftSkills resume={resume} theme={theme} />
                             <Interests resume={resume} theme={theme} />
