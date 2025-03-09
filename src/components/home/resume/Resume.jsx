@@ -9,17 +9,17 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2"
 
 const Resume = ({ theme, resume, isLoading }) => {
     return (
-        <SectionWrapper bgcolor='dark' sectionId='resume'>
+        <SectionWrapper bgcolor='dark' sectionId='experience'>
           
             <BackgroundImage />
             
-            <TitleWithDescription h3='Resume' description='' />
+            <TitleWithDescription h3='Experience' description='' />
 
             {!isLoading && resume && (
                 <Grid container justifyContent='center' spacing={10} sx={{ zIndex: 10 }}>
                     <Grid xs={12} md={6}>
-                        <Education resume={resume} theme={theme} />
                         <Experiences resume={resume} theme={theme} />
+                        <Education resume={resume} theme={theme} />
                     </Grid>
                 </Grid>
             )}

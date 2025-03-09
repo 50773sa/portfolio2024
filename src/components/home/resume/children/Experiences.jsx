@@ -1,5 +1,5 @@
 // components
-import H3 from "./H3"
+// import H3 from "./H3"
 // mui
 import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
@@ -22,7 +22,7 @@ const Experiences = ({ theme, resume }) => {
            
     return (
         <>
-            <H3 title='Experiences' />
+            {/* <H3 title='Experiences' /> */}
             
             <Grid container alignItems="center" spacing={1}>
                 {resume.map((data) => data.experiences
