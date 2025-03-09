@@ -21,12 +21,16 @@ const TitleWithDescription = ({ h2, h3, paragraph }) => {
                                 bgcolor: theme.palette.color.orange.light,
                                 height: {xs: '0.2rem', sm: '0.2rem'},
                                 width: {xs: '4rem', sm: '4rem'},
-                                mt: 1.5,
-                                mr: 2
+                                mt: 1.3,
+                                mr: 2,
                             }}
                         />
 
-                        <Typography component='p' variant='subtitle1' sx={{ textAlign: 'start', mb: 5, cursor: 'default' }}>
+                        <Typography 
+                            component='p' 
+                            variant='subtitle1' 
+                            sx={{ textAlign: 'start', mb: 7, cursor: 'default' }}
+                        >
                             { paragraph }
                         </Typography>
                     </div>

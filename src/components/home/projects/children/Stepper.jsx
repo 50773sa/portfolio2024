@@ -38,6 +38,9 @@ const Stepper = ({ project, imageIndex, setImageIndex }) => {
                         left: '45%' ,
                         bottom: '8px',
                     },
+                    '& .MuiMobileStepper-dot': {
+                        backgroundColor: '#ffffff6b'
+                    },
                     '& .MuiMobileStepper-dotActive': {
                         backgroundColor: '#1976d2'
                     },
@@ -49,10 +52,10 @@ const Stepper = ({ project, imageIndex, setImageIndex }) => {
                         onClick={handleNext}
                         sx={{
                             backgroundColor: '#ffffff6b',
-                            '&:hover': { backgroundColor: '#ffffffe8' },    
                             position: 'absolute',
                             right: '8px' ,
                             top: '44%',
+                            '&:hover, &:focus': { backgroundColor: '#ffffffe8' },    
                         }}
                     >   
                         <KeyboardArrowRight sx={{ color: '#212121' }} />
@@ -68,7 +71,7 @@ const Stepper = ({ project, imageIndex, setImageIndex }) => {
                             position: 'absolute',
                             left: '8px' ,
                             top: '44%',
-                            '&:hover': { backgroundColor: '#ffffffe8' },    
+                            '&:hover, &:focus': { backgroundColor: '#ffffffe8' },
                         }}
                     >
                         <KeyboardArrowLeft sx={{ color: '#212121' }} />
