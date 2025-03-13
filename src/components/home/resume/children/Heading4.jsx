@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography'
 
-const Heading4 = ({ title }) => {
+const H3 = ({ title }) => {
     return (
         <Typography 
             component='h4' 
@@ -13,4 +13,4 @@ const Heading4 = ({ title }) => {
     )
 }
 
-export default Heading4
+export default H3

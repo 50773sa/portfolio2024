@@ -1,5 +1,5 @@
 // components
-import H3 from "./H3"
+import Heading4 from "./Heading4"
 import LinearValueBar from "./LinearValueBar"
 // mui
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography"
 const SoftwareSkills = ({ resume }) => {
     return (
         <>
-            <H3 title='Software Skills' />
+            <Heading4 title='Software Skills' />
 
             <Grid container alignItems="center" mb={7} spacing={1}>
                 {resume.map((data) =>

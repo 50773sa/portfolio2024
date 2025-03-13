@@ -16,7 +16,7 @@ const Resume = ({ theme, resume, isLoading }) => {
             {!isLoading && resume && (
                 <Grid container spacing={5} sx={{ zIndex: 10 }}>
 
-                    <Grid xs={11} md={8}>
+                    <Grid xs={12} md={8}>
                         <TitleWithDescription h3='Experience' paragraph='' />
                         <Experiences resume={resume} theme={theme} />
                     </Grid>

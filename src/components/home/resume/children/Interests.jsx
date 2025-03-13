@@ -1,5 +1,5 @@
 // components
-import H3 from "./H3"
+import Heading4 from "./Heading4"
 // mui
 import CodeIcon from '@mui/icons-material/Code'
 import ChairIcon from "@mui/icons-material/Chair"
@@ -22,7 +22,7 @@ const Interests = ({ resume, theme }) => {
 
     return (
         <>
-            <H3 title='Interests' />
+            <Heading4 title='Interests' />
 
             <Grid container xs={12} spacing={2}>
                 {resume
