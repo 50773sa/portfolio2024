@@ -39,7 +39,7 @@ const TitleWithDescription = ({ h2, h3, paragraph }) => {
 
             {h3 && (
                 <>
-                    <Typography component='h3' variant='h4' sx={{ textAlign: 'center', mb: 2, cursor: 'default', zIndex: 10 }}>
+                    <Typography component='h3' variant='h4' sx={{ textAlign: 'start', mb: 2, cursor: 'default', zIndex: 10 }}>
                         { h3 }
                     </Typography>
 
