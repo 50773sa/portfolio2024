@@ -13,14 +13,19 @@ const Resume = ({ theme, resume, isLoading }) => {
           
             <BackgroundImage />
             
-            <TitleWithDescription h3='Experience' description='' />
-
             {!isLoading && resume && (
-                <Grid container justifyContent='center' spacing={10} sx={{ zIndex: 10 }}>
-                    <Grid xs={12} md={6}>
+                <Grid container spacing={5} sx={{ zIndex: 10 }}>
+
+                    <Grid xs={11} md={8}>
+                        <TitleWithDescription h3='Experience' paragraph='' />
                         <Experiences resume={resume} theme={theme} />
+                    </Grid>
+
+                    <Grid xs={12} md={4}>
+                        <TitleWithDescription h3='Education' paragraph='' />
                         <Education resume={resume} theme={theme} />
                     </Grid>
+
                 </Grid>
             )}
         </SectionWrapper>
