@@ -1,7 +1,6 @@
 // components
 import Heading4 from "./Heading4"
 // mui
-import CodeIcon from '@mui/icons-material/Code'
 import ChairIcon from "@mui/icons-material/Chair"
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
 import GridOnIcon from '@mui/icons-material/GridOn'
@@ -24,30 +23,37 @@ const Interests = ({ resume, theme }) => {
         <>
             <Heading4 title='Interests' />
 
-            <Grid container xs={12} spacing={2}>
+            <Grid container xs={12} spacing={2} sx={{ mb: 7 }}>
                 {resume
                     .map((data) => data.hobbies
                     .sort((a, b) => a.order - b.order)
                     .map((i) => (
                         <Grid
-                            xs={6}
+                            xs={4}
+                            sm={3}
+                            md={3.5}
+                            // lg={3}
                             key={i.title}
-                            sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: "center",
-                            }}
+                            sx={{ display: "flex", alignItems: "start" }}
                         >
-                            <span style={bgCircle}>
-                                {i.title == "Crosswords" && <GridOnIcon />}
-                                {i.title == "Petting Animals" && <PetsIcon />}
-                                {i.title == "Interior Decor" && <ChairIcon />}
-                                {i.title == "Coding" && <CodeIcon />}
-                            </span>
+                            <div 
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <span style={bgCircle}>
+                                    {i.title == "Crosswords" && <GridOnIcon />}
+                                    {i.title == "Petting Animals" && <PetsIcon />}
+                                    {i.title == "Interior Decor" && <ChairIcon />}
+                                </span>
 
-                            <Typography variant="caption" sx={{ whiteSpace: "nowrap", mt: 1 }}>
-                                {i.title}
-                            </Typography>
+                                <Typography variant="caption" sx={{ whiteSpace: "nowrap", mt: 1 }}>
+                                    {i.title}
+                                </Typography>
+                            </div>
+                            
                         </Grid>
                     )))
                 }
