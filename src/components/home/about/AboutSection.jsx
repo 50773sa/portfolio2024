@@ -1,4 +1,5 @@
 // components
+import Education from '../resume/children/Education'
 import Interests from '../resume/children/Interests'
 import Languages from '../resume/children/Languages'
 import SectionWrapper from '../SectionWrapper'
@@ -18,21 +19,23 @@ const AboutSection = ({ about, resume, isLoadingAbout, isLoadingResume, theme, t
             {!isLoadingResume && (
                 <Grid 
                     container 
-                    xs={12} 
+                    xs={12}
                     sx={{ 
                         justifyContent: 'space-between',
                         borderRadius: '10px',
                         pt: 5,
-                        px: 10,
+                        px: {xs: '6%', sm: '8%',},
                         mb: 7,
                         bgcolor: theme.palette.bgColor.dark,
                     }} 
                 >   
-                    <Grid xs={12} md={7}>
+                    <Grid xs={12} md={5}>
                         <Languages resume={resume} theme={theme} />
                         <SoftSkills resume={resume} theme={theme} />
                     </Grid>
-                    <Grid xs={12} md={3}>
+
+                    <Grid xs={12} md={6} lg={5}>
+                        <Education resume={resume} theme={theme} />
                         <Interests resume={resume} theme={theme} />
                     </Grid>
                 </Grid>
