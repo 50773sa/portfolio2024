@@ -15,12 +15,14 @@ const TitleWithDescription = ({ h2, h3, paragraph }) => {
 
                     <div style={{ display: 'flex' }}>
                         <Divider 
-                            orientation='vertical'
+                            orientation='horizontal'
+                            variant='fullWidth'
                             aria-hidden="true" 
-                            sx={{ 
+                            sx={{
+                                display: { xs: 'none', md: 'inline-block' }, 
                                 bgcolor: theme.palette.color.orange.light,
-                                height: {xs: '0.2rem', sm: '0.2rem'},
-                                width: {xs: '4rem', sm: '4rem'},
+                                width: {  xs: '6%' },
+                                height: 3,
                                 mt: 1.3,
                                 mr: 2,
                             }}
