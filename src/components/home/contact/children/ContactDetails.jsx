@@ -49,7 +49,7 @@ const ContactDetails = ({ contact }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     underline='none'
-                    href={`mailto: ${contact.emal}`}
+                    href={`mailto: ${contact.email}`}
                 >
                     <EmailIcon sx={{ mr: 1, fontSize: '30px' }} />
 
