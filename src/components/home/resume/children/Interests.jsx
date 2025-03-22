@@ -29,10 +29,7 @@ const Interests = ({ resume, theme }) => {
                     .sort((a, b) => a.order - b.order)
                     .map((i) => (
                         <Grid
-                            xs={4}
-                            sm={3}
-                            md={3.5}
-                            // lg={3}
+                            xs='auto'
                             key={i.title}
                             sx={{ display: "flex", alignItems: "start" }}
                         >
