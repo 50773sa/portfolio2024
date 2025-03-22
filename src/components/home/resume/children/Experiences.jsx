@@ -87,7 +87,7 @@ const Experiences = ({ theme, resume }) => {
                                 </Box>                        
                             </Grid>
 
-                            <Grid xs={8} sm={6}>
+                            <Grid xs={8} sm={6} md={5}>
 
                                 {/**
                                  *  Company

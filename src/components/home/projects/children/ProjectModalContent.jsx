@@ -77,7 +77,7 @@ const ProjectModalContent = ({  project }) => {
                         mt: 2,
                     }}
                 >                           
-                    <Typography gutterBottom variant="h4" component="h2">
+                    <Typography gutterBottom variant="h4" component="h2" sx={{ textAlign: 'center' }}>
                         {project.name}
                     </Typography>
                     

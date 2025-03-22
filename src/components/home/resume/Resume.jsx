@@ -12,7 +12,7 @@ const Resume = ({ theme, resume, isLoading }) => {
           
             <BackgroundImage />
             
-            <TitleWithDescription h2='Experience' paragraph='' />
+            <TitleWithDescription h3='Experience' paragraph='' />
 
             {!isLoading && resume && (
                 <Grid container sx={{ justifyContent: 'center', zIndex: 10 }}>
