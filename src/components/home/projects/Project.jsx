@@ -18,7 +18,7 @@ const Project = ({ image, name, logo, project, onClickProject, onPressEnter, the
         aspectRatio: '4/4',
         cursor: 'pointer',
         borderRadius: '10px',
-        background: theme.palette.bgColor.extraDark,
+        background: theme.palette.bgColor.medium,
         '&:hover div': {
             display: 'flex',
         },

@@ -27,7 +27,7 @@ const Projects = ({ theme, projects, isLoading }) => {
     }
 
     return (
-        <SectionWrapper bgcolor='medium' sectionId='projects'>
+        <SectionWrapper bgcolor='extraDark' sectionId='projects'>
             
             <TitleWithDescription 
                 h3='Projects'
