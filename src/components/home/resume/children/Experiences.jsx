@@ -24,7 +24,7 @@ const Experiences = ({ theme, resume }) => {
         display: { xs: 'none', sm: 'flex' },
         color: theme.palette.color.white,
         backgroundColor: theme.palette.bgColor.light,
-        marginTop: 1,
+        marginTop: 1.4,
         padding: '10px 30px 10px 10px',
         minWidth: '111px',
         maxWidth: '120px',
