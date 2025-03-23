@@ -50,7 +50,7 @@ export const darkTheme = createTheme({
         MuiDivider: {
             styleOverrides: {
                 root: {
-                    backgroundColor: '#A17A45',
+                    backgroundColor: '#d68f24',
                     borderRadius: '20px',
                 },
             },
