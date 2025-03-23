@@ -24,7 +24,6 @@ const HeroText = ({ theme }) => {
                     className='lastName'
                     sx={{ 
                         fontSize: { xs: '3rem', sm: '4.5rem', md: '5rem' }, 
-                        fontWeight: 800 
                     }}
                 >
                     Almqvist
@@ -40,7 +39,8 @@ const HeroText = ({ theme }) => {
             >
                 <Typography 
                     component='span' 
-                    sx={{ 
+                    sx={{
+                        fontSize: { xs: '1rem', sm: '1.1rem' },
                         color: theme.palette.color.orange.light,        
                     }}
                 >
