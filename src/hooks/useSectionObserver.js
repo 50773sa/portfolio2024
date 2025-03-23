@@ -24,7 +24,7 @@ const useSectionObserver = () => {
                     } 
                 })
             },
-            { threshold: 0.5 } // Observe when section is in view
+            { threshold: 0.2 } // Observe when section is in view
         )
 
         sections.forEach((section) => observer.observe(section))
