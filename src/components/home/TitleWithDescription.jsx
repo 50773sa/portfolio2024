@@ -36,7 +36,7 @@ const TitleWithDescription = ({ h2, h3, paragraph }) => {
                                     bgcolor: theme.palette.color.orange.light,
                                     width: {  xs: '6%' },
                                     height: 3,
-                                    mt: 1.3,
+                                    mt: 1.5,
                                     mr: 2,
                                 }}
                             />
