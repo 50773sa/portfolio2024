@@ -15,7 +15,7 @@ const AllProjectsButton = ({ buttonText, expanded, onClick }) => {
             onClick={onClick}
             variant='outlined' 
             sx={{ 
-                minWidth: '10rem',
+                width: {xs: '100%', sm: '9.5rem'},
                 color: buttonColor, 
                 bgcolor: 'transparent',
                 border: `2px solid ${buttonColor}`,
