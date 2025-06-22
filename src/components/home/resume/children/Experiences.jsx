@@ -82,7 +82,7 @@ const Experiences = ({ theme, resume }) => {
                                         orientation="vertical" 
                                         aria-hidden="true" /* aria hidden='true' = screen readers will skip this part. is used when the component is only for styling purposes */
                                         variant="middle" 
-                                        sx={{ height: '70%' }}
+                                        sx={{ height: '70%', bgcolor: 'grey' }}
                                     /> 
                                 </Box>                        
                             </Grid>
