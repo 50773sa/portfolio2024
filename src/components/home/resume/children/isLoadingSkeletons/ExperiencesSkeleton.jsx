@@ -49,7 +49,7 @@ const ExperiencesSkeleton = () => {
                 <StyledSkeleton variant="p"  sx={{ height: '16px', maxWidth: '70%',  mb: '24px' }} />
 
                 <StyledSkeleton variant="h5" sx={{ height: '16px', maxWidth: '20%',  mb: 0.5 }} />
-                <StyledSkeleton variant="p" r  sx={{ height: '14px', maxWidth: '70%', mb: '24px' }} />
+                <StyledSkeleton variant="p" sx={{ height: '14px', maxWidth: '70%', mb: '24px' }} />
                 
                 <StyledSkeleton variant="h5" sx={{ height: '16px', maxWidth: '30%',  mb: 0.5 }} />
                 <StyledSkeleton variant="p" sx={{ height: '60px', maxWidth: '70%', mb: '24px' }} />
