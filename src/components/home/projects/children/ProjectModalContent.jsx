@@ -11,9 +11,10 @@ import CardMedia from '@mui/material/CardMedia'
 import Grid from "@mui/material/Unstable_Grid2/Grid2"
 import Typography from '@mui/material/Typography'
 
-const ProjectModalContent = ({  project }) => {
+const ProjectModalContent = ({ project }) => {
     const theme = useTheme()
     const [imageIndex, setImageIndex] = useState(0)
+    const [isNextLoaded, setIsNextLoaded] = useState(true)
 
     return (
         <Card 
@@ -47,12 +48,19 @@ const ProjectModalContent = ({  project }) => {
                     component="img"
                     image={project.images[imageIndex]?.url}
                     alt={`View Image ${imageIndex + 1}`}
-                    sx={{ height: 'auto', width: '100%', p: 3}}
+                    sx={{ 
+                        height: 'auto', 
+                        width: '100%', 
+                        p: 3,
+                        opacity: isNextLoaded ? 1 : 0.5,
+                        transition: 'opacity 0.5s ease-in-out',
+                    }}
                 /> 
                 <Stepper
                     project={project}
                     imageIndex={imageIndex}
                     setImageIndex={setImageIndex}
+                    setIsNextLoaded={setIsNextLoaded}
                 />
             </Box>
 

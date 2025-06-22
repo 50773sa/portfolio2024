@@ -4,23 +4,42 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft'
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 import MobileStepper from '@mui/material/MobileStepper'
 
-const Stepper = ({ project, imageIndex, setImageIndex }) => {
+    const Stepper = ({ project, imageIndex, setImageIndex, setIsNextLoaded }) => {
     const imgLength = project.images.length
 
+
     const handleNext = () => {
-        setImageIndex((prevImageIndex) => (
-            prevImageIndex === imgLength -1
-                ?  0 
-                : prevImageIndex +1
-        ))
+        setIsNextLoaded(false)
+
+        // If you're on the last imgage - start over with index 0, otherwise show next image 
+        const newIndex = imageIndex === imgLength -1 
+            ? 0 
+            : imageIndex + 1
+
+        const nextImg = new Image()
+        nextImg.src = project.images[newIndex].url
+
+        nextImg.onload = () => {
+            setImageIndex(newIndex)
+            setIsNextLoaded(true)
+        }
     }
   
     const handleBack = () => {
-        setImageIndex((prevImageIndex) => (
-            prevImageIndex === 0 
-                ? imgLength -1
-                : prevImageIndex -1
-        ))
+        setIsNextLoaded(false)
+
+        // If you're on the first image - show the last image, otherwise show the previous image 
+        const newIndex = imageIndex === 0 
+            ? imgLength - 1 
+            : imageIndex - 1
+
+        const prevImg = new Image()
+        prevImg.src = project.images[newIndex].url
+
+        prevImg.onload = () => {
+            setImageIndex(newIndex)
+            setIsNextLoaded(true)
+        }
     }
     
     return (
