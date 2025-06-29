@@ -71,7 +71,7 @@ const NavBar = ({ theme }) => {
                         onClick={() => handleScrollIntoViewNavLink('home') } 
                         style={{ height: '100%', width: 'auto' }}
                     >
-                        <img src={logo} alt='site logo' style={{ height: '100%', width: '100%' }}/>
+                        <img src={logo} alt='site logo' height='70px' width='50px' style={{ height: '100%' }}/>
                     </Link>
                 </Grid>
 
