@@ -13,7 +13,6 @@ export const darkTheme = createTheme({
                 dark: '#A17A45', // only for decorative purposes (not suitable for text (accessibility issues))
             },
             blue: '#246BD6',
-            magenta: '#BA2C73',
             black: '#353434'
         },
         bgColor: {
