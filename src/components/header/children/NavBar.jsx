@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 import BurgerIcon from './BurgerIcon'
 import BurgerMenuDrawer from './BurgerMenuDrawer'
 // assets
-import logo from '../../../assets/siteLogo.svg'
+import logo from '../../../assets/siteLogo.png'
 // mui
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
 import Paper from '@mui/material/Paper'
@@ -69,9 +69,8 @@ const NavBar = ({ theme }) => {
                 <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center', height: '100%', py: 2.5}}>
                     <Link to='/' 
                         onClick={() => handleScrollIntoViewNavLink('home') } 
-                        style={{ height: '100%', width: 'auto' }}
                     >
-                        <img src={logo} alt='site logo' height='70px' width='50px' style={{ height: '100%' }}/>
+                        <img src={logo} alt='site logo' height='70px' width='100px' style={{ height: '100%' }}/>
                     </Link>
                 </Grid>
 
