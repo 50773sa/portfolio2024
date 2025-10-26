@@ -42,7 +42,7 @@ const NavBar = ({ theme }) => {
             elevation={0}
             square
             sx={{ 
-                height: 90, 
+                height: 70, 
                 px: 0.5, // This is only used to remove shadow on the x-axis
                 mb: 4,
                 bgcolor: theme.palette.bgColor.extraDark,
