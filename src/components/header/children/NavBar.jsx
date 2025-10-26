@@ -78,7 +78,7 @@ const NavBar = ({ theme }) => {
                  * Navigation links
                  */}
 
-                <Grid xs={0} sm={4} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'start' } }}>
+                <Grid xs={0} sm={8} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'flex-end' } }}>
                     {links.map((link) => (
                         <NavLink 
                             key={link.title} 
