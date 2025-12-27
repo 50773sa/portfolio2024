@@ -1,5 +1,5 @@
-@import './burgerIcon.scss';
-@import './decorativeDots.scss';
+@use './burgerIcon.scss';
+@use './decorativeDots.scss';
 
 *, *::before, *::after {
     padding: 0;
