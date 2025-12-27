@@ -29,11 +29,11 @@ function App() {
 
 				<Routes>
 					<Route path="/" element={<Homepage />}>
-						<Route path="/about" element={<AboutSection />} /> 
-						<Route path="/projects" element={<ProjectsSection />} /> 
-						<Route path="/projects/:id" element={<Project />} /> 
-						<Route path="/experience" element={<ResumeSection />} /> 
-						<Route path="/contact" element={<ContactSection />} /> 
+						<Route path="about" element={<AboutSection />} /> 
+						<Route path="projects" element={<ProjectsSection />} /> 
+						<Route path="projects/:id" element={<Project />} /> 
+						<Route path="experience" element={<ResumeSection />} /> 
+						<Route path="contact" element={<ContactSection />} /> 
 					</Route> 
 
 					<Route path="*" element={<PageNotFoundPage/>} />
