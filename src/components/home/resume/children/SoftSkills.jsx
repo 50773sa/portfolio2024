@@ -2,7 +2,7 @@
 import Heading4 from "./Heading4"
 // mui
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
-import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import Grid from '@mui/material/Grid'
 import Typography from "@mui/material/Typography"
 
 const SoftSkills = ({ resume, theme }) => {

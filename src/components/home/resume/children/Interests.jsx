@@ -2,7 +2,7 @@
 import Heading4 from "./Heading4"
 // mui
 import ChairIcon from "@mui/icons-material/Chair"
-import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import Grid from '@mui/material/Grid'
 import GridOnIcon from '@mui/icons-material/GridOn'
 import PetsIcon from '@mui/icons-material/Pets'
 import Typography from "@mui/material/Typography"

@@ -2,7 +2,7 @@
 import { styled } from '@mui/material/styles'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Unstable_Grid2/Grid2'
+import Grid from '@mui/material/Grid'
 import Skeleton from '@mui/material/Skeleton'
 
 const TechStackImgSkeleton = () => {

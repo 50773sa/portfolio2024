@@ -9,7 +9,7 @@ import TitleWithDescription from "../TitleWithDescription"
 // mui
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
-import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import Grid from '@mui/material/Grid'
 
 
 const Projects = ({ theme, projects, isLoading }) => {

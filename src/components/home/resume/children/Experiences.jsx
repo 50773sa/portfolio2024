@@ -1,7 +1,7 @@
 // mui
 import Box from "@mui/material/Box"
 import Divider from "@mui/material/Divider"
-import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import Grid from '@mui/material/Grid'
 import Typography from "@mui/material/Typography"
 import WorkIcon from '@mui/icons-material/Work'
 

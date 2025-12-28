@@ -6,7 +6,7 @@ import BurgerMenuDrawer from './BurgerMenuDrawer'
 // assets
 import logo from '../../../assets/siteLogo.png'
 // mui
-import Grid from '@mui/material/Unstable_Grid2/Grid2'
+import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
 
 const links = [

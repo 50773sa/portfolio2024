@@ -1,7 +1,7 @@
 // components
 import Heading4 from "./Heading4"
 // mui
-import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import Grid from '@mui/material/Grid'
 import Typography from "@mui/material/Typography"
 
 const monthsEN = ["Jan", "Feb", "Mars", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]

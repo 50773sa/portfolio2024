@@ -1,8 +1,8 @@
 // mui
 import { useTheme } from "@mui/material"
-import styled  from '@mui/material/styles/styled'
+import { styled } from '@mui/material/styles'
 import Divider from '@mui/material/Divider'
-import Grid from '@mui/material/Unstable_Grid2/Grid2'
+import Grid from '@mui/material/Grid'
 import EmailIcon from '@mui/icons-material/Email'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import Link from '@mui/material/Link'

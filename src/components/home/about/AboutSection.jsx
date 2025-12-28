@@ -7,7 +7,7 @@ import SoftSkills from '../resume/children/SoftSkills'
 import TechStack from '../techStack/TechStack'
 import TitleWithDescription from '../TitleWithDescription'
 // mui
-import Grid from "@mui/material/Unstable_Grid2/Grid2"
+import Grid from '@mui/material/Grid'
 
 const AboutSection = ({ about, resume, isLoadingAbout, isLoadingResume, theme, techStack, isLoadingTechnologies }) => {
     return (
