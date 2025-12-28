@@ -7,7 +7,7 @@ import Skeleton from '@mui/material/Skeleton'
 const ExperiencesSkeleton = () => {
 
     const StyledSkeleton = styled (Skeleton)(() => ({
-            backgroundColor: 'grey'
+            backgroundColor: 'grey',
     }))
     
     const styledResumeIcon = {
@@ -18,7 +18,7 @@ const ExperiencesSkeleton = () => {
     }
 
     return (
-        <Grid container spacing={2} sx={{ justifyContent: 'center' }} size={12}>
+        <Grid container spacing={2} sx={{ justifyContent: 'center' }} >
             {/**
              *  Work-icon and divider
              */}

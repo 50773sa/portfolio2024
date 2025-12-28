@@ -12,7 +12,7 @@ const TechStack = ({ techStack, isLoading, theme }) => {
                 h3='Software Skills'
                 paragraph='In my projects, I have used the following technologies and tools among others.'
             />
-            <Grid container spacing={4} justifyContent='center'>
+            <Grid container spacing={4} justifyContent='center' sx={{ width: '100%' }}>
 
                 {isLoading && <TechStackImgSkeleton />}
 
@@ -31,7 +31,7 @@ const TechStack = ({ techStack, isLoading, theme }) => {
                                 theme={theme}
                             />
                         </Grid>
-                    );
+                    )
                 })}
             </Grid>
         </>

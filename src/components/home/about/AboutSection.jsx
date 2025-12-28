@@ -21,6 +21,7 @@ const AboutSection = ({ about, resume, isLoadingAbout, isLoadingResume, theme, t
                     container 
                     sx={{ 
                         justifyContent: 'space-between',
+                        width: '100%',
                         borderRadius: '10px',
                         pt: 5,
                         px: {xs: '6%', sm: '8%',},

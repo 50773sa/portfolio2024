@@ -35,7 +35,7 @@ const Projects = ({ theme, projects, isLoading }) => {
             <Accordion
                 expanded={expanded} 
                 elevation={0}
-                sx={{ bgcolor: 'transparent' }}
+                sx={{ bgcolor: 'transparent', width: '100%' }}
             >     
                 <AccordionSummary
                     aria-controls="panel2-content"
@@ -44,7 +44,7 @@ const Projects = ({ theme, projects, isLoading }) => {
                     sx={{ p: 0 }}
                     component='div'
                 >
-                    <Grid container spacing={4} justifyContent='center'>
+                    <Grid container spacing={4} justifyContent='center' sx={{ width: '100%' }}>
                         {isLoading && <LoadingImgSkeletons />}
                         
                         {!isLoading && projects

@@ -4,7 +4,7 @@ import Skeleton from '@mui/material/Skeleton'
 
 const LoadingImgSkeletons = () => {
     return (
-        <Grid container spacing={4} justifyContent='center' mb={4} px={2} width='100%'>
+        <Grid container spacing={4} justifyContent='center' mb={4} px={2} sx={{ width: '100%' }}>
             {Array(6 ).fill().map((_, i) => (
                 <Grid
                     key={i}
@@ -19,6 +19,7 @@ const LoadingImgSkeletons = () => {
                             width: '100%',
                             height: '100%',
                             aspectRatio: 4 / 4,
+                            borderRadius: '10px',
                         }}
                     />
                 </Grid>

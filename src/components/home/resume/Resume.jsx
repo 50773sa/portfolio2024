@@ -12,8 +12,8 @@ const Resume = ({ theme, resume, isLoading }) => {
         <SectionWrapper bgcolor='dark' sectionId='experience'>
             <BackgroundImage />
             <TitleWithDescription h3='Experience' paragraph='' />
-            <Grid container sx={{ justifyContent: 'center', zIndex: 10 }} size={12}>
-                <Grid size={12}>
+            <Grid container sx={{ justifyContent: 'center', zIndex: 10, width: '100%' }} >
+                <Grid size={{ xs: 12 }}>
                     {isLoading  
                         ? <ExperiencesSkeleton theme={theme} /> 
                         : <Experiences resume={resume} theme={theme} isLoading={isLoading} />
