@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 // components
 import Heading4 from "./Heading4"
 import LinearValueBar from "./LinearValueBar"
@@ -13,7 +14,7 @@ const Languages = ({ resume }) => {
                 {resume.map((data) =>
                     data.languages.map((skill) => {
                         return (
-                            <>
+                            <Fragment key={skill.title}>
                                 <Grid size={6}>
                                     <Typography>
                                         {skill.title}
@@ -22,8 +23,8 @@ const Languages = ({ resume }) => {
                                 <Grid size={6}>
                                     <LinearValueBar skill={skill} />
                                 </Grid>
-                            </>
-                        );
+                            </Fragment>
+                        )
                     })
                 )}
             </Grid>
