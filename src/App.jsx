@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 // components
 import AboutSection from './components/home/about/AboutSection'
 import ContactSection from './components/home/contact/Contact'
