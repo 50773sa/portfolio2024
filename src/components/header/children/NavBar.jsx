@@ -66,7 +66,12 @@ const NavBar = ({ theme }) => {
                  * Site logo
                  */}
 
-                <Grid xs={10} sm={4} sx={{ display: 'flex', alignItems: 'center', height: '100%', py: 2.5}}>
+                <Grid
+                    sx={{ display: 'flex', alignItems: 'center', height: '100%', py: 2.5}}
+                    size={{
+                        xs: 10,
+                        sm: 4
+                    }}>
                     <Link to='/' 
                         onClick={() => handleScrollIntoViewNavLink('home') } 
                     >
@@ -78,7 +83,12 @@ const NavBar = ({ theme }) => {
                  * Navigation links
                  */}
 
-                <Grid xs={0} sm={8} sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'flex-end' } }}>
+                <Grid
+                    sx={{ display: { xs: 'none', sm: 'flex', justifyContent: 'flex-end' } }}
+                    size={{
+                        xs: 0,
+                        sm: 8
+                    }}>
                     {links.map((link) => (
                         <NavLink 
                             key={link.title} 
@@ -100,7 +110,7 @@ const NavBar = ({ theme }) => {
                  * Burger menu
                  */}
 
-                <Grid xs={2} sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'flex-end' } }}>
+                <Grid sx={{ display: { xs: 'flex', sm: 'none', justifyContent: 'flex-end' } }} size={2}>
                     <BurgerIcon isOpen={isOpen} toggleDrawer={toggleDrawer} />
                     
                     <BurgerMenuDrawer
@@ -112,11 +122,15 @@ const NavBar = ({ theme }) => {
                     />
                 </Grid>
 
-                <Grid xs={3} sm={4} />
+                <Grid
+                    size={{
+                        xs: 3,
+                        sm: 4
+                    }} />
            
-            </Grid> 
+            </Grid>
         </Paper>
-    )
+    );
 }
 
 export default NavBar

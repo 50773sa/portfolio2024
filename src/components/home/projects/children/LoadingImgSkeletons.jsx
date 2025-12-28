@@ -6,7 +6,13 @@ const LoadingImgSkeletons = () => {
     return (
         <Grid container spacing={4} justifyContent='center' mb={4} px={2} width='100%'>
             {Array(6 ).fill().map((_, i) => (
-                <Grid xs={12} sm={6} md={4} key={i}>
+                <Grid
+                    key={i}
+                    size={{
+                        xs: 12,
+                        sm: 6,
+                        md: 4
+                    }}>
                     <Skeleton 
                         variant="rectangle" 
                         sx={{ 
@@ -18,7 +24,7 @@ const LoadingImgSkeletons = () => {
                 </Grid>
             ))}
         </Grid>
-    )
+    );
 }
 
 export default LoadingImgSkeletons

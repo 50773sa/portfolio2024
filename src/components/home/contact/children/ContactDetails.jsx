@@ -42,8 +42,7 @@ const ContactDetails = ({ contact }) => {
             {/**
                 Mail
              */}
-
-            <StyledGrid xs={12} sm={8} md={5}>
+            <StyledGrid size={{ xs: 12, sm: 8, md: 5 }}>
                 <StyledLink 
                     component='a'
                     target="_blank"
@@ -58,34 +57,28 @@ const ContactDetails = ({ contact }) => {
                     <KeyboardArrowRightIcon className="hoverLink" sx={{ visibility: { sm: 'hidden' } }}/>
                 </StyledLink>
             </StyledGrid>
-
             {/**
                 Phone
             */}
-
-            <StyledGrid xs={12} sm={8} md={5}>
+            <StyledGrid size={{ xs: 12, sm: 8, md: 5 }}>
                 <LocalPhoneRoundedIcon sx={{ mr: 1, fontSize: '30px' }} />
                 <Typography component='p' sx={{ cursor: 'default' }}>
                     +46{contact.phoneNumber}
                 </Typography>
             </StyledGrid>
-
             {/**
                 Location
              */}
-
-            <StyledGrid xs={12} sm={8} md={5}>
+            <StyledGrid size={{ xs: 12, sm: 8, md: 5 }}>
                 <LocationOnRoundedIcon sx={{ mr: 1, fontSize: '30px' }} />
                 <Typography component='p' sx={{ cursor: 'default' }}>
                     Skåne, Sweden
                 </Typography>
             </StyledGrid>
-
             {/**
                 LinkedIn
              */}
-
-            <Grid xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Grid sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
                 <StyledDivider />
                     <StyledLink 
                         component='a'
@@ -101,7 +94,7 @@ const ContactDetails = ({ contact }) => {
 
             </Grid>
         </>
-    )
+    );
 }
 
 export default ContactDetails

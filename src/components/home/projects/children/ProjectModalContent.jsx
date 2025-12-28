@@ -30,8 +30,7 @@ const ProjectModalContent = ({ project }) => {
         >
             {/**
              *  Images
-             */} 
-
+             */}
             <Box 
                 sx={{ 
                     display: 'flex',
@@ -63,11 +62,9 @@ const ProjectModalContent = ({ project }) => {
                     setIsNextLoaded={setIsNextLoaded}
                 />
             </Box>
-
             {/**
              * Title and description
              */}
-
             <Box 
                 sx={{ 
                     width: {xs: '100%', md: '50%'}, 
@@ -121,7 +118,7 @@ const ProjectModalContent = ({ project }) => {
                      * Action buttons
                      */}                     
 
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <CardActionBtns
                             project={project} 
                             isCodeAvailable={project.link !== ''}
@@ -130,7 +127,7 @@ const ProjectModalContent = ({ project }) => {
                 </CardContent>
             </Box>
         </Card>
-    )
+    );
 }
 
 export default ProjectModalContent

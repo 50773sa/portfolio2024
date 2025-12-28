@@ -48,10 +48,9 @@ const Experiences = ({ theme, resume }) => {
 
                     return (
                         <Grid container spacing={2} key={i} sx={{ justifyContent: 'center' }}>
-
                             <Grid
-                                xs='auto'
                                 sx={{ display: 'flex', flexWrap: 'nowrap' }}
+                                size='auto'
                             >   
                                 {/**
                                  *  Badge
@@ -86,8 +85,12 @@ const Experiences = ({ theme, resume }) => {
                                     /> 
                                 </Box>                        
                             </Grid>
-
-                            <Grid xs={8} sm={6} md={5}>
+                            <Grid
+                                size={{
+                                    xs: 8,
+                                    sm: 6,
+                                    md: 5
+                                }}>
 
                                 {/**
                                  *  Company
@@ -139,12 +142,11 @@ const Experiences = ({ theme, resume }) => {
                                 </Typography>
                             </Grid>
                         </Grid>
-                    )
+                    );
                 })
             )}
         </>
-   
-    )
+    );
 }
 
 export default Experiences

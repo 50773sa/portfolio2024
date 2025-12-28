@@ -7,14 +7,13 @@ import Typography from "@mui/material/Typography"
 const monthsEN = ["Jan", "Feb", "Mars", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 const Education = ({ resume }) => {
-    return (  
+    return (
         <>
             <Heading4 title='Education' />
-
             <Grid container mb={3.7} spacing={2}>
                 {resume.map((data) =>
                     data.educations.map((edu) => (
-                        <Grid xs={12} key={edu.title}>
+                        <Grid key={edu.title} size={12}>
                             <Typography component='h4' sx={{ fontWeight: 600 }}>
                                 {edu.title}
                             </Typography>
@@ -36,7 +35,7 @@ const Education = ({ resume }) => {
                 )}  
             </Grid>
         </>
-    )
+    );
 }
 
 export default Education

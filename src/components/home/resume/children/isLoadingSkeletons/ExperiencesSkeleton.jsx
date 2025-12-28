@@ -18,13 +18,11 @@ const ExperiencesSkeleton = () => {
     }
 
     return (
-        <Grid container xs={12} spacing={2} sx={{ justifyContent: 'center' }}>
-
+        <Grid container spacing={2} sx={{ justifyContent: 'center' }} size={12}>
             {/**
              *  Work-icon and divider
              */}
-
-            <Grid xs='auto' sx={{ display: 'flex', flexWrap: 'nowrap' }}>
+            <Grid sx={{ display: 'flex', flexWrap: 'nowrap' }} size='auto'>
                 <Box
                     sx={{ 
                         display: 'flex',
@@ -42,8 +40,12 @@ const ExperiencesSkeleton = () => {
                     <StyledSkeleton sx={{ height: '100%' }}/>
                 </Box>                        
             </Grid>
-
-            <Grid xs={8} sm={6} md={5}>
+            <Grid
+                size={{
+                    xs: 8,
+                    sm: 6,
+                    md: 5
+                }}>
                 <StyledSkeleton variant="h5" sx={{ height: '16px', maxWidth: '30%',  mb: 0.5 }} />
                 <StyledSkeleton variant="p"  sx={{ height: '14px', maxWidth: '40%', mb: 0.5 }} />
                 <StyledSkeleton variant="p"  sx={{ height: '16px', maxWidth: '70%',  mb: '24px' }} />
@@ -54,9 +56,8 @@ const ExperiencesSkeleton = () => {
                 <StyledSkeleton variant="h5" sx={{ height: '16px', maxWidth: '30%',  mb: 0.5 }} />
                 <StyledSkeleton variant="p" sx={{ height: '60px', maxWidth: '70%', mb: '24px' }} />
             </Grid>
-
-        </Grid>                     
-    )
+        </Grid>
+    );
 }
 
 export default ExperiencesSkeleton

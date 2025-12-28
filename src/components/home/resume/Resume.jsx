@@ -10,21 +10,18 @@ import Grid from '@mui/material/Grid'
 const Resume = ({ theme, resume, isLoading }) => {
     return (
         <SectionWrapper bgcolor='dark' sectionId='experience'>
-          
             <BackgroundImage />
-            
             <TitleWithDescription h3='Experience' paragraph='' />
-
-            <Grid container xs={12} sx={{ justifyContent: 'center', zIndex: 10 }}>
-                <Grid xs={12}>
+            <Grid container sx={{ justifyContent: 'center', zIndex: 10 }} size={12}>
+                <Grid size={12}>
                     {isLoading  
                         ? <ExperiencesSkeleton theme={theme} /> 
                         : <Experiences resume={resume} theme={theme} isLoading={isLoading} />
                     }
                 </Grid>
-            </Grid>   
+            </Grid>
         </SectionWrapper>
-    )
+    );
 }
 
 export default Resume

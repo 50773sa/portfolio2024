@@ -9,16 +9,15 @@ const SoftwareSkills = ({ resume }) => {
     return (
         <>
             <Heading4 title='Software Skills' />
-
             <Grid container alignItems="center" mb={7} spacing={1}>
                 {resume.map((data) =>
                     <>
                         {data.softwareSkills.map((skill) => (
                             <>
-                                <Grid xs={6}>
+                                <Grid size={6}>
                                     <Typography>{skill.title}</Typography>
                                 </Grid>
-                                <Grid xs={6}>
+                                <Grid size={6}>
                                     <LinearValueBar skill={skill} />
                                 </Grid>
                             </>
@@ -31,7 +30,7 @@ const SoftwareSkills = ({ resume }) => {
                 )}
             </Grid>
         </>
-    )
+    );
 }
 
 export default SoftwareSkills

@@ -22,16 +22,15 @@ const Interests = ({ resume, theme }) => {
     return (
         <>
             <Heading4 title='Interests' />
-
-            <Grid container xs={12} spacing={2} sx={{ mb: 7 }}>
+            <Grid container spacing={2} sx={{ mb: 7 }} size={12}>
                 {resume
                     .map((data) => data.hobbies
                     .sort((a, b) => a.order - b.order)
                     .map((i) => (
                         <Grid
-                            xs='auto'
                             key={i.title}
                             sx={{ display: "flex", alignItems: "start" }}
+                            size='auto'
                         >
                             <div 
                                 style={{
@@ -56,7 +55,7 @@ const Interests = ({ resume, theme }) => {
                 }
             </Grid>
         </>
-    )    
+    );    
 }
 
 export default Interests

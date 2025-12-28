@@ -30,7 +30,13 @@ const TechStackImgSkeleton = () => {
     return (
         <>
             {Array(11).fill().map((_, i) => (
-                <Grid xs={6} sm={4} md={3} key={i}>
+                <Grid
+                    key={i}
+                    size={{
+                        xs: 6,
+                        sm: 4,
+                        md: 3
+                    }}>
                     <StyledCard>
                         <StyledCardContent>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: -10, flexBasis: '80%' }}>
@@ -41,7 +47,7 @@ const TechStackImgSkeleton = () => {
                 </Grid>
             ))}
         </>
-    )
+    );
 }
 
 export default TechStackImgSkeleton

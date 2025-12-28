@@ -20,10 +20,10 @@ const Homepage = () => {
     const fetchTechnologies = () => getData('techStack')
     const fetchResume = () => getData('resume')
     // Query data
-    const { data: about, isLoading: isLoadingAbout, isError} = useQuery('about', fetchAbout)
-    const { data: projects, isLoading: isLoadingProjects } = useQuery('projects', fetchProjects)
-    const { data: technologies, isLoading: isLoadingTechnologies } = useQuery('techStack', fetchTechnologies)
-    const { data: resume, isLoading: isLoadingResume } = useQuery('resume', fetchResume)
+    const { data: about, isLoading: isLoadingAbout, isError} = useQuery({ queryKey: ['about'], queryFn: fetchAbout })
+    const { data: projects, isLoading: isLoadingProjects } = useQuery({ queryKey: ['projects'], queryFn: fetchProjects })
+    const { data: technologies, isLoading: isLoadingTechnologies } = useQuery({ queryKey: ['techStack'], queryFn: fetchTechnologies })
+    const { data: resume, isLoading: isLoadingResume } = useQuery({ queryKey: ['resume'], queryFn: fetchResume })
 
     return (  
         <>

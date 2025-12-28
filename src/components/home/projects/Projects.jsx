@@ -28,12 +28,10 @@ const Projects = ({ theme, projects, isLoading }) => {
 
     return (
         <SectionWrapper bgcolor='extraDark' sectionId='projects'>
-            
             <TitleWithDescription 
                 h3='Projects'
                 paragraph="Here, you'll find a selection of work that showcases the skills and knowledge I've developed along the way."
             />
-
             <Accordion 
                 expanded={expanded} 
                 elevation={0}
@@ -71,7 +69,7 @@ const Projects = ({ theme, projects, isLoading }) => {
                                 )
                         })}
 
-                        <Grid xs={12} textAlign='center'>
+                        <Grid textAlign='center' size={12}>
                             <AllProjectsButton 
                                 onClick={handleExpandClick} 
                                 buttonText={!expanded ? 'View More' : 'View Less'}
@@ -82,11 +80,9 @@ const Projects = ({ theme, projects, isLoading }) => {
                     </Grid>
                 </AccordionSummary>
             </Accordion>
-        
             {/**
              *   Modal
              */}
-
             {open && (
                 <ProjectModal 
                     open={open} 
@@ -94,9 +90,8 @@ const Projects = ({ theme, projects, isLoading }) => {
                     project={project}
                 />
             )}
-      
         </SectionWrapper>
-    )
+    );
 }
 
 export default Projects

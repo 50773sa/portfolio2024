@@ -9,9 +9,8 @@ const SoftSkills = ({ resume, theme }) => {
     return (
         <>
             <Heading4 title='Soft Skills' />
-
             <Grid container alignItems="center" mb={7}>
-                <Grid xs={12} display="flex" alignItems="center" flexWrap='wrap'>
+                <Grid display="flex" alignItems="center" flexWrap='wrap' size={12}>
                     {resume.map((data) => data.softSkills.map((i) => 
                         <div
                             key={i.skill}
@@ -32,7 +31,7 @@ const SoftSkills = ({ resume, theme }) => {
                 </Grid>
             </Grid>
         </>
-    )    
+    );    
 }
 
 export default SoftSkills

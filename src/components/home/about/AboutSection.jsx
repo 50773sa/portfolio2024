@@ -19,7 +19,6 @@ const AboutSection = ({ about, resume, isLoadingAbout, isLoadingResume, theme, t
             {!isLoadingResume && (
                 <Grid 
                     container 
-                    xs={12}
                     sx={{ 
                         justifyContent: 'space-between',
                         borderRadius: '10px',
@@ -27,24 +26,32 @@ const AboutSection = ({ about, resume, isLoadingAbout, isLoadingResume, theme, t
                         px: {xs: '6%', sm: '8%',},
                         mb: 7,
                         bgcolor: theme.palette.bgColor.dark,
-                    }} 
+                    }}
+                    size={12} 
                 >   
-                    <Grid xs={12} md={5}>
+                    <Grid
+                        size={{
+                            xs: 12,
+                            md: 5
+                        }}>
                         <Languages resume={resume} theme={theme} />
                         <SoftSkills resume={resume} theme={theme} />
                     </Grid>
 
-                    <Grid xs={12} md={6} lg={5}>
+                    <Grid
+                        size={{
+                            xs: 12,
+                            md: 6,
+                            lg: 5
+                        }}>
                         <Education resume={resume} theme={theme} />
                         <Interests resume={resume} theme={theme} />
                     </Grid>
                 </Grid>
             )}
-
             <TechStack theme={theme} techStack={techStack} isLoading={isLoadingTechnologies} />
-
         </SectionWrapper>
-    )
+    );
 }
 
 export default AboutSection

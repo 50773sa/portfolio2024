@@ -40,7 +40,13 @@ const Project = ({ image, name, logo, project, onClickProject, onPressEnter, the
     }))
 
     return (
-        <Grid xs={12} sm={6} md={4} sx={{ cursor: 'default' }}>
+        <Grid
+            sx={{ cursor: 'default' }}
+            size={{
+                xs: 12,
+                sm: 6,
+                md: 4
+            }}>
             <StyledCard onKeyDown={onPressEnter}>
 
                 <Typography 
@@ -98,9 +104,9 @@ const Project = ({ image, name, logo, project, onClickProject, onPressEnter, the
                     />
                 </OverlayDiv> 
 
-            </StyledCard>                  
+            </StyledCard>
         </Grid>
-    )
+    );
 }
 
 export default Project

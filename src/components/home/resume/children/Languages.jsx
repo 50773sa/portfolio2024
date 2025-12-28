@@ -9,27 +9,26 @@ const Languages = ({ resume }) => {
     return (
         <>
             <Heading4 title='Languages' />
-
             <Grid container alignItems="center" mb={7} spacing={1}>
                 {resume.map((data) =>
                     data.languages.map((skill) => {
                         return (
                             <>
-                                <Grid xs={6}>
+                                <Grid size={6}>
                                     <Typography>
                                         {skill.title}
                                     </Typography>
                                 </Grid>
-                                <Grid xs={6}>
+                                <Grid size={6}>
                                     <LinearValueBar skill={skill} />
                                 </Grid>
                             </>
-                        )
+                        );
                     })
                 )}
             </Grid>
         </>
-    )
+    );
 }
 
 export default Languages
