@@ -32,7 +32,7 @@ const Projects = ({ theme, projects, isLoading }) => {
                 h3='Projects'
                 paragraph="Here, you'll find a selection of work that showcases the skills and knowledge I've developed along the way."
             />
-            <Accordion 
+            <Accordion
                 expanded={expanded} 
                 elevation={0}
                 sx={{ bgcolor: 'transparent' }}
@@ -41,7 +41,8 @@ const Projects = ({ theme, projects, isLoading }) => {
                     aria-controls="panel2-content"
                     id="panel2-header"
                     tabIndex={-1}
-                    sx={{ p: 0 }}    
+                    sx={{ p: 0 }}
+                    component='div'
                 >
                     <Grid container spacing={4} justifyContent='center'>
                         {isLoading && <LoadingImgSkeletons />}
