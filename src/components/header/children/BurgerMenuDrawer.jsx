@@ -14,7 +14,7 @@ const BurgerMenuDrawer = ({ theme, isOpen, toggleDrawer, links, handleScrollInto
             open= {isOpen}
             onClose={toggleDrawer}
             onOpen={toggleDrawer}
-            PaperProps={{ sx: { mt: 10, height: 'max-content', position: 'unset' }}}
+            slotProps={{ paper: { sx: { mt: 10, height: 'max-content', position: 'unset' }}}}
         >
             <Box
                 sx={{ width: '100vw', height: '100%', bgcolor: theme.palette.bgColor.dark }}
